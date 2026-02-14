@@ -1,0 +1,21 @@
+# Introduction
+Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD) is characterized by a complex interplay of metabolic and inflammatory pathways. The liver-bone axis, mediated by factors like IGF-1 and Sclerostin, plays a critical role in maintaining skeletal integrity.
+
+# Methods
+## Participant Selection
+A total of $N=100$ subjects were recruited. Advanced fibrosis (F3-F4) was defined by FibroScan LSM $\geq 12$ kPa.
+
+## HR-pQCT and FEA
+The distal radius and tibia were scanned using HR-pQCT (XtremeCT). Finite Element Analysis (FEA) provided estimates of Failure Load ($F_f$) and Stiffness.
+
+---
+
+### 4. Discussion & Conclusion: `discussion_conclusion.qmd`
+Keep this separate so you can edit your interpretations without scrolling past code.
+
+```markdown
+# Discussion
+The observed "trabecularization" of the cortical shell in MASLD patients suggests a high-turnover state likely driven by the dysregulation of the Wnt-signaling pathway. As an endocrinologist, the reduction in hepatic IGF-1—a key osteoblastotrophic hormone—serves as the primary mechanism for the observed failure in cortical maintenance.
+
+# Conclusion
+HR-pQCT identifies skeletal fragility in MASLD that is independent of aBMD.

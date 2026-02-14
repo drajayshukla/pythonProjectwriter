@@ -1,0 +1,47 @@
+---
+title: "Results: Baseline Characteristics and Microarchitectural Analysis"
+format:
+  html:
+    code-fold: true
+    theme: cosmo
+  pdf:
+    echo: false
+---
+
+# Baseline Characteristics
+
+The study population consisted of 100 participants. Results are summarized in **Table 1**.
+
+```{python}
+#| label: setup
+#| echo: false
+import pandas as pd
+from scipy.stats import ttest_ind
+import seaborn as sns
+import matplotlib.pyplot as plt
+from IPython.display import Markdown
+
+df = pd.read_csv("../data/liver_hrpqct_filled.csv")
+ctrl = df[df["Study_Group"] == "Control"]
+fibro = df[df["Study_Group"] == "Advanced Fibrosis"]
+
+def get_row(label, col):
+    m_c, s_c = ctrl[col].mean(), ctrl[col].std()
+    m_f, s_f = fibro[col].mean(), fibro[col].std()
+    _, p = ttest_ind(ctrl[col].dropna(), fibro[col].dropna())
+    p_txt = "<0.001" if p < 0.001 else f"{p:.4f}"
+    return {"Variable": label, "Control": f"{m_c:.2f}±{s_c:.2f}", "F3-F4": f"{m_f:.2f}±{s_f:.2f}", "P-value": p_txt}
+
+vars = {"Age_years": "Age", "BMI": "BMI", "FibroScan_LSM_kPa": "LSM", "Sclerostin_pg_mL": "Sclerostin", "Radius_Ct_Po_percent": "Ct.Po (%)", "Radius_Failure_Load_N": "Failure Load (N)"}
+table_df = pd.DataFrame([get_row(l, c) for c, l in vars.items()])
+Markdown(table_df.to_markdown(index=False))
+```
+
+# Visual Analysis
+
+```{python}
+#| echo: false
+sns.boxplot(x="Study_Group", y="Radius_Ct_Po_percent", data=df)
+plt.title("Cortical Porosity Comparison")
+plt.show()
+```

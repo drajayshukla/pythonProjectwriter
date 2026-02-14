@@ -1,0 +1,20 @@
+---
+title: "Microarchitectural Deterioration and Reduced Bone Strength in MASLD: An HR-pQCT Study"
+author: "Dr. Ajay Shukla, et al."
+date: "2026-02-14"
+format:
+  pdf:
+    documentclass: article
+    number-sections: true
+    geometry: margin=1in
+  html:
+    toc: true
+    theme: cosmo
+bibliography: references.bib
+---
+
+{{< include static_part.qmd >}}
+
+{{< include dynamic_part.qmd >}}
+
+{{< include discussion_conclusion.qmd >}}

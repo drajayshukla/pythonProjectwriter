@@ -1,0 +1,83 @@
+# Results
+
+```{python}
+#| label: analysis-table
+#| echo: false
+#| message: false
+#| warning: false
+
+import pandas as pd
+from scipy.stats import ttest_ind
+from IPython.display import Markdown
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load Data
+try:
+    df = pd.read_csv('../data/liver_hrpqct_filled.csv')
+except:
+    df = pd.read_csv('MAFLD_HRPQCT/data/liver_hrpqct_filled.csv')
+
+ctrl = df[df['Study_Group'] == 'Control']
+fibro = df[df['Study_Group'] == 'Advanced Fibrosis']
+
+def get_row(label, col):
+    m_c, s_c = ctrl[col].mean(), ctrl[col].std()
+    m_f, s_f = fibro[col].mean(), fibro[col].std()
+    _, p = ttest_ind(ctrl[col].dropna(), fibro[col].dropna())
+    p_txt = '<0.001' if p < 0.001 else f'{p:.4f}'
+    return {'Variable': label, 'Control': f'{m_c:.2f} ± {s_c:.2f}', 'F3-F4': f'{m_f:.2f} ± {s_f:.2f}', 'P-value': p_txt}
+
+vars_to_show = {
+    'Age_years': 'Age (years)',
+    'BMI': 'BMI (kg/m²)',
+    'FibroScan_LSM_kPa': 'Liver Stiffness (kPa)',
+    'Sclerostin_pg_mL': 'Sclerostin (pg/mL)',
+    'Radius_Ct_Po_percent': 'Radius Ct.Po (%)',
+    'Radius_Failure_Load_N': 'Radius Failure Load (N)'
+}
+
+table_df = pd.DataFrame([get_row(l, c) for c, l in vars_to_show.items()])
+Markdown(table_df.to_markdown(index=False))
+```
+
+## Microarchitectural Analysis
+
+```{python}
+#| label: dynamic-text-vars
+#| echo: false
+
+ct_po_c = ctrl['Radius_Ct_Po_percent'].mean()
+ct_po_f = fibro['Radius_Ct_Po_percent'].mean()
+_, p_ct = ttest_ind(ctrl['Radius_Ct_Po_percent'], fibro['Radius_Ct_Po_percent'])
+p_ct_txt = '< 0.001' if p_ct < 0.001 else f'= {p_ct:.3f}'
+
+ff_c = ctrl['Radius_Failure_Load_N'].mean()
+ff_f = fibro['Radius_Failure_Load_N'].mean()
+_, p_ff = ttest_ind(ctrl['Radius_Failure_Load_N'], fibro['Radius_Failure_Load_N'])
+p_ff_txt = '< 0.001' if p_ff < 0.001 else f'= {p_ff:.3f}'
+
+pct_increase = ((ct_po_f - ct_po_c) / ct_po_c) * 100
+```
+
+HR-pQCT analysis revealed a significant compartment-specific decay in the cortical bone. Patients with advanced fibrosis exhibited a **`{python} f'{pct_increase:.1f}'`% increase** in Cortical Porosity ($Ct.Po$) at the distal radius compared to controls (`{python} f'{ct_po_f:.2f}'`% vs. `{python} f'{ct_po_c:.2f}'`%, $p$ `{python} p_ct_txt`).
+
+This 'trabecularization' of the cortex translated into a significant biomechanical deficit. Finite Element Analysis (FEA) estimated a mean Failure Load ($F_f$) of **`{python} f'{ff_f:.0f}'` N** in the fibrosis group, compared to **`{python} f'{ff_c:.0f}'` N** in the control group ($p$ `{python} p_ff_txt`).
+
+## Visual Analysis
+
+**Figure 1** illustrates the distribution of cortical porosity between the two groups.
+
+```{python}
+#| label: fig-boxplot
+#| echo: false
+#| warning: false
+
+plt.figure(figsize=(8, 5))
+sns.set_style('whitegrid')
+sns.boxplot(x='Study_Group', y='Radius_Ct_Po_percent', data=df, palette=['#3498db', '#e74c3c'])
+plt.xlabel('Cohort')
+plt.ylabel('Radius Cortical Porosity (%)')
+plt.title('Impact of Advanced Fibrosis on Cortical Microarchitecture')
+plt.show()
+```
