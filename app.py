@@ -13,31 +13,33 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for a cleaner look
+# Custom CSS
 st.markdown("""
 <style>
-    .reportview-container {
-        background: #f0f2f6
-    }
+    .reportview-container { background: #f0f2f6 }
     h1 { color: #2c3e50; }
     h2 { color: #34495e; border-bottom: 2px solid #ccc; padding-bottom: 10px; }
     .stMetric { background-color: #ffffff; padding: 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🦴 Liver-Bone Axis: HR-pQCT Analytics Engine")
-st.markdown("**Project:** Microarchitectural Deterioration in MASLD | **Data Source:** `liver_hrpqct_filled.csv`")
+st.title("🦴 Liver-Bone Axis: High-Dimensional Analytics")
+st.markdown("**Project:** MASLD Microarchitecture | **Data Source:** `liver_hrpqct_filled.csv`")
 
 
-# 2. Data Loading Function
+# 2. Robust Data Loading
 @st.cache_data
 def load_data():
-    # Robust pathing: tries 'data/' folder first, then root
-    paths = ['data/liver_hrpqct_filled.csv', 'liver_hrpqct_filled.csv', '../data/liver_hrpqct_filled.csv']
+    paths = [
+        'liver_hrpqct_filled.csv',
+        'data/liver_hrpqct_filled.csv',
+        '../data/liver_hrpqct_filled.csv',
+        'MAFLD_HRPQCT/DATA/liver_hrpqct_filled.csv'
+    ]
     for path in paths:
         try:
             df = pd.read_csv(path)
-            # Calculated Field: BMI (if missing)
+            # Calculated BMI if missing
             if 'BMI' not in df.columns and 'Weight_kg' in df.columns:
                 df['BMI'] = df['Weight_kg'] / ((df['Height_cm'] / 100) ** 2)
             return df
@@ -49,187 +51,172 @@ def load_data():
 df = load_data()
 
 if df is None:
-    st.error(
-        "❌ **Critical Error:** Data file not found. Please ensure `liver_hrpqct_filled.csv` is in the `data/` directory.")
+    st.error("❌ Critical Error: Data file not found. Please upload `liver_hrpqct_filled.csv`.")
     st.stop()
+
+
+# --- HELPER: Variable Categorization ---
+# This helps organize your 100+ variables into drop-down categories
+def get_var_category(col_name):
+    col_lower = col_name.lower()
+    if 'radius' in col_lower: return "📍 Radius (HR-pQCT)"
+    if 'tibia' in col_lower: return "📍 Tibia (HR-pQCT)"
+    if any(x in col_lower for x in ['dxa', 'tbs', 'frax', 'bmd']): return "🦴 DXA & FRAX"
+    if any(x in col_lower for x in
+           ['sclerostin', 'igf', 'ctx', 'p1np', 'rankl', 'opg', 'vit', 'pth', 'calcium']): return "🩸 Bone Markers"
+    if any(x in col_lower for x in ['alt', 'ast', 'ggt', 'alp', 'albumin', 'bilirubin', 'inr', 'fibroscan', 'child',
+                                    'meld']): return "liver 🟢 Liver Profile"
+    if any(x in col_lower for x in
+           ['age', 'sex', 'weight', 'height', 'bmi', 'smoking', 'alcohol']): return "👤 Demographics"
+    return "🔹 Other Clinical"
+
+
+all_cols = df.columns.tolist()
+num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+cat_cols = df.select_dtypes(exclude=[np.number]).columns.tolist()
+
+# Organize numeric variables by category for the sidebar/dropdowns
+var_groups = {}
+for col in num_cols:
+    cat = get_var_category(col)
+    if cat not in var_groups: var_groups[cat] = []
+    var_groups[cat].append(col)
 
 # 3. Sidebar Navigation
 st.sidebar.title("Analysis Modules")
 module = st.sidebar.radio(
     "Select Module:",
-    ["📊 Data Overview", "📈 Descriptive Stats", "🧪 Comparative (T-Test)", "📐 Regression Analysis",
-     "🔥 Correlation Matrix"]
+    ["📊 Data Overview", "📈 Descriptive Stats", "🧪 Group Comparisons", "📐 Regression Analysis", "🔥 Correlation Matrix"]
 )
-
 st.sidebar.markdown("---")
-st.sidebar.info(f"**N = {len(df)} Patients**")
-st.sidebar.info("Developed for Dr. Ajay Shukla")
+st.sidebar.metric("Total Variables", len(all_cols))
+st.sidebar.metric("Total Patients", len(df))
 
 # --- MODULE 1: DATA OVERVIEW ---
 if module == "📊 Data Overview":
     st.header("Dataset Overview")
 
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Total Patients", len(df))
-    col2.metric("Features", len(df.columns))
-    col3.metric("Study Groups", len(df['Study_Group'].unique()) if 'Study_Group' in df.columns else "N/A")
+    st.info(f"Successfully loaded **{len(all_cols)} variables** for **{len(df)} patients**.")
 
-    with st.expander("📄 View Raw Data", expanded=True):
+    with st.expander("🔍 View All Variable Names (Click to Expand)", expanded=False):
+        st.write(all_cols)
+
+    with st.expander("📄 View Raw Data Table", expanded=True):
         st.dataframe(df.head(10))
-
-    st.subheader("Data Quality Check")
-    missing = df.isnull().sum()
-    if missing.sum() > 0:
-        st.write("Missing Values Detected:", missing[missing > 0])
-    else:
-        st.success("✅ Dataset is complete (No missing values detected).")
 
 # --- MODULE 2: DESCRIPTIVE STATS ---
 elif module == "📈 Descriptive Stats":
     st.header("Descriptive Statistics")
 
-    # Filter for numeric columns
-    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
-    default_cols = ['Age_years', 'BMI', 'FibroScan_LSM_kPa', 'Radius_Ct_Po_percent', 'Radius_Failure_Load_N']
-    # Ensure defaults exist in data
-    default_cols = [c for c in default_cols if c in numeric_cols]
+    # Category Filter
+    st.markdown("##### 1. Select Variable Category")
+    selected_cat = st.selectbox("Filter Variables by Type:", list(var_groups.keys()))
 
-    selected_cols = st.multiselect("Select Variables for Summary Table:", numeric_cols, default=default_cols)
+    # Specific Variable Select
+    cols_in_cat = var_groups[selected_cat]
+    selected_vars = st.multiselect(f"Select {selected_cat} Variables:", cols_in_cat, default=cols_in_cat[:3])
 
-    if selected_cols:
-        st.subheader("1. Overall Summary")
-        st.dataframe(df[selected_cols].describe().style.format("{:.2f}"))
+    if selected_vars:
+        st.subheader("Summary Table")
+        st.dataframe(df[selected_vars].describe().T.style.format("{:.2f}"))
 
-        if 'Study_Group' in df.columns:
-            st.subheader("2. Stratified by Study Group")
-            grouped = df.groupby('Study_Group')[selected_cols].describe().T
-            st.dataframe(grouped.style.format("{:.2f}"))
+        st.subheader("Distribution Plots")
+        viz_var = st.selectbox("Select variable to plot:", selected_vars)
 
-# --- MODULE 3: COMPARATIVE ANALYSIS (T-TEST) ---
-elif module == "🧪 Comparative (T-Test)":
-    st.header("Hypothesis Testing: Group Comparison")
+        fig, ax = plt.subplots(1, 2, figsize=(12, 4))
 
-    if 'Study_Group' not in df.columns:
-        st.warning("Study_Group column missing.")
-        st.stop()
+        # Histogram
+        sns.histplot(df[viz_var], kde=True, color="teal", ax=ax[0])
+        ax[0].set_title(f"Histogram: {viz_var}")
 
-    groups = df['Study_Group'].unique()
+        # Boxplot
+        sns.boxplot(x=df[viz_var], color="lightblue", ax=ax[1])
+        ax[1].set_title(f"Boxplot: {viz_var}")
 
-    col_setup1, col_setup2 = st.columns(2)
-    with col_setup1:
-        group1 = st.selectbox("Control Group:", groups, index=0)
-    with col_setup2:
-        group2 = st.selectbox("Test Group:", groups, index=1 if len(groups) > 1 else 0)
+        st.pyplot(fig)
 
-    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
-    target_var = st.selectbox("Select Dependent Variable (Y):", numeric_cols, index=numeric_cols.index(
-        'Radius_Ct_Po_percent') if 'Radius_Ct_Po_percent' in numeric_cols else 0)
+# --- MODULE 3: COMPARATIVE ANALYSIS ---
+elif module == "🧪 Group Comparisons":
+    st.header("Hypothesis Testing")
 
-    # Prepare Data
-    g1_data = df[df['Study_Group'] == group1][target_var].dropna()
-    g2_data = df[df['Study_Group'] == group2][target_var].dropna()
+    # 1. Grouping
+    group_var = st.selectbox("Group Patients By:", cat_cols,
+                             index=cat_cols.index('Study_Group') if 'Study_Group' in cat_cols else 0)
+    unique_groups = df[group_var].dropna().unique()
 
-    # Run T-Test
-    t_stat, p_val = ttest_ind(g1_data, g2_data)
+    c1, c2 = st.columns(2)
+    g1 = c1.selectbox("Group 1 (Control):", unique_groups, index=0)
+    g2 = c2.selectbox("Group 2 (Test):", unique_groups, index=1 if len(unique_groups) > 1 else 0)
 
-    # Display Metrics
-    st.markdown("### Statistical Results")
-    m1, m2, m3, m4 = st.columns(4)
-    m1.metric(f"{group1} Mean", f"{g1_data.mean():.2f}", f"σ={g1_data.std():.2f}")
-    m2.metric(f"{group2} Mean", f"{g2_data.mean():.2f}", f"σ={g2_data.std():.2f}")
-    m3.metric("T-Statistic", f"{t_stat:.2f}")
+    # 2. Target Variable (Categorized)
+    st.markdown("---")
+    st.markdown("##### Select Dependent Variable")
+    target_cat = st.selectbox("Category:", list(var_groups.keys()))
+    target_var = st.selectbox("Variable:", var_groups[target_cat])
 
-    # Color code significant P-values
-    p_color = "inverse" if p_val < 0.05 else "normal"
-    m4.metric("P-Value", f"{p_val:.4e}")
+    # 3. Run Test
+    d1 = df[df[group_var] == g1][target_var].dropna()
+    d2 = df[df[group_var] == g2][target_var].dropna()
 
-    if p_val < 0.05:
-        st.success(f"✅ Statistically Significant Difference (p < 0.05)")
-    else:
-        st.warning(f"❌ No Significant Difference (p >= 0.05)")
+    if len(d1) > 1 and len(d2) > 1:
+        t_stat, p_val = ttest_ind(d1, d2)
 
-    # Visualization
-    st.subheader("Scientific Visualization")
-    fig, ax = plt.subplots(figsize=(8, 5))
+        st.markdown("### Results")
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric(f"{g1} Mean", f"{d1.mean():.2f}", f"n={len(d1)}")
+        col2.metric(f"{g2} Mean", f"{d2.mean():.2f}", f"n={len(d2)}")
+        col3.metric("Difference", f"{d2.mean() - d1.mean():.2f}")
+        col4.metric("P-Value", f"{p_val:.4e}", delta_color="inverse" if p_val < 0.05 else "off")
 
-    # Boxplot with Stripplot overlay (JBMR Style)
-    sns.boxplot(x='Study_Group', y=target_var, data=df[df['Study_Group'].isin([group1, group2])],
-                palette="Set2", width=0.5, ax=ax, showfliers=False)
-    sns.stripplot(x='Study_Group', y=target_var, data=df[df['Study_Group'].isin([group1, group2])],
-                  color='black', alpha=0.5, ax=ax, jitter=True)
+        # Plot
+        fig, ax = plt.subplots(figsize=(8, 5))
+        plot_data = df[df[group_var].isin([g1, g2])]
+        sns.boxplot(x=group_var, y=target_var, data=plot_data, palette="Set2", width=0.5, ax=ax, showfliers=False)
+        sns.stripplot(x=group_var, y=target_var, data=plot_data, color='black', alpha=0.5, jitter=True, ax=ax)
+        ax.set_title(f"{target_var} by {group_var}")
+        st.pyplot(fig)
 
-    ax.set_title(f"Distribution of {target_var} by Group", fontsize=14, fontweight='bold')
-    ax.set_xlabel("")
-    ax.set_ylabel(target_var, fontsize=12)
-    sns.despine()
-    st.pyplot(fig)
-
-# --- MODULE 4: REGRESSION ANALYSIS ---
+# --- MODULE 4: REGRESSION ---
 elif module == "📐 Regression Analysis":
-    st.header("Multivariable Linear Regression (OLS)")
-    st.markdown("Use this module to verify the **'BMI Paradox'** (adjusting for confounders).")
+    st.header("Multivariable Regression")
 
-    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    st.markdown("##### 1. Outcome Variable (Y)")
+    y_cat = st.selectbox("Y Category:", list(var_groups.keys()), key='y_cat')
+    y_var = st.selectbox("Y Variable:", var_groups[y_cat], key='y_var')
 
-    col1, col2 = st.columns([1, 2])
-    with col1:
-        y_var = st.selectbox("Dependent Variable (Y):", numeric_cols, index=numeric_cols.index(
-            'Radius_Ct_Po_percent') if 'Radius_Ct_Po_percent' in numeric_cols else 0)
-    with col2:
-        default_x = ['FibroScan_LSM_kPa', 'BMI', 'Age_years']
-        default_x = [x for x in default_x if x in numeric_cols]
-        x_vars = st.multiselect("Independent Variables (X):", numeric_cols, default=default_x)
+    st.markdown("##### 2. Predictors (X)")
+    x_vars = st.multiselect("Select Independent Variables (X):", num_cols, default=['Age_years', 'BMI'])
 
-    if st.button("🚀 Run Regression Model"):
-        if not x_vars:
-            st.error("Select at least one independent variable.")
-        else:
-            # Statsmodels OLS
+    if st.button("Run Regression"):
+        if x_vars:
             reg_df = df[[y_var] + x_vars].dropna()
-            Y = reg_df[y_var]
-            X = reg_df[x_vars]
-            X = sm.add_constant(X)
-
-            model = sm.OLS(Y, X).fit()
-
-            st.subheader("Model Summary")
+            model = sm.OLS(reg_df[y_var], sm.add_constant(reg_df[x_vars])).fit()
             st.text(model.summary())
 
-            # Scatter Plot with Regression Line (if 1 predictor)
-            if len(x_vars) == 1:
-                st.subheader("Regression Plot")
-                fig, ax = plt.subplots(figsize=(8, 5))
-                sns.regplot(x=x_vars[0], y=y_var, data=reg_df, scatter_kws={'alpha': 0.5}, line_kws={'color': 'red'},
-                            ax=ax)
-                ax.set_title(f"Correlation: {x_vars[0]} vs {y_var}")
-                st.pyplot(fig)
+            # Diagnostic Plot
+            fig, ax = plt.subplots(figsize=(8, 4))
+            ax.scatter(model.fittedvalues, model.resid, alpha=0.5)
+            ax.axhline(0, color='red', linestyle='--')
+            ax.set_xlabel("Fitted Values")
+            ax.set_ylabel("Residuals")
+            ax.set_title("Residuals vs Fitted")
+            st.pyplot(fig)
 
-            # Residual Plot (if multiple predictors)
-            else:
-                st.subheader("Residuals vs Fitted")
-                fig, ax = plt.subplots(figsize=(8, 5))
-                ax.scatter(model.fittedvalues, model.resid, alpha=0.5)
-                ax.axhline(0, color='red', linestyle='--')
-                ax.set_xlabel("Fitted Values")
-                ax.set_ylabel("Residuals")
-                st.pyplot(fig)
-
-# --- MODULE 5: CORRELATION MATRIX ---
+# --- MODULE 5: CORRELATION ---
 elif module == "🔥 Correlation Matrix":
-    st.header("Feature Correlation Analysis")
+    st.header("Correlation Matrix")
 
-    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
-    default_corr = ['FibroScan_LSM_kPa', 'Radius_Ct_Po_percent', 'Radius_Failure_Load_N', 'Sclerostin_pg_mL', 'BMI',
-                    'Age_years']
-    default_corr = [c for c in default_corr if c in numeric_cols]
+    cats_to_corr = st.multiselect("Select Categories to Correlate:", list(var_groups.keys()),
+                                  default=["📍 Radius (HR-pQCT)", "🩸 Bone Markers"])
 
-    selected_corr_vars = st.multiselect("Select Variables for Heatmap:", numeric_cols, default=default_corr)
+    vars_to_corr = []
+    for cat in cats_to_corr:
+        vars_to_corr.extend(var_groups[cat])
 
-    if len(selected_corr_vars) > 1:
-        corr_matrix = df[selected_corr_vars].corr()
-
-        fig, ax = plt.subplots(figsize=(10, 8))
-        sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', center=0, fmt=".2f", linewidths=0.5, ax=ax)
+    if len(vars_to_corr) > 1:
+        corr_df = df[vars_to_corr].corr()
+        fig, ax = plt.subplots(figsize=(12, 10))
+        sns.heatmap(corr_df, cmap='coolwarm', center=0, linewidths=0.5, square=True, ax=ax)
         st.pyplot(fig)
     else:
-        st.info("Please select at least two variables to generate the heatmap.")
+        st.info("Select categories to generate heatmap.")
