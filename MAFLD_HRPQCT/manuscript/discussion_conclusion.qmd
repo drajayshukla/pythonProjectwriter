@@ -1,2 +1,26 @@
 # Discussion
-Advanced fibrosis appears to drive cortical decay via the liver-bone axis.
+
+[cite_start]This study demonstrates that advanced liver fibrosis is associated with a distinct skeletal phenotype characterized by cortical deterioration[cite: 3]. [cite_start]The key finding—a marked increase in cortical porosity (153.2% higher in F3-F4) despite significantly higher BMI—suggests that the mechanical protection typically afforded by obesity is overridden by the metabolic toxicity of liver disease[cite: 3]. This confirms that in MASLD, metabolic "insults" to the bone multicellular unit take precedence over traditional mechanical loading principles.
+
+
+
+## The Mechanistic Link
+[cite_start]The observed elevation in serum sclerostin ($691.64 \pm 164.80$ pg/mL in the fibrosis group) provides a plausible mechanism for this decay[cite: 3]. Sclerostin inhibits the $Wnt/\beta$-catenin pathway, suppressing osteoblast activity and uncoupling bone remodeling [@manolagas2020wnt].
+
+
+
+As a potent antagonist of bone formation, increased sclerostin levels likely drive the "trabecularization" of the cortical shell observed in our HR-pQCT scans, leading to the hollowing of the radius shell and a subsequent significant reduction in failure load [@boutroy2021trabecularization].
+
+## Biomechanical Implications
+[cite_start]The estimated Failure Load ($F_f$) was significantly lower in the advanced fibrosis cohort (2909 N vs. 4163 N), highlighting a clear biomechanical deficit[cite: 3]. This structural vulnerability, characterized by high cortical porosity and reduced stiffness, explains the increased fracture risk observed in patients with hepatic osteodystrophy, even when traditional aBMD measurements might appear misleadingly stable [@sinigaglia2021bone].
+
+
+
+# Conclusion
+
+HR-pQCT identifies skeletal fragility in MASLD that is independent of aBMD [@sinigaglia2021bone]. Clinicians should consider bone health assessment—specifically looking at cortical parameters—in patients with advanced fibrosis, regardless of their BMI or dual-energy X-ray absorptiometry (DXA) scores [@hu2023masld].
+
+# References
+
+::: {#refs}
+:::

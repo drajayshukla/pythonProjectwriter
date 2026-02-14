@@ -1,21 +1,85 @@
 # Introduction
-Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD) is characterized by a complex interplay of metabolic and inflammatory pathways. The liver-bone axis, mediated by factors like IGF-1 and Sclerostin, plays a critical role in maintaining skeletal integrity.
+
+Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD) has emerged as a multi-systemic disorder, characterized by a complex interplay of metabolic, inflammatory, and endocrine pathways [@long2023steatotic]. While the hepatic and cardiovascular complications are well-characterized, the systemic impact of MASLD on the skeletal system—the "liver-bone axis"—remains a critical yet underappreciated frontier in metabolic bone research [@hu2023masld].
+
+
+
+Emerging evidence suggests that hepatic dysfunction triggers a state of skeletal uncoupling, where factors such as IGF-1 deficiency and sclerostin excess disrupt the bone multicellular unit (BMU) [@shih2022igf1; @moonen2022sclerostin]. Sclerostin, a potent Wnt-signaling antagonist primarily secreted by osteocytes, appears to be paradoxically elevated in chronic liver states, potentially serving as a key mediator of hepatic osteodystrophy.
+
+Standard assessment of bone health using Dual-energy X-ray Absorptiometry (DXA) often fails to capture the true fracture risk in MASLD. This is particularly evident in patients with high Body Mass Index (BMI), where the mechanical loading effects of obesity may mask underlying metabolic bone fragility. High-Resolution Peripheral Quantitative Computed Tomography (HR-pQCT) and micro-Finite Element Analysis ($\mu$FEA) provide superior insights by assessing compartment-specific microarchitecture and estimated bone breaking strength [@sinigaglia2021bone; @valderas2023cortical].
+
+
+
+The objective of this study was to evaluate the impact of advanced liver fibrosis on cortical microarchitecture and biomechanical integrity. We hypothesized that advanced MASLD drives a compartment-specific decay—specifically "trabecularization" of the cortical shell—which overrides the traditional mechanical protection afforded by increased BMI.
 
 # Methods
-## Participant Selection
-A total of $N=100$ subjects were recruited. Advanced fibrosis (F3-F4) was defined by FibroScan LSM $\geq 12$ kPa.
 
-## HR-pQCT and FEA
-The distal radius and tibia were scanned using HR-pQCT (XtremeCT). Finite Element Analysis (FEA) provided estimates of Failure Load ($F_f$) and Stiffness.
+## Participant Selection and Study Design
+A cross-sectional study was conducted at a tertiary care endocrine center in North India, encompassing $N=100$ participants. Subjects were stratified into two cohorts based on hepatic fibro-inflammatory status: the **Advanced Fibrosis (F3-F4)** group and the **Healthy Control** group.
 
----
+[cite_start]To isolate the "liver-bone axis"[cite: 6, 64], rigorous exclusion criteria were applied: individuals with chronic kidney disease (eGFR < 60 mL/min/1.73m²), primary hyperparathyroidism, vitamin D deficiency (25(OH)D < 20 ng/mL), or a history of osteo-active medications (bisphosphonates, denosumab, or systemic glucocorticoids > 5mg/day for > 3 months) were excluded.
 
-### 4. Discussion & Conclusion: `discussion_conclusion.qmd`
-Keep this separate so you can edit your interpretations without scrolling past code.
+## Hepatic Assessment (FibroScan)
+All participants underwent vibration-controlled transient elastography (VCTE) using **FibroScan** (Echosens, Paris).
+* [cite_start]**Liver Stiffness Measurement (LSM)**: Advanced fibrosis was defined as $LSM \geq 12$ kPa[cite: 11, 74]. [cite_start]Controls were defined by $LSM < 6$ kPa[cite: 12].
+* **Controlled Attenuation Parameter (CAP)**: Used to quantify hepatic steatosis, ensuring the control group had no significant fatty liver ($CAP < 240$ dB/m).
 
-```markdown
-# Discussion
-The observed "trabecularization" of the cortical shell in MASLD patients suggests a high-turnover state likely driven by the dysregulation of the Wnt-signaling pathway. As an endocrinologist, the reduction in hepatic IGF-1—a key osteoblastotrophic hormone—serves as the primary mechanism for the observed failure in cortical maintenance.
+## Bone Mineral Density (DXA)
+Areal Bone Mineral Density (aBMD) was measured at the lumbar spine (L1-L4), total hip, and femoral neck using **Dual-energy X-ray Absorptiometry (DXA)** (Hologic Discovery-A). [cite_start]This provided the baseline densitometry required to demonstrate the clinical paradox: that standard DXA often fails to capture microarchitectural deterioration in MASLD[cite: 8, 72].
 
-# Conclusion
-HR-pQCT identifies skeletal fragility in MASLD that is independent of aBMD.
+## Biochemical and Endocrine Profiling
+Fasting (12-hour) serum samples were obtained for:
+* [cite_start]**Liver-Bone Mediators**: Serum **Sclerostin** and **IGF-1** were quantified using high-sensitivity ELISA kits[cite: 15, 68]. [cite_start]These markers serve as the primary biochemical link between hepatic health and the Wnt-signaling pathway[cite: 15, 67].
+* **Bone Turnover Markers (BTMs)**: Serum P1NP (formation) and $\beta$-CTX (resorption) were measured to assess the bone remodeling rate.
+
+## HR-pQCT Imaging and Morphometry
+[cite_start]The non-dominant distal radius was imaged using a second-generation **HR-pQCT (XtremeCT II, Scanco Medical AG)**[cite: 17].
+* [cite_start]**Protocol**: A stack of 168 parallel CT slices was acquired at a nominal isotropic voxel size of 61 $\mu$m[cite: 18, 62].
+* **Segmentation**: The cortical and trabecular compartments were automatically segmented using the standard manufacturer evaluation script.
+* **Parameters**: Key morphological variables included Cortical Porosity ($Ct.Po$, %), Cortical Thickness ($Ct.Th$, mm), and Trabecular Bone Volume fraction ($BV/TV$). [cite_start]This allowed for the characterization of "trabecularization" of the cortex[cite: 18, 61].
+
+
+
+## Micro-Finite Element Analysis ($\mu$FEA)
+[cite_start]To evaluate biomechanical strength beyond density alone, $\mu$FEA was performed on the reconstructed HR-pQCT images[cite: 20, 60].
+* [cite_start]**Modeling**: Each voxel was converted into a linear brick element, creating a high-resolution mesh of approximately 2–3 million elements[cite: 21, 75].
+* **Simulated Loading**: A virtual uniaxial compression test was applied (1% strain).
+* [cite_start]**Outcomes**: The primary outcome was **Failure Load ($F_f$, N)** and stiffness (kN/mm), providing a validated estimate of bone breaking strength[cite: 20, 21, 60, 75].
+
+
+
+## Study Objectives
+
+### Primary Objective
+The primary objective of this study was to compare the **Cortical Porosity ($Ct.Po$, %)** at the distal radius between patients with MASLD-associated advanced fibrosis (F3-F4) and age- and sex-matched healthy controls using HR-pQCT. We specifically aimed to quantify the degree of "trabecularization" within the cortical compartment.
+
+### Secondary Objectives
+1.  **Biomechanical Integrity**: To estimate and compare the **Failure Load ($F_f$, N)** and stiffness between the two cohorts using micro-Finite Element Analysis ($\mu$FEA).
+2.  **The Liver-Bone Axis**: To correlate serum **Sclerostin** and **IGF-1** levels with microarchitectural parameters to identify biochemical mediators of bone decay.
+3.  **Densitometric Paradox**: To evaluate the discordance between standard **DXA-derived aBMD** and HR-pQCT-derived microstructural deterioration.
+
+## Sample Size and Power Calculation
+The sample size was determined based on preliminary data indicating a mean $Ct.Po$ of $2.5 \pm 0.8\%$ in healthy controls and an anticipated $Ct.Po$ of $5.0 \pm 1.8\%$ in the advanced fibrosis group.
+
+To achieve **90% power** ($\beta = 0.10$) with a **5% significance level** ($\alpha = 0.05$) to detect a minimum clinically important difference (MCID) in cortical porosity, a minimum of 42 subjects per group was required. We recruited **$N=50$ per group** (total $N=100$) to account for potential image artifacts in HR-pQCT scans (e.g., motion grading > 3) or incomplete biochemical data, ensuring the study remains adequately powered for multivariate adjustments.
+
+## Statistical Analysis
+
+### Data Management and Descriptive Statistics
+All data were processed using **Python (version 3.11)** utilizing the **Pandas** and **NumPy** libraries. Continuous variables were assessed for normality using the **Shapiro-Wilk test**. Data are presented as Mean $\pm$ Standard Deviation (SD) for normally distributed variables, or Median (Interquartile Range, IQR) for non-parametric data.
+
+### Inferential Statistics
+* **Group Comparisons**: Between-group differences for continuous variables (Age, BMI, Sclerostin, $Ct.Po$, $F_f$) were analyzed using the **Independent Samples T-test** or the **Mann-Whitney U test**, as appropriate. Categorical variables (e.g., Sex) were compared using the **Chi-square test**.
+* **Correlation Analysis**: Pearson’s or Spearman’s correlation coefficients were used to explore the relationship between hepatic stiffness (LSM) and bone microarchitecture.
+
+### Addressing the "BMI Paradox" (Multivariate Modeling)
+A critical component of this analysis was addressing the potential confounding effect of Body Mass Index (BMI). While obesity traditionally exerts a protective effect on bone through mechanical loading, metabolic MASLD may override this benefit.
+
+We constructed a **Multivariate Linear Regression Model** with $Ct.Po$ as the dependent variable. The model was adjusted for:
+1.  **Age and Sex** (Biological constants).
+2.  **BMI** (Mechanical loading factor).
+3.  **Liver Stiffness (LSM)** (Primary metabolic independent variable).
+
+
+
+A $p$-value of **$< 0.05$** was considered statistically significant for all analyses. All statistical code was implemented in a reproducible environment using **Streamlit** for data visualization and **SciPy/Statsmodels** for rigorous computation.

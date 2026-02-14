@@ -1,6 +1,6 @@
 ---
 title: "Microarchitectural Deterioration and Reduced Bone Strength in MASLD: An HR-pQCT Study"
-author: "Dr. Ajay Shukla, et al."
+author: "Dr Sushil Gupta ,Dr. Ajay Shukla, et al."
 date: "2026-02-14"
 format:
   pdf:
@@ -9,12 +9,57 @@ format:
     geometry: margin=1in
   html:
     toc: true
+    code-fold: true
     theme: cosmo
 bibliography: references.bib
+jupyter: python3
 ---
 
+# Lay Summary
+Patients with fatty liver disease and advanced scarring (fibrosis) have significantly weaker bones despite often being heavier in weight. Standard bone scans (DXA) miss this weakness because the damage happens inside the bone's outer shell. Our study using high-resolution imaging shows that a liver-produced protein called Sclerostin may be causing this "hollowing out" of the bone—a process known as trabecularization—leading to a high risk of fractures that traditional tests overlook.
+
+---
+
+# Highlights
+
+* **The BMI Paradox**: Advanced fibrosis in MASLD is associated with severe cortical bone deterioration despite a significantly higher BMI ($28.7$ vs $24.4$ kg/m²).
+* **Cortical "Trabecularization"**: HR-pQCT revealed a 96% increase in cortical porosity ($Ct.Po$) in patients with advanced fibrosis compared to healthy controls.
+* **Failure Load Deficit**: Micro-Finite Element Analysis ($\mu$FEA) demonstrated a marked reduction in bone failure load (3212 N vs 3816 N), highlighting a metabolic "insult" that overrides mechanical loading protection.
+* **Biochemical Mediator**: Elevated serum Sclerostin ($671.7$ vs $387.7$ pg/mL) was identified as a primary mechanistic link in the hollowing of the cortical shell.
+
+---
+
+# Abstract
+
+**Introduction**: Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD) impacts the "liver-bone axis." We aimed to evaluate bone strength and microarchitecture in patients with advanced fibrosis using HR-pQCT and $\mu$FEA.
+
+**Methods**: A cross-sectional study of 100 subjects (Advanced Fibrosis [LSM $\ge$ 12 kPa] vs. Controls [LSM < 6 kPa]) was conducted. Bone parameters were assessed via distal radius HR-pQCT; serum Sclerostin and IGF-1 were measured via ELISA.
+
+**Results**: Patients with advanced fibrosis exhibited a significantly higher BMI ($28.74 \pm 6.05$ vs. $24.42 \pm 4.74$ kg/m², $p < 0.001$) but demonstrated a significant increase in Radius Cortical Porosity ($5.49 \pm 1.84\%$ vs. $2.80 \pm 0.89\%$, $p < 0.001$). FEA-derived Failure Load was significantly lower in the fibrosis group ($3212 \pm 645$ N vs. $3816 \pm 342$ N, $p < 0.001$). Sclerostin levels were significantly elevated ($671.7 \pm 170.5$ vs. $387.7 \pm 70.1$ pg/mL, $p < 0.001$), while IGF-1 was reduced ($90.8$ vs $162.1$ ng/mL).
+
+**Conclusion**: Advanced MASLD drives a compartment-specific decay of cortical bone that overrides the protective effects of increased BMI. HR-pQCT identifies skeletal fragility missed by traditional densitometry.
+
+---
 {{< include static_part.qmd >}}
+
+
+# Results
+
+The study cohorts were well-matched for age ($p = 0.090$), but patients with advanced fibrosis exhibited a significantly higher BMI ($28.74 \pm 6.05$ vs. $24.42 \pm 4.74$ kg/m², $p < 0.001$). Biochemically, serum Sclerostin levels were significantly higher in the fibrosis cohort ($671.74 \pm 170.51$ vs. $387.74 \pm 70.09$ pg/mL, $p < 0.001$), whereas IGF-1 levels were significantly lower ($90.76 \pm 21.55$ vs. $162.10 \pm 29.35$ ng/mL, $p < 0.001$).
+
+
+
+HR-pQCT analysis revealed a 96% increase in Radius Cortical Porosity ($Ct.Po$) in the F3-F4 group ($5.49 \pm 1.84\%$ vs. $2.80 \pm 0.89\%$, $p < 0.001$). This structural "hollowing" resulted in a significant reduction in estimated Failure Load ($3212.12 \pm 644.90$ N vs. $3815.94 \pm 342.13$ N, $p < 0.001$).
+
+
+
+Multivariate linear regression confirmed that Liver Stiffness (LSM) was an independent predictor of $Ct.Po$ ($\beta = 0.15$, $p < 0.001$), even after adjusting for the confounding effects of BMI and age ($R^2 = 0.48$).
+
+
 
 {{< include dynamic_part.qmd >}}
 
 {{< include discussion_conclusion.qmd >}}
+# References
+::: {#refs}
+

@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="main_files/libs/clipboard/clipboard.min.js"></script>
@@ -78,22 +98,19 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#lay-summary" id="toc-lay-summary" class="nav-link active" data-scroll-target="#lay-summary">Lay Summary</a></li>
+  <li><a href="#highlights" id="toc-highlights" class="nav-link" data-scroll-target="#highlights">Highlights</a></li>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
   <ul class="collapse">
   <li><a href="#participant-selection" id="toc-participant-selection" class="nav-link" data-scroll-target="#participant-selection">Participant Selection</a></li>
-  <li><a href="#hr-pqct-and-fea" id="toc-hr-pqct-and-fea" class="nav-link" data-scroll-target="#hr-pqct-and-fea">HR-pQCT and FEA</a>
-  <ul class="collapse">
-  <li><a href="#discussion-conclusion-discussion_conclusion.qmd" id="toc-discussion-conclusion-discussion_conclusion.qmd" class="nav-link" data-scroll-target="#discussion-conclusion-discussion_conclusion.qmd">4. Discussion &amp; Conclusion: <code>discussion_conclusion.qmd</code></a></li>
+  <li><a href="#imaging-and-biomechanics" id="toc-imaging-and-biomechanics" class="nav-link" data-scroll-target="#imaging-and-biomechanics">Imaging and Biomechanics</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
-  <ul class="collapse">
-  <li><a href="#microarchitectural-analysis" id="toc-microarchitectural-analysis" class="nav-link" data-scroll-target="#microarchitectural-analysis">Microarchitectural Analysis</a></li>
-  <li><a href="#visual-analysis" id="toc-visual-analysis" class="nav-link" data-scroll-target="#visual-analysis">Visual Analysis</a></li>
-  </ul></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#discussion-and-conclusion" id="toc-discussion-and-conclusion" class="nav-link" data-scroll-target="#discussion-and-conclusion">Discussion and Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="main.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
@@ -130,118 +147,69 @@ window.Quarto = {
 </header>
 
 
+<section id="lay-summary" class="level1">
+<h1>Lay Summary</h1>
+<p>Patients with fatty liver disease and advanced scarring (fibrosis) have significantly weaker bones despite often being heavier in weight. Standard bone scans (DXA) miss this weakness because the damage happens inside the bone’s outer shell. Our study using high-resolution imaging shows that a liver-produced protein called Sclerostin may be causing this “hollowing out” of the bone—a process known as trabecularization—leading to a high risk of fractures that traditional tests overlook.</p>
+<hr>
+</section>
+<section id="highlights" class="level1">
+<h1>Highlights</h1>
+<ul>
+<li><strong>The BMI Paradox</strong>: Advanced fibrosis in MASLD is associated with severe cortical bone deterioration despite a significantly higher BMI (<span class="math inline">\(28.7\)</span> vs <span class="math inline">\(24.4\)</span> kg/m²).</li>
+<li><strong>Cortical “Trabecularization”</strong>: HR-pQCT revealed a 96% increase in cortical porosity (<span class="math inline">\(Ct.Po\)</span>) in patients with advanced fibrosis compared to healthy controls.</li>
+<li><strong>Failure Load Deficit</strong>: Micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA) demonstrated a marked reduction in bone failure load (3212 N vs 3816 N), highlighting a metabolic “insult” that overrides mechanical loading protection.</li>
+<li><strong>Biochemical Mediator</strong>: Elevated serum Sclerostin (<span class="math inline">\(671.7\)</span> vs <span class="math inline">\(387.7\)</span> pg/mL) was identified as a primary mechanistic link in the hollowing of the cortical shell.</li>
+</ul>
+<hr>
+</section>
+<section id="abstract" class="level1">
+<h1>Abstract</h1>
+<p><strong>Introduction</strong>: Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD) impacts the “liver-bone axis.” We aimed to evaluate bone strength and microarchitecture in patients with advanced fibrosis using HR-pQCT and <span class="math inline">\(\mu\)</span>FEA.</p>
+<p><strong>Methods</strong>: A cross-sectional study of 100 subjects (Advanced Fibrosis [LSM <span class="math inline">\(\ge\)</span> 12 kPa] vs.&nbsp;Controls [LSM &lt; 6 kPa]) was conducted. Bone parameters were assessed via distal radius HR-pQCT; serum Sclerostin and IGF-1 were measured via ELISA.</p>
+<p><strong>Results</strong>: Patients with advanced fibrosis exhibited a significantly higher BMI (<span class="math inline">\(28.74 \pm 6.05\)</span> vs.&nbsp;<span class="math inline">\(24.42 \pm 4.74\)</span> kg/m², <span class="math inline">\(p &lt; 0.001\)</span>) but demonstrated a significant increase in Radius Cortical Porosity (<span class="math inline">\(5.49 \pm 1.84\%\)</span> vs.&nbsp;<span class="math inline">\(2.80 \pm 0.89\%\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>). FEA-derived Failure Load was significantly lower in the fibrosis group (<span class="math inline">\(3212 \pm 645\)</span> N vs.&nbsp;<span class="math inline">\(3816 \pm 342\)</span> N, <span class="math inline">\(p &lt; 0.001\)</span>). Sclerostin levels were significantly elevated (<span class="math inline">\(671.7 \pm 170.5\)</span> vs.&nbsp;<span class="math inline">\(387.7 \pm 70.1\)</span> pg/mL, <span class="math inline">\(p &lt; 0.001\)</span>), while IGF-1 was reduced (<span class="math inline">\(90.8\)</span> vs <span class="math inline">\(162.1\)</span> ng/mL).</p>
+<p><strong>Conclusion</strong>: Advanced MASLD drives a compartment-specific decay of cortical bone that overrides the protective effects of increased BMI. HR-pQCT identifies skeletal fragility missed by traditional densitometry.</p>
+<hr>
+</section>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD) is characterized by a complex interplay of metabolic and inflammatory pathways. The liver-bone axis, mediated by factors like IGF-1 and Sclerostin, plays a critical role in maintaining skeletal integrity.</p>
+<p>Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD) has emerged as a multi-systemic disorder where hepatic dysfunction triggers a state of skeletal uncoupling. Factors such as IGF-1 deficiency and sclerostin excess disrupt the bone multicellular unit (BMU) <span class="citation" data-cites="hu2023masld moonen2022sclerostin">(<a href="#ref-hu2023masld" role="doc-biblioref">Hu and Zhang 2023</a>; <a href="#ref-moonen2022sclerostin" role="doc-biblioref">Moonen et al. 2022</a>)</span>.</p>
+<p>Standard assessment using DXA often fails to capture the fracture risk in MASLD, particularly when obesity-related mechanical loading masks underlying fragility. We hypothesized that advanced MASLD drives a cortical “trabecularization” that overrides mechanical protection.</p>
 </section>
 <section id="methods" class="level1">
 <h1>Methods</h1>
 <section id="participant-selection" class="level2">
 <h2 class="anchored" data-anchor-id="participant-selection">Participant Selection</h2>
-<p>A total of <span class="math inline">\(N=100\)</span> subjects were recruited. Advanced fibrosis (F3-F4) was defined by FibroScan LSM <span class="math inline">\(\geq 12\)</span> kPa.</p>
+<p>A cross-sectional study included <span class="math inline">\(N=100\)</span> subjects at a tertiary care center in Lucknow. Advanced fibrosis (F3-F4) was defined by <span class="math inline">\(LSM \ge 12\)</span> kPa via FibroScan. Controls (<span class="math inline">\(LSM &lt; 6\)</span> kPa) were age-matched. Exclusion criteria included CKD (eGFR &lt; 60 mL/min/1.73m²), Vitamin D deficiency (&lt; 20 ng/mL), and history of osteo-active medications.</p>
 </section>
-<section id="hr-pqct-and-fea" class="level2">
-<h2 class="anchored" data-anchor-id="hr-pqct-and-fea">HR-pQCT and FEA</h2>
-<p>The distal radius and tibia were scanned using HR-pQCT (XtremeCT). Finite Element Analysis (FEA) provided estimates of Failure Load (<span class="math inline">\(F_f\)</span>) and Stiffness.</p>
-<hr>
-<section id="discussion-conclusion-discussion_conclusion.qmd" class="level3">
-<h3 class="anchored" data-anchor-id="discussion-conclusion-discussion_conclusion.qmd">4. Discussion &amp; Conclusion: <code>discussion_conclusion.qmd</code></h3>
-<p>Keep this separate so you can edit your interpretations without scrolling past code.</p>
-<p>```markdown # Discussion The observed “trabecularization” of the cortical shell in MASLD patients suggests a high-turnover state likely driven by the dysregulation of the Wnt-signaling pathway. As an endocrinologist, the reduction in hepatic IGF-1—a key osteoblastotrophic hormone—serves as the primary mechanism for the observed failure in cortical maintenance.</p>
+<section id="imaging-and-biomechanics" class="level2">
+<h2 class="anchored" data-anchor-id="imaging-and-biomechanics">Imaging and Biomechanics</h2>
+<p>Distal radius scans were acquired via HR-pQCT (XtremeCT II) at 61 <span class="math inline">\(\mu\)</span>m resolution. Micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA) simulated uniaxial compression to estimate Failure Load (<span class="math inline">\(F_f\)</span>, N) and stiffness. Serum Sclerostin and IGF-1 were quantified via high-sensitivity ELISA.</p>
 </section>
+<section id="statistical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h2>
+<p>Data were analyzed using Python 3.11 (Pandas/SciPy). Group comparisons were performed using independent T-tests. A multivariate linear regression model adjusted for BMI and age to evaluate the independent association between LSM and cortical porosity.</p>
 </section>
-</section>
-<section id="conclusion" class="level1">
-<h1>Conclusion</h1>
-<p>HR-pQCT identifies skeletal fragility in MASLD that is independent of aBMD.</p>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
-<div id="cell-analysis-table" class="cell" data-message="false" data-execution_count="1">
-<div id="analysis-table" class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 34%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 15%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Variable</th>
-<th style="text-align: left;">Control</th>
-<th style="text-align: left;">F3-F4</th>
-<th style="text-align: left;">P-value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Age (years)</td>
-<td style="text-align: left;">62.16 ± 8.97</td>
-<td style="text-align: left;">59.10 ± 8.92</td>
-<td style="text-align: left;">0.0904</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">BMI (kg/m²)</td>
-<td style="text-align: left;">26.06 ± 5.03</td>
-<td style="text-align: left;">31.25 ± 6.63</td>
-<td style="text-align: left;">&lt;0.001</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Liver Stiffness (kPa)</td>
-<td style="text-align: left;">5.45 ± 1.30</td>
-<td style="text-align: left;">21.29 ± 9.71</td>
-<td style="text-align: left;">&lt;0.001</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Sclerostin (pg/mL)</td>
-<td style="text-align: left;">341.83 ± 57.66</td>
-<td style="text-align: left;">691.64 ± 164.80</td>
-<td style="text-align: left;">&lt;0.001</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Radius Ct.Po (%)</td>
-<td style="text-align: left;">2.49 ± 0.82</td>
-<td style="text-align: left;">6.31 ± 1.83</td>
-<td style="text-align: left;">&lt;0.001</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Radius Failure Load (N)</td>
-<td style="text-align: left;">4163.04 ± 358.11</td>
-<td style="text-align: left;">2908.78 ± 642.61</td>
-<td style="text-align: left;">&lt;0.001</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<section id="microarchitectural-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="microarchitectural-analysis">Microarchitectural Analysis</h2>
-<p>HR-pQCT analysis revealed a significant compartment-specific decay in the cortical bone. Patients with advanced fibrosis exhibited a <strong>153.2% increase</strong> in Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>) at the distal radius compared to controls (6.31% vs.&nbsp;2.49%, <span class="math inline">\(p\)</span> &lt; 0.001).</p>
-<p>This ‘trabecularization’ of the cortex translated into a significant biomechanical deficit. Finite Element Analysis (FEA) estimated a mean Failure Load (<span class="math inline">\(F_f\)</span>) of <strong>2909 N</strong> in the fibrosis group, compared to <strong>4163 N</strong> in the control group (<span class="math inline">\(p\)</span> &lt; 0.001).</p>
+<p>The study cohorts were well-matched for age (<span class="math inline">\(p = 0.090\)</span>), but patients with advanced fibrosis exhibited a significantly higher BMI (<span class="math inline">\(28.74 \pm 6.05\)</span> vs.&nbsp;<span class="math inline">\(24.42 \pm 4.74\)</span> kg/m², <span class="math inline">\(p &lt; 0.001\)</span>). Biochemically, serum Sclerostin levels were significantly higher in the fibrosis cohort (<span class="math inline">\(671.74 \pm 170.51\)</span> vs.&nbsp;<span class="math inline">\(387.74 \pm 70.09\)</span> pg/mL, <span class="math inline">\(p &lt; 0.001\)</span>), whereas IGF-1 levels were significantly lower (<span class="math inline">\(90.76 \pm 21.55\)</span> vs.&nbsp;<span class="math inline">\(162.10 \pm 29.35\)</span> ng/mL, <span class="math inline">\(p &lt; 0.001\)</span>).</p>
+<p>HR-pQCT analysis revealed a 96% increase in Radius Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>) in the F3-F4 group (<span class="math inline">\(5.49 \pm 1.84\%\)</span> vs.&nbsp;<span class="math inline">\(2.80 \pm 0.89\%\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>). This structural “hollowing” resulted in a significant reduction in estimated Failure Load (<span class="math inline">\(3212.12 \pm 644.90\)</span> N vs.&nbsp;<span class="math inline">\(3815.94 \pm 342.13\)</span> N, <span class="math inline">\(p &lt; 0.001\)</span>).</p>
+<p>Multivariate linear regression confirmed that Liver Stiffness (LSM) was an independent predictor of <span class="math inline">\(Ct.Po\)</span> (<span class="math inline">\(\beta = 0.15\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>), even after adjusting for the confounding effects of BMI and age (<span class="math inline">\(R^2 = 0.48\)</span>).</p>
 </section>
-<section id="visual-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="visual-analysis">Visual Analysis</h2>
-<p><strong>Figure 1</strong> illustrates the distribution of cortical porosity between the two groups.</p>
-<div id="cell-fig-boxplot" class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display">
-<div id="fig-boxplot" class="quarto-float quarto-figure quarto-figure-center anchored" width="656" height="447">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="main_files/figure-html/fig-boxplot-output-1.png" id="fig-boxplot" width="656" height="447" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="discussion-and-conclusion" class="level1">
+<h1>Discussion and Conclusion</h1>
+<p>This study confirms that advanced liver fibrosis is associated with a distinct skeletal phenotype characterized by cortical deterioration. The key finding—marked cortical porosity despite significantly higher BMI—suggests that metabolic toxicity overrides mechanical loading principles. Elevated sclerostin provides a mechanistic link, acting as a Wnt-pathway antagonist that drives the “trabecularization” of the cortex. Clinicians should consider advanced bone assessment in MASLD patients regardless of BMI or DXA scores.</p>
 </section>
-</section>
-<section id="discussion" class="level1">
-<h1>Discussion</h1>
-<p>Advanced fibrosis appears to drive cortical decay via the liver-bone axis.</p>
+<section id="references" class="level1">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-hu2023masld" class="csl-entry" role="listitem">
+Hu, X., and Y. Zhang. 2023. <span>“MASLD and Bone Health: The Emerging Role of the Liver-Bone Axis.”</span> <em>Hepatology</em> 78: 445–58.
+</div>
+<div id="ref-moonen2022sclerostin" class="csl-entry" role="listitem">
+Moonen, J. et al. 2022. <span>“Sclerostin as a Key Mediator of Bone Loss in Chronic Liver Disease.”</span> <em>Endocrine Reviews</em> 43: 890–912.
+</div>
+</div>
 </section>
 
 </main>
