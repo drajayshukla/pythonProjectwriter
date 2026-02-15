@@ -17,34 +17,34 @@ The objective of this study was to evaluate the impact of advanced liver fibrosi
 ## Participant Selection and Study Design
 A cross-sectional study was conducted at a tertiary care endocrine center in North India, encompassing $N=100$ participants. Subjects were stratified into two cohorts based on hepatic fibro-inflammatory status: the **Advanced Fibrosis (F3-F4)** group and the **Healthy Control** group.
 
-[cite_start]To isolate the "liver-bone axis"[cite: 6, 64], rigorous exclusion criteria were applied: individuals with chronic kidney disease (eGFR < 60 mL/min/1.73m²), primary hyperparathyroidism, vitamin D deficiency (25(OH)D < 20 ng/mL), or a history of osteo-active medications (bisphosphonates, denosumab, or systemic glucocorticoids > 5mg/day for > 3 months) were excluded.
+To isolate the "liver-bone axis", rigorous exclusion criteria were applied: individuals with chronic kidney disease (eGFR < 60 mL/min/1.73m²), primary hyperparathyroidism, vitamin D deficiency (25(OH)D < 20 ng/mL), or a history of osteo-active medications (bisphosphonates, denosumab, or systemic glucocorticoids > 5mg/day for > 3 months) were excluded.
 
 ## Hepatic Assessment (FibroScan)
 All participants underwent vibration-controlled transient elastography (VCTE) using **FibroScan** (Echosens, Paris).
-* [cite_start]**Liver Stiffness Measurement (LSM)**: Advanced fibrosis was defined as $LSM \geq 12$ kPa[cite: 11, 74]. [cite_start]Controls were defined by $LSM < 6$ kPa[cite: 12].
+* **Liver Stiffness Measurement (LSM)**: Advanced fibrosis was defined as $LSM \geq 12$ kPa. Controls were defined by $LSM < 6$ kPa.
 * **Controlled Attenuation Parameter (CAP)**: Used to quantify hepatic steatosis, ensuring the control group had no significant fatty liver ($CAP < 240$ dB/m).
 
 ## Bone Mineral Density (DXA)
-Areal Bone Mineral Density (aBMD) was measured at the lumbar spine (L1-L4), total hip, and femoral neck using **Dual-energy X-ray Absorptiometry (DXA)** (Hologic Discovery-A). [cite_start]This provided the baseline densitometry required to demonstrate the clinical paradox: that standard DXA often fails to capture microarchitectural deterioration in MASLD[cite: 8, 72].
+Areal Bone Mineral Density (aBMD) was measured at the lumbar spine (L1-L4), total hip, and femoral neck using **Dual-energy X-ray Absorptiometry (DXA)** (Hologic Discovery-A). This provided the baseline densitometry required to demonstrate the clinical paradox: that standard DXA often fails to capture microarchitectural deterioration in MASLD.
 
 ## Biochemical and Endocrine Profiling
 Fasting (12-hour) serum samples were obtained for:
-* [cite_start]**Liver-Bone Mediators**: Serum **Sclerostin** and **IGF-1** were quantified using high-sensitivity ELISA kits[cite: 15, 68]. [cite_start]These markers serve as the primary biochemical link between hepatic health and the Wnt-signaling pathway[cite: 15, 67].
+* **Liver-Bone Mediators**: Serum **Sclerostin** and **IGF-1** were quantified using high-sensitivity ELISA kits. These markers serve as the primary biochemical link between hepatic health and the Wnt-signaling pathway.
 * **Bone Turnover Markers (BTMs)**: Serum P1NP (formation) and $\beta$-CTX (resorption) were measured to assess the bone remodeling rate.
 
 ## HR-pQCT Imaging and Morphometry
-[cite_start]The non-dominant distal radius was imaged using a second-generation **HR-pQCT (XtremeCT II, Scanco Medical AG)**[cite: 17].
-* [cite_start]**Protocol**: A stack of 168 parallel CT slices was acquired at a nominal isotropic voxel size of 61 $\mu$m[cite: 18, 62].
+The non-dominant distal radius was imaged using a second-generation **HR-pQCT (XtremeCT II, Scanco Medical AG)**.
+* **Protocol**: A stack of 168 parallel CT slices was acquired at a nominal isotropic voxel size of 61 $\mu$m.
 * **Segmentation**: The cortical and trabecular compartments were automatically segmented using the standard manufacturer evaluation script.
-* **Parameters**: Key morphological variables included Cortical Porosity ($Ct.Po$, %), Cortical Thickness ($Ct.Th$, mm), and Trabecular Bone Volume fraction ($BV/TV$). [cite_start]This allowed for the characterization of "trabecularization" of the cortex[cite: 18, 61].
+* **Parameters**: Key morphological variables included Cortical Porosity ($Ct.Po$, %), Cortical Thickness ($Ct.Th$, mm), and Trabecular Bone Volume fraction ($BV/TV$). This allowed for the characterization of "trabecularization" of the cortex.
 
 
 
 ## Micro-Finite Element Analysis ($\mu$FEA)
-[cite_start]To evaluate biomechanical strength beyond density alone, $\mu$FEA was performed on the reconstructed HR-pQCT images[cite: 20, 60].
-* [cite_start]**Modeling**: Each voxel was converted into a linear brick element, creating a high-resolution mesh of approximately 2–3 million elements[cite: 21, 75].
+To evaluate biomechanical strength beyond density alone, $\mu$FEA was performed on the reconstructed HR-pQCT images.
+* **Modeling**: Each voxel was converted into a linear brick element, creating a high-resolution mesh of approximately 2–3 million elements.
 * **Simulated Loading**: A virtual uniaxial compression test was applied (1% strain).
-* [cite_start]**Outcomes**: The primary outcome was **Failure Load ($F_f$, N)** and stiffness (kN/mm), providing a validated estimate of bone breaking strength[cite: 20, 21, 60, 75].
+* **Outcomes**: The primary outcome was **Failure Load ($F_f$, N)** and stiffness (kN/mm), providing a validated estimate of bone breaking strength.
 
 
 

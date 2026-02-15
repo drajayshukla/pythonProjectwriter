@@ -20,7 +20,3 @@ As a potent antagonist of bone formation, increased sclerostin levels likely dri
 
 HR-pQCT identifies skeletal fragility in MASLD that is independent of aBMD [@sinigaglia2021bone]. Clinicians should consider bone health assessment—specifically looking at cortical parameters—in patients with advanced fibrosis, regardless of their BMI or dual-energy X-ray absorptiometry (DXA) scores [@hu2023masld].
 
-# References
-
-::: {#refs}
-:::

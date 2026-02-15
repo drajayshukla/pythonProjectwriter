@@ -60,6 +60,7 @@ Multivariate linear regression confirmed that Liver Stiffness (LSM) was an indep
 {{< include dynamic_part.qmd >}}
 
 {{< include discussion_conclusion.qmd >}}
+
 # References
 ::: {#refs}
 
