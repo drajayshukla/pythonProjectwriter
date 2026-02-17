@@ -1,0 +1,9 @@
+
+## Multivariable Risk Modeling
+
+To determine independent fracture risk, we adjusted for Age, BMI, and Total Hip $aBMD$.
+
+* **Trabecular Driver:** In general osteopenia, **Radius $Tb.N$** remained the strongest predictor ($aOR = 2.59$, $p < 0.001$).
+* **Cortical Switch:** In diabetic osteopenia, **Radius $Ct.Po$** emerged as the dominant predictor ($aOR = 1.94$, $p < 0.05$).
+
+This dissociation proves that HR-pQCT identifies specific structural failure modes that DXA misses.

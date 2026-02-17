@@ -3,14 +3,91 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/MAFLD_HRPQCT/DATA/liver_hrpqct_filled.csv">
+        <entry key="/HRPQCT_BMD_TBS_FRAX/DBT_final.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/indianfrax/indianfrax.csv">
+        <entry key="/HRPQCT_BMD_TBS_FRAX/data/03_final/cohort_osteopenia_diabetes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/data/03_final/cohort_osteopenia_n91.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/data/03_final/cohort_total_diabetes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/data/03_final/cohort_total_n215.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/results/tables/Table1_Demographics.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/results/tables/Table2_LogisticModels.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/results/tables/stats_total_dm.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/scripts/results/tables/Table2_Radius_Parameters.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/scripts/results/tables/Table3_Tibia_Parameters.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/LitReview_Engine/output/01_raw_search.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/LitReview_Engine/output/02_scored_papers.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/MAFLD_HRPQCT/DATA/liver_hrpqct_filled.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

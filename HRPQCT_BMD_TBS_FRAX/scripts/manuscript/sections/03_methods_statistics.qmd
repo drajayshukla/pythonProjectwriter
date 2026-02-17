@@ -1,0 +1,4 @@
+
+## Statistical Analysis
+
+Data were analyzed using Python (v3.11). Group differences were assessed via Student's t-test or Mann-Whitney U-test. To verify the independent value of HR-pQCT, multivariable logistic regression models were constructed, adjusting for Age, BMI, and Total Hip $aBMD$. Adjusted Odds Ratios (aOR) are reported per 1-SD change.

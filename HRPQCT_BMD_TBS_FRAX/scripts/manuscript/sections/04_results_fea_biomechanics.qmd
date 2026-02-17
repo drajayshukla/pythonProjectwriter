@@ -1,0 +1,8 @@
+
+## Biomechanical Competence ($\mu$FEA)
+
+**General Osteopenia ($n=91$):**
+Radius **Failure Load** was $14.3\%$ lower in fracturers ($p = 0.03$), driven by the loss of trabecular connectivity.
+
+**Diabetic Osteopenia ($n=66$):**
+Tibia **Failure Load** was $16.8\%$ lower in fracturers ($p = 0.01$). Critically, in this group, failure load was strongly correlated with **Cortical Porosity** ($r = -0.48$, $p < 0.01$), confirming that porosity acts as the primary stress riser in diabetic bone.

@@ -1,0 +1,63 @@
+# Results
+
+## Primary Objective: The Osteopenic "Grey Zone" ($n=91$)
+
+The primary analysis focused on the 91 postmenopausal women with osteopenia ($T$-score between -1.0 and -2.5).
+
+### Clinical Characteristics
+As mandated by the study design, there were no significant differences in age or BMI between the fracture and control groups ($p > 0.05$). Crucially, **$aBMD$ failed to discriminate fracture status** in this sub-cohort. Neither FRAX, TBS, nor Neck T-score provided significant discrimination.
+
+{{< include /results/tables/Table1_Clinical.md >}}
+
+### The Structural "Quality" Defect
+In sharp contrast to the clinical parameters, HR-pQCT revealed a profound structural failure in the fracture group. This fragility was characterized by **Trabecular Disconnection** (reduced $Tb.N$) and volumetric density loss.
+
+{{< include /results/tables/Table2_Structural_Osteopenia_Full.md >}}
+
+### Clinical vs. Structural Prediction (The "Grey Zone" Challenge)
+To determine the utility of advanced imaging, we compared the diagnostic performance of a comprehensive **Clinical Model** (BMD + TBS + FRAX) against the **Structural Model** (HR-pQCT parameters).
+
+{{< include /results/tables/Table_AUC_Comparison.md >}}
+
+Despite including FRAX and TBS, the Clinical Model achieved an AUC of only 0.60, highlighting the limitations of current tools in the osteopenic population. In contrast, the Structural Model (incorporating connectivity, density, and strength) achieved a superior AUC of 0.73.
+
+![**Model Comparison.** ROC curves illustrating the significant diagnostic gain achieved by integrating HR-pQCT and $\mu$FEA parameters compared to the standard clinical assessment (BMD+TBS+FRAX).](/results/figures/Fig_Comparision_ROC.png){#fig-model-comp width=80%}
+
+---
+
+## Secondary Objective A: Validation in the General Cohort ($N=215$)
+
+To validate these findings, we assessed the total cohort. The effect sizes observed in the grey zone were amplified in the general population, confirming that **Trabecular Disconnection** is a universal driver of fragility.
+
+{{< include /results/tables/Table3_Structural_Total_Full.md >}}
+
+---
+
+## Secondary Objective B: The T2DM Phenotype
+
+Subgroup analysis of the osteopenic women with Type 2 Diabetes ($n=66$) revealed a distinct phenotypic shift. We tested the hypothesis that diabetes acts as a "Cortical Switch." **However, the data revealed a different reality.**
+
+{{< include /results/tables/Table4_Structural_Diabetes_Osteopenia_Full.md >}}
+
+### Diabetic Metabolic Profile (Reviewer Context)
+To investigate the lack of cortical porosity ("Cortical Switch"), we analyzed the metabolic profile of the diabetic sub-cohort.
+
+{{< include /results/tables/Table1B_Diabetes_Characteristics.md >}}
+
+The diabetic cohort was characterized by a **moderate duration of disease** (~7 years) and **reasonable glycemic control** (HbA1c ~7.2%). This supports our "Temporal Hierarchy" hypothesis: this cohort represents the **Early Phase** of diabetic bone disease.
+
+![**Microarchitecture in Diabetic Osteopenia.** Comparison of cortical and trabecular compartments. Note that while cortical porosity is visible, statistical analysis confirms that **Trabecular Disconnection** ($d=0.99$) is the primary driver of fragility, dominating the cortical signal ($d=0.28$). **(Visual Hypothesis: Osteopenia $\rightarrow$ Trabecular Failure; Osteoporosis $\rightarrow$ Cortical Failure).**](/results/figures/Fig3_Porosity_Diabetes.png){#fig-diabetes width=70%}
+
+**Key Finding:** Contrary to expectation, **Cortical Porosity** was not a significant discriminator ($p=0.26, d=0.28$). Instead, the diabetic group exhibited **severe Trabecular Disconnection** ($d=0.99$), suggesting that in the osteopenic phase, diabetes accelerates trabecular decay rather than cortical porosity.
+
+### Independent Predictors of Diabetic Fragility (Multivariable Analysis)
+To rule out confounding by cortical parameters, we performed a multivariable logistic regression.
+
+{{< include /results/tables/Table4B_Multivariable_Diabetes.md >}}
+
+**Crucially, even after adjusting for Age, BMI, and Cortical Porosity, Trabecular Disconnection ($Tb.N$) remained the only significant independent predictor of fracture ($p=0.001$).** Cortical porosity failed to discriminate ($p=0.72$), confirming that trabecular decay drives early diabetic fragility.
+
+### Total Diabetic Cohort Data ($N=140$)
+For completeness, we provide the comprehensive HR-pQCT parameters for the entire diabetic cohort.
+
+{{< include /results/tables/Table5_Structural_Diabetes_Total_Full.md >}}

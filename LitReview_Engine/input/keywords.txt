@@ -1,0 +1,4 @@
+HR-pQCT osteopenia fracture discrimination
+HR-pQCT type 2 diabetes cortical porosity
+trabecular bone score osteopenia fracture
+HR-pQCT failure load finite element analysis

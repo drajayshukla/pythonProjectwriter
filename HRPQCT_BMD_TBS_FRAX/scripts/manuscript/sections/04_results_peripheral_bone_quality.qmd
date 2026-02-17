@@ -1,0 +1,8 @@
+
+## Peripheral Bone Microarchitecture and Quality
+
+**Osteopenic Sub-cohort ($n=91$): The Trabecular Driver**
+In the primary "Grey Zone" cohort, HR-pQCT revealed a profound deficit in trabecular integrity. At the distal radius, women with fractures exhibited significantly lower **Trabecular Number ($Tb.N$)** compared to controls ($-11.6\%$, $p < 0.001$). This was the dominant structural failure mode.
+
+**Diabetic Osteopenia ($n=66$): The Cortical Switch**
+A distinct "Cortical Phenotype" emerged in the diabetic osteopenic subgroup. While trabecular deficits were present, the most striking failure was in the cortical envelope. At the distal tibia, diabetic fracture subjects (DMFx) displayed a significant increase in **Cortical Porosity ($Ct.Po$)** ($+58.1\%$, $p = 0.005$) compared to diabetic controls. This "Swiss-Cheese" transformation drives fragility in the weight-bearing skeleton of diabetic patients.

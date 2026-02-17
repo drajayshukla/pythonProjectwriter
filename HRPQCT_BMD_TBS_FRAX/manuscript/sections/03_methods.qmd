@@ -1,0 +1,20 @@
+# Materials and Methods
+
+## Study Design and Participants
+This cross-sectional, observational study was conducted at a tertiary care metabolic bone center. We recruited 215 postmenopausal women to evaluate the structural determinants of skeletal fragility. To ensure data integrity for advanced biomechanical modeling, we utilized an "Strict image quality inclusion criteria": participants were only included if they successfully completed both DXA and HR-pQCT of the distal radius. Of the 227 initially screened participants, 12 (5.3%) were excluded due to significant motion artifacts (Scanco Grade 4 or 5) to prevent resolution-induced bias, resulting in the final cohort of 215.
+
+![**Study Flowchart.** Recruitment, exclusion, and stratification of the study population.](../results/figures/Fig1_Consort.png){#fig-consort width=90%}
+
+
+The study architecture was designed to address three hierarchical objectives:
+1.  **Primary Objective (The "Grey Zone"):** Discrimination of fracture status within the osteopenic sub-cohort ($n=91$; 47 fractures, 44 controls), defined by a WHO $T$-score between -1.0 and -2.5.
+2.  **Secondary Objective A (Total Cohort Validation):** Validation of structural markers across the total population ($N=215$; 118 fractures, 97 controls).
+3.  **Secondary Objective B (T2DM Phenotyping):** Characterization of the Type 2 Diabetes Mellitus (T2DM) impact as a structural modifier.
+
+## Clinical and Densitometric Assessment
+Areal Bone Mineral Density ($aBMD$, g/cm²) and $T$-scores were measured at the lumbar spine ($L1-L4$), femoral neck, and total hip (Prodigy, GE Lunar). The Trabecular Bone Score (TBS) was derived from spine DXA images. 10-year fracture probability was calculated using the FRAX® tool [@meilinghuangPerformanceHRpQCTDXA2021]..
+
+## HR-pQCT Imaging and $\mu$FEA
+Volumetric BMD ($vBMD$) and microarchitecture were assessed using an XtremeCT II scanner (Scanco Medical AG, Switzerland) with an isotropic voxel size of 61 $\mu$m. 
+* **Morphological Parameters:** Key outcomes included total $vBMD$ ($Tt.vBMD$), trabecular number ($Tb.N$), and cortical porosity ($Ct.Po$).
+* **Biomechanical Competence ($\mu$FEA):** A linear $\mu$FEA solver was used to simulate a uniaxial compression test (1% apparent strain) to derive Failure Load ($F.Load$, N) and Stiffness (kN/mm). Boundary conditions simulated uniaxial compression between frictionless platens. Elements were assigned a homogeneous isotropic tissue modulus of 6829 MPa and a Poisson's ratio of 0.3, consistent with the standard Scanco FE evaluation protocol.

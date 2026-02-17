@@ -1,0 +1,12 @@
+
+## Areal Bone Mineral Density (aBMD)
+
+Dual-energy X-ray absorptiometry (DXA) was performed in all 215 subjects. In the total cohort, mean $T$-scores at the lumbar spine (L1-L4) and femoral neck were within the osteopenic range for both the fracture and control groups, confirming the "grey zone" status of the study population (Figure 2).
+
+### Osteopenic Sub-cohort ($n=91$)
+In the primary osteopenic sub-cohort, densitometry failed to discriminate between fracture and non-fracture status.
+* **Lumbar Spine:** $aBMD$ was similar between Fx ($n=47$) and Co ($n=44$) groups ($0.86 \pm 0.09$ vs $0.88 \pm 0.08$ g/cm²; $-2.3\%$, $p = 0.110$).
+* **Femoral Neck:** $aBMD$ was virtually identical ($p = 0.713$).
+
+### Diabetic Sub-cohorts
+Notably, in the **Diabetic Osteopenia ($n=66$)** subgroup, $aBMD$ values were paradoxically preserved in the fracture group ($+1.4\%$ at femoral neck, $p=0.74$) compared to controls. This "Diabetic Paradox" confirms that $aBMD$ is a poor surrogate for skeletal strength in T2DM.

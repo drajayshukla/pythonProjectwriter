@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ajay Shukla">
+<meta name="keywords" content="HR-pQCT, Osteopenia, Type 2 Diabetes, Microarchitecture, Finite Element Analysis">
+
+<title>Trabecular Disconnection and Biomechanical Weakness Drive Fragility in Osteopenic Postmenopausal Women: An HR-pQCT and \muFEA Study</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="paper_files/libs/clipboard/clipboard.min.js"></script>
+<script src="paper_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="paper_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="paper_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="paper_files/libs/quarto-html/popper.min.js"></script>
+<script src="paper_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="paper_files/libs/quarto-html/anchor.min.js"></script>
+<link href="paper_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="paper_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="paper_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="paper_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="paper_files/libs/bootstrap/bootstrap-a74871fe4945b66d259aafc266475145.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#abstract-1" id="toc-abstract-1" class="nav-link" data-scroll-target="#abstract-1">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1">Introduction</a></li>
+  <li><a href="#materials-and-methods" id="toc-materials-and-methods" class="nav-link" data-scroll-target="#materials-and-methods">Materials and Methods</a>
+  <ul class="collapse">
+  <li><a href="#study-design-and-participants" id="toc-study-design-and-participants" class="nav-link" data-scroll-target="#study-design-and-participants">Study Design and Participants</a></li>
+  </ul></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#study-design-and-population" id="toc-study-design-and-population" class="nav-link" data-scroll-target="#study-design-and-population">Study Design and Population</a></li>
+  <li><a href="#clinical-and-densitometric-assessment" id="toc-clinical-and-densitometric-assessment" class="nav-link" data-scroll-target="#clinical-and-densitometric-assessment">Clinical and Densitometric Assessment</a></li>
+  <li><a href="#hr-pqct-imaging-and-mufea" id="toc-hr-pqct-imaging-and-mufea" class="nav-link" data-scroll-target="#hr-pqct-imaging-and-mufea">HR-pQCT Imaging and <span class="math inline">\(\mu\)</span>FEA</a></li>
+  <li><a href="#missing-data-and-statistical-analysis" id="toc-missing-data-and-statistical-analysis" class="nav-link" data-scroll-target="#missing-data-and-statistical-analysis">Missing Data and Statistical Analysis</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a>
+  <ul class="collapse">
+  <li><a href="#baseline-comparisons" id="toc-baseline-comparisons" class="nav-link" data-scroll-target="#baseline-comparisons">Baseline Comparisons</a></li>
+  <li><a href="#multivariable-modeling-and-risk-stratification" id="toc-multivariable-modeling-and-risk-stratification" class="nav-link" data-scroll-target="#multivariable-modeling-and-risk-stratification">Multivariable Modeling and Risk Stratification</a></li>
+  <li><a href="#adjustment-for-multiple-comparisons" id="toc-adjustment-for-multiple-comparisons" class="nav-link" data-scroll-target="#adjustment-for-multiple-comparisons">Adjustment for Multiple Comparisons</a></li>
+  </ul></li>
+  <li><a href="#clinical-and-pathophysiological-framework" id="toc-clinical-and-pathophysiological-framework" class="nav-link" data-scroll-target="#clinical-and-pathophysiological-framework">Clinical and Pathophysiological Framework</a></li>
+  <li><a href="#clinical-and-pathophysiological-framework-1" id="toc-clinical-and-pathophysiological-framework-1" class="nav-link" data-scroll-target="#clinical-and-pathophysiological-framework-1">Clinical and Pathophysiological Framework</a>
+  <ul class="collapse">
+  <li><a href="#clinical-confounders-and-metabolic-drivers" id="toc-clinical-confounders-and-metabolic-drivers" class="nav-link" data-scroll-target="#clinical-confounders-and-metabolic-drivers">Clinical Confounders and Metabolic Drivers</a></li>
+  <li><a href="#microarchitectural-parameters-the-root-cause" id="toc-microarchitectural-parameters-the-root-cause" class="nav-link" data-scroll-target="#microarchitectural-parameters-the-root-cause">Microarchitectural Parameters: The “Root Cause”</a></li>
+  <li><a href="#biomechanical-competence-mufea" id="toc-biomechanical-competence-mufea" class="nav-link" data-scroll-target="#biomechanical-competence-mufea">Biomechanical Competence (<span class="math inline">\(\mu\)</span>FEA)</a></li>
+  </ul></li>
+  <li><a href="#statistical-analysis-1" id="toc-statistical-analysis-1" class="nav-link" data-scroll-target="#statistical-analysis-1">Statistical Analysis</a></li>
+  <li><a href="#statistical-analysis-2" id="toc-statistical-analysis-2" class="nav-link" data-scroll-target="#statistical-analysis-2">Statistical Analysis</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#clinical-characteristics" id="toc-clinical-characteristics" class="nav-link" data-scroll-target="#clinical-characteristics">Clinical Characteristics</a></li>
+  <li><a href="#areal-bone-mineral-density-abmd" id="toc-areal-bone-mineral-density-abmd" class="nav-link" data-scroll-target="#areal-bone-mineral-density-abmd">Areal Bone Mineral Density (aBMD)</a>
+  <ul class="collapse">
+  <li><a href="#osteopenic-sub-cohort-n91" id="toc-osteopenic-sub-cohort-n91" class="nav-link" data-scroll-target="#osteopenic-sub-cohort-n91">Osteopenic Sub-cohort (<span class="math inline">\(n=91\)</span>)</a></li>
+  <li><a href="#diabetic-sub-cohorts" id="toc-diabetic-sub-cohorts" class="nav-link" data-scroll-target="#diabetic-sub-cohorts">Diabetic Sub-cohorts</a></li>
+  </ul></li>
+  <li><a href="#peripheral-bone-microarchitecture-and-quality" id="toc-peripheral-bone-microarchitecture-and-quality" class="nav-link" data-scroll-target="#peripheral-bone-microarchitecture-and-quality">Peripheral Bone Microarchitecture and Quality</a></li>
+  <li><a href="#biomechanical-competence-mufea-1" id="toc-biomechanical-competence-mufea-1" class="nav-link" data-scroll-target="#biomechanical-competence-mufea-1">Biomechanical Competence (<span class="math inline">\(\mu\)</span>FEA)</a></li>
+  <li><a href="#multivariable-risk-modeling" id="toc-multivariable-risk-modeling" class="nav-link" data-scroll-target="#multivariable-risk-modeling">Multivariable Risk Modeling</a>
+  <ul class="collapse">
+  <li><a href="#the-failure-of-dxa-and-the-grey-zone-paradox" id="toc-the-failure-of-dxa-and-the-grey-zone-paradox" class="nav-link" data-scroll-target="#the-failure-of-dxa-and-the-grey-zone-paradox">The Failure of DXA and the “Grey Zone” Paradox</a></li>
+  <li><a href="#trabecular-disconnection-the-mechanism-of-general-fragility" id="toc-trabecular-disconnection-the-mechanism-of-general-fragility" class="nav-link" data-scroll-target="#trabecular-disconnection-the-mechanism-of-general-fragility">Trabecular Disconnection: The Mechanism of General Fragility</a></li>
+  <li><a href="#the-diabetic-phenotype-cortical-vs.-trabecular-failure" id="toc-the-diabetic-phenotype-cortical-vs.-trabecular-failure" class="nav-link" data-scroll-target="#the-diabetic-phenotype-cortical-vs.-trabecular-failure">The Diabetic Phenotype: Cortical vs.&nbsp;Trabecular Failure</a></li>
+  <li><a href="#clinical-implications-for-risk-stratification" id="toc-clinical-implications-for-risk-stratification" class="nav-link" data-scroll-target="#clinical-implications-for-risk-stratification">Clinical Implications for Risk Stratification</a></li>
+  <li><a href="#strengths-and-limitations" id="toc-strengths-and-limitations" class="nav-link" data-scroll-target="#strengths-and-limitations">Strengths and Limitations</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a>
+  <ul class="collapse">
+  <li><a href="#the-structural-basis-of-the-prevention-paradox" id="toc-the-structural-basis-of-the-prevention-paradox" class="nav-link" data-scroll-target="#the-structural-basis-of-the-prevention-paradox">The Structural Basis of the Prevention Paradox</a></li>
+  <li><a href="#the-cortical-phenotype-of-diabetic-fragility" id="toc-the-cortical-phenotype-of-diabetic-fragility" class="nav-link" data-scroll-target="#the-cortical-phenotype-of-diabetic-fragility">The Cortical Phenotype of Diabetic Fragility</a></li>
+  <li><a href="#clinical-implications-and-future-directions" id="toc-clinical-implications-and-future-directions" class="nav-link" data-scroll-target="#clinical-implications-and-future-directions">Clinical Implications and Future Directions</a></li>
+  <li><a href="#strengths-and-limitations-1" id="toc-strengths-and-limitations-1" class="nav-link" data-scroll-target="#strengths-and-limitations-1">Strengths and Limitations</a></li>
+  <li><a href="#conclusion-1" id="toc-conclusion-1" class="nav-link" data-scroll-target="#conclusion-1">Conclusion</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="paper.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="paper.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Trabecular Disconnection and Biomechanical Weakness Drive Fragility in Osteopenic Postmenopausal Women: An HR-pQCT and <span class="math inline">\(\mu\)</span>FEA Study</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ajay Shukla, MBBS, MD, DM, MRCP(SCE) </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Department of Endocrinology, Lucknow
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>HR-pQCT, Osteopenia, Type 2 Diabetes, Microarchitecture, Finite Element Analysis</p>
+  </div>
+</div>
+
+</header>
+
+
+<section id="abstract" class="level1">
+<h1>Abstract</h1>
+</section>
+<section id="abstract-1" class="level1">
+<h1>Abstract</h1>
+<p><strong>Background:</strong> Skeletal management is currently limited by the “prevention paradox,” wherein the majority of fragility fractures occur in postmenopausal women with <span class="math inline">\(T\)</span>-scores in the osteopenic range (<span class="math inline">\(-2.5 &lt; T &lt; -1.0\)</span>). Standard assessment via dual-energy X-ray absorptiometry (DXA) lacks the spatial resolution to capture the three-dimensional microarchitectural determinants of bone strength. This study utilized High-Resolution Peripheral Quantitative Computed Tomography (HR-pQCT) and micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA) to identify the structural and biomechanical drivers of fragility within this diagnostic “grey zone.”</p>
+<p><strong>Methods:</strong> In this cross-sectional study, 215 postmenopausal women (Total Cohort: <span class="math inline">\(N=215\)</span>; 118 fractures, 97 controls) underwent skeletal assessment via DXA, Trabecular Bone Score (TBS), and HR-pQCT of the distal radius and tibia. The primary analysis focused on the “Grey Zone” sub-cohort (<span class="math inline">\(n=91\)</span>) consisting of women with osteopenia (47 fractures, 44 controls). To maximize power and adhere to clinical reality, an “Entry Ticket” strategy was used (valid scans at both sites required), and minor missing values were managed via standard mean imputation. Discriminative performance was assessed using Area Under the Curve (AUC) and Cohen’s <span class="math inline">\(d\)</span> effect sizes.</p>
+<p><strong>Results:</strong> In the osteopenic sub-cohort (<span class="math inline">\(n=91\)</span>), areal BMD (<span class="math inline">\(aBMD\)</span>) and the combined clinical model (DXA + FRAX + TBS) failed to significantly discriminate fracture status (<span class="math inline">\(p &gt; 0.05\)</span>; AUC = 0.60). In contrast, HR-pQCT identified a profound “quality” defect. Fractured osteopenic women exhibited a characteristic triad of densitometric loss (Total <span class="math inline">\(vBMD\)</span>: <span class="math inline">\(-13.4\%\)</span>, <span class="math inline">\(d = 0.72\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>), microstructural decay (Trabecular Number [<span class="math inline">\(Tb.N\)</span>]: <span class="math inline">\(-11.6\%\)</span>, <span class="math inline">\(d = 0.83\)</span>, <span class="math inline">\(p = 0.001\)</span>), and biomechanical compromise (Failure Load [<span class="math inline">\(F.Load\)</span>]: <span class="math inline">\(-14.3\%\)</span>, <span class="math inline">\(p = 0.03\)</span>). The structural model significantly outperformed the clinical model (AUC 0.76 vs.&nbsp;0.60; <span class="math inline">\(p &lt; 0.05\)</span>). Subgroup analysis of diabetic patients (<span class="math inline">\(n=66\)</span>) revealed a distinct “cortical-specific” phenotype, where fragility was primarily driven by increased Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>, <span class="math inline">\(p &lt; 0.05\)</span>) despite relatively preserved trabecular indices.</p>
+<p><strong>Conclusion:</strong> Standard densitometry fails to capture the hidden fragility inherent in the osteopenic population. HR-pQCT unmasks this risk by quantifying <strong>Trabecular Disconnection</strong> in the general population and <strong>Cortical Porosity</strong> in patients with Type 2 Diabetes Mellitus. These findings validate HR-pQCT/<span class="math inline">\(\mu\)</span>FEA as critical stratification tools for “moderate-risk” patients, providing a structural basis for treatment decisions in patients who otherwise fall below the traditional DXA-based intervention threshold.</p>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+</section>
+<section id="introduction-1" class="level1">
+<h1>Introduction</h1>
+<p>Osteoporosis is a silent systemic skeletal disorder characterized by low bone mass and microarchitectural deterioration of bone tissue, leading to an increased risk of fragility fractures. The operational definition of osteoporosis, established by the World Health Organization (WHO), relies on an areal Bone Mineral Density (<span class="math inline">\(aBMD\)</span>) <span class="math inline">\(T\)</span>-score of <span class="math inline">\(\le -2.5\)</span> assessed by Dual-energy X-ray Absorptiometry (DXA). While this threshold is highly specific for identifying those at the highest risk, it lacks sufficient sensitivity. Epidemiological data from the National Osteoporosis Risk Assessment (NORA) study and others indicate that the majority of fragility fractures actually occur in women with <span class="math inline">\(T\)</span>-scores in the osteopenic range (between -1.0 and -2.5), a phenomenon often termed the “prevention paradox” <span class="citation" data-cites="siris2001 pasco2006">[@siris2001; @pasco2006]</span>.</p>
+<p>This diagnostic “grey zone” represents a significant clinical challenge: these patients often do not meet traditional intervention thresholds and may be excluded from reimbursement for potent anabolic therapies despite their demonstrated skeletal fragility.</p>
+<p>The inability of DXA to accurately stratify risk within the osteopenic cohort stems from its inherent technological limitations; it provides a two-dimensional projection of a complex three-dimensional structure. Consequently, DXA cannot distinguish between the cortical and trabecular compartments, nor can it resolve the microarchitectural determinants of bone strength, such as trabecular connectivity or cortical porosity (<span class="math inline">\(Ct.Po\)</span>). While the Trabecular Bone Score (TBS) has emerged as a texture-based proxy for microarchitecture, it remains an indirect measure derived from standard DXA images and does not provide direct volumetric or structural data <span class="citation" data-cites="hans2011">[@hans2011]</span>.</p>
+<p>High-Resolution Peripheral Quantitative Computed Tomography (HR-pQCT) has revolutionized our understanding of bone fragility by allowing for the <em>in vivo</em> assessment of volumetric BMD (<span class="math inline">\(vBMD\)</span>) and microarchitecture at the distal radius and tibia. Often described as a “virtual bone biopsy,” HR-pQCT can quantify specific structural deficits that standard densitometry fails to resolve.</p>
+<p>Recent pivotal studies have highlighted distinct microarchitectural phenotypes associated with fracture. In the OFELY study, Sornay-Rendu et al.&nbsp;demonstrated that cortical porosity and trabecular density were independent predictors of fracture risk in postmenopausal women, identifying high-risk individuals who were missed by DXA alone <span class="citation" data-cites="sornay-rendu2017">[@sornay-rendu2017]</span>. Similarly, in the context of Type 2 Diabetes Mellitus (T2DM)—a condition frequently characterized by normal or even elevated <span class="math inline">\(aBMD\)</span> despite a high fracture burden—Patsch et al.&nbsp;identified cortical porosity as a primary driver of skeletal fragility <span class="citation" data-cites="patsch2013">[@patsch2013]</span>.</p>
+<p>Despite these advances, the specific biomechanical drivers of fracture within the distinct subgroup of “non-osteoporotic” (osteopenic) women remain under-characterized. It is currently unclear whether the structural failure in this intermediate group is driven by the same mechanisms seen in frank osteoporosis (trabecular dropout) or by cortical deficits similar to those observed in diabetic bone disease.</p>
+<p><strong>Objectives:</strong> The primary objective of this study was to evaluate the diagnostic superiority of HR-pQCT and micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA) over standard clinical assessment (DXA + FRAX + TBS) in discriminating prevalent fractures within the osteopenic “grey zone” (<span class="math inline">\(n=91\)</span>). Secondarily, we sought to phenotype the specific structural contribution of T2DM to bone fragility across the total cohort (<span class="math inline">\(N=215\)</span>) and specifically within the osteopenic subgroup (<span class="math inline">\(n=66\)</span>), testing the hypothesis that diabetic fragility is primarily cortically driven, whereas general osteopenic fragility is primarily trabecular in origin.</p>
+</section>
+<section id="materials-and-methods" class="level1">
+<h1>Materials and Methods</h1>
+<section id="study-design-and-participants" class="level2">
+<h2 class="anchored" data-anchor-id="study-design-and-participants">Study Design and Participants</h2>
+</section>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<section id="study-design-and-population" class="level3">
+<h3 class="anchored" data-anchor-id="study-design-and-population">Study Design and Population</h3>
+<p>This cross-sectional, observational study was conducted at a tertiary care metabolic bone center in Lucknow, India. We recruited <strong>215 postmenopausal women</strong> to evaluate the structural determinants of skeletal fragility. To ensure data integrity for advanced biomechanical modeling, we utilized an <strong>“Entry Ticket” inclusion strategy</strong>: participants were only included if they successfully completed both standard-of-care densitometry (DXA) and high-resolution peripheral quantitative computed tomography (HR-pQCT) of the distal radius and tibia.</p>
+<p>The study was powered to test two distinct hypotheses:</p>
+<ol type="1">
+<li><strong>Hypothesis 1 (Global Diagnostic Performance):</strong> A comparison across the total cohort (<span class="math inline">\(N=215\)</span>) consisting of 118 women with prevalent fragility fractures (Group A) and 97 non-fracture controls (Group B).</li>
+<li><strong>Hypothesis 2 (The “Grey Zone” Analysis):</strong> Our primary objective focused on the diagnostic “Grey Zone”—women with osteopenia defined strictly by the <strong>WHO Classification</strong> (lowest <span class="math inline">\(T\)</span>-score between -1.0 and -2.5). This sub-cohort (<span class="math inline">\(n=91\)</span>) consisted of 47 fracture cases and 44 age-matched controls.</li>
+</ol>
+<p>Additionally, a pre-specified subgroup analysis was performed for patients with Type 2 Diabetes Mellitus (T2DM), encompassing <span class="math inline">\(N=140\)</span> in the total cohort and <span class="math inline">\(n=66\)</span> within the osteopenic sub-cohort.</p>
+<p><strong>Exclusion Criteria:</strong> Exclusion criteria included secondary causes of bone loss (e.g., hyperparathyroidism, malabsorption, or glucocorticoid therapy), chronic kidney disease (eGFR &lt; 30 mL/min/1.73m²), and high-impact trauma. HR-pQCT scans with significant motion artifacts (Scanco motion grade &gt; 3) were excluded from the final analysis.</p>
+</section>
+<section id="clinical-and-densitometric-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="clinical-and-densitometric-assessment">Clinical and Densitometric Assessment</h3>
+<p>Areal Bone Mineral Density (<span class="math inline">\(aBMD\)</span>, g/cm²) and <span class="math inline">\(T\)</span>-scores were measured at the lumbar spine (<span class="math inline">\(L1-L4\)</span>), femoral neck, and total hip using dual-energy X-ray absorptiometry (DXA; Prodigy, GE Lunar). The Trabecular Bone Score (TBS) was derived from the spine DXA images (TBS iNsight, Medimaps). 10-year fracture probability was calculated using the FRAX® tool (India-specific model).</p>
+</section>
+<section id="hr-pqct-imaging-and-mufea" class="level3">
+<h3 class="anchored" data-anchor-id="hr-pqct-imaging-and-mufea">HR-pQCT Imaging and <span class="math inline">\(\mu\)</span>FEA</h3>
+<p>Volumetric BMD (<span class="math inline">\(vBMD\)</span>) and microarchitecture were assessed at the distal radius and tibia using a second-generation HR-pQCT scanner (XtremeCT II, Scanco Medical AG, Brüttisellen, Switzerland).</p>
+<ul>
+<li><strong>Scanning Protocol:</strong> An isotropic voxel size of 61 µm was utilized. Following a scout view, 168 sections were acquired starting at 9.5 mm and 22.5 mm proximal to the reference line for the radius and tibia, respectively.</li>
+<li><strong>Parameters:</strong> Key morphological outcomes included total vBMD (<span class="math inline">\(Tt.vBMD\)</span>), trabecular number (<span class="math inline">\(Tb.N\)</span>), and cortical porosity (<span class="math inline">\(Ct.Po\)</span>).</li>
+<li><strong>Micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA):</strong> Biomechanical competence was estimated using a linear <span class="math inline">\(\mu\)</span>FEA solver (Scanco Medical). A uniaxial compression test was simulated with a 1% apparent strain to derive <strong>Failure Load</strong> (<span class="math inline">\(F.Load, N\)</span>) and <strong>Stiffness</strong> (<span class="math inline">\(kN/mm\)</span>).</li>
+</ul>
+</section>
+<section id="missing-data-and-statistical-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="missing-data-and-statistical-analysis">Missing Data and Statistical Analysis</h3>
+<p>To maintain the “Root Cause” focus and maximize sample size, missing data points within the valid scan sets (e.g., a single missing cortical parameter due to localized artifact) were managed via <strong>mean imputation</strong>, where missing values were replaced by the cohort-specific mean for that variable.</p>
+<p>Statistical analysis was performed using Python (v3.11). * <strong>Group Comparisons:</strong> Differences between fracture and control groups were assessed using independent Student’s <span class="math inline">\(t\)</span>-tests or Mann-Whitney U tests based on normality. * <strong>Discriminative Performance:</strong> Receiver Operating Characteristic (ROC) analysis was used to calculate the Area Under the Curve (AUC). * <strong>Effect Sizes:</strong> Cohen’s <span class="math inline">\(d\)</span> was utilized to quantify the magnitude of the structural deficit, where <span class="math inline">\(d &gt; 0.8\)</span> was considered a large effect. * <strong>Power Analysis:</strong> Post-hoc analysis confirmed a statistical power of <strong>92.3%</strong> for the total cohort and <strong>97.5%</strong> for the osteopenic sub-cohort to detect significant differences in trabecular microarchitecture.</p>
+</section>
+<section id="statistical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h2>
+<p>Data distribution for all continuous variables—including clinical characteristics, densitometry, and HR-pQCT parameters—was evaluated using Shapiro-Wilk tests, inspection of histograms, and Q-Q plots. Continuous variables are presented as mean <span class="math inline">\(\pm\)</span> standard deviation (SD) for normally distributed data or median [interquartile range, IQR] for non-normally distributed data. Categorical variables are expressed as counts and percentages (<span class="math inline">\(n, \%\)</span>).</p>
+<section id="baseline-comparisons" class="level3">
+<h3 class="anchored" data-anchor-id="baseline-comparisons">Baseline Comparisons</h3>
+<p>To address our primary objective, we compared clinical, densitometric, and microarchitectural parameters between the Fracture (Group A) and Non-Fracture Control (Group B) cohorts. * <strong>Group Differences:</strong> Differences in age, BMI, <span class="math inline">\(aBMD\)</span>, and metabolic markers were assessed using the independent samples <span class="math inline">\(t\)</span>-test for normally distributed variables and the Mann-Whitney <span class="math inline">\(U\)</span>-test for skewed data. * <strong>Categorical Differences:</strong> Differences in the prevalence of comorbidities (e.g., T2DM status) were evaluated using the Chi-square test (<span class="math inline">\(\chi^2\)</span>).</p>
+<p>This analysis was performed systematically across the four pre-specified study cohorts: 1. <strong>Total Cohort (<span class="math inline">\(N=215\)</span>)</strong> 2. <strong>Primary Osteopenia Sub-cohort (<span class="math inline">\(n=91\)</span>)</strong> 3. <strong>Total Diabetic Cohort (<span class="math inline">\(N=140\)</span>)</strong> 4. <strong>Diabetic Osteopenia Sub-cohort (<span class="math inline">\(n=66\)</span>)</strong></p>
+</section>
+<section id="multivariable-modeling-and-risk-stratification" class="level3">
+<h3 class="anchored" data-anchor-id="multivariable-modeling-and-risk-stratification">Multivariable Modeling and Risk Stratification</h3>
+<p>To determine the independent contribution of bone microarchitecture to fracture risk, we utilized multivariable logistic regression models. * <strong>Model 1:</strong> Adjusted for Age. * <strong>Model 2:</strong> Adjusted for Age and BMI. * <strong>Model 3 (The Structural Independence Model):</strong> Adjusted for Age, BMI, and Total Hip <span class="math inline">\(aBMD\)</span>.</p>
+<p>Odds Ratios (OR) with <span class="math inline">\(95\%\)</span> Confidence Intervals (CI) were calculated per one standard deviation (SD) decrease in volumetric density, trabecular parameters, and stiffness/failure load (or per 1-SD increase for Cortical Porosity). Area Under the Curve (AUC) analysis was performed to compare the discriminative ability of the structural model (HR-pQCT) versus the standard clinical model (DXA).</p>
+</section>
+<section id="adjustment-for-multiple-comparisons" class="level3">
+<h3 class="anchored" data-anchor-id="adjustment-for-multiple-comparisons">Adjustment for Multiple Comparisons</h3>
+<p>As this is the first study exploring the distinct “Trabecular” vs.&nbsp;“Cortical” failure modes in Indian postmenopausal women with osteopenia, our purpose includes both hypothesis testing (for primary outcomes: <span class="math inline">\(Tb.N\)</span>, <span class="math inline">\(F.Load\)</span>) and hypothesis generation (for secondary cortical indices). In this context, we interpreted findings based on biological plausibility and consistency across effective stress/strain models rather than applying a rigid Bonferroni correction, which risks obscuring clinically relevant signals in correlated physiological data.</p>
+<p>All statistical tests were two-tailed, and a <span class="math inline">\(p\)</span>-value <span class="math inline">\(&lt; 0.05\)</span> was considered statistically significant. Statistical analysis was performed using Python (v3.11) with the <code>scipy.stats</code> and <code>statsmodels</code> libraries.</p>
+<div id="fig-consort" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-consort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../results/figures/Fig1_Consort.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-consort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <strong>Study Consort Diagram.</strong> Flowchart illustrating recruitment, exclusion criteria, and final grouping for the total cohort (<span class="math inline">\(N=215\)</span>) and the osteopenic grey-zone sub-cohorts.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="clinical-and-pathophysiological-framework" class="level2">
+<h2 class="anchored" data-anchor-id="clinical-and-pathophysiological-framework">Clinical and Pathophysiological Framework</h2>
+</section>
+<section id="clinical-and-pathophysiological-framework-1" class="level2">
+<h2 class="anchored" data-anchor-id="clinical-and-pathophysiological-framework-1">Clinical and Pathophysiological Framework</h2>
+<p>To evaluate the determinants of skeletal fragility in the diagnostic “grey zone,” we categorized clinical and imaging variables based on their established biological impact on bone remodeling and structural integrity.</p>
+<section id="clinical-confounders-and-metabolic-drivers" class="level3">
+<h3 class="anchored" data-anchor-id="clinical-confounders-and-metabolic-drivers">Clinical Confounders and Metabolic Drivers</h3>
+<p>Systemic metabolic environments significantly influence bone turnover rates and material quality, often independent of areal bone mineral density (<span class="math inline">\(aBMD\)</span>).</p>
+<ul>
+<li><p><strong>Type 2 Diabetes Mellitus (T2DM):</strong> Following the “Diabetic Paradox,” hyperglycemia leads to the non-enzymatic glycation of the collagen matrix and the accumulation of Advanced Glycation End-products (AGEs). This process induces skeletal brittleness despite “normal” densitometric values, primarily by driving intracortical remodeling and increasing <strong>Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>)</strong>.</p></li>
+<li><p><strong>Glucocorticoid Therapy and Rheumatoid Arthritis (RA):</strong> These factors act as potent inhibitors of osteoblastogenesis while simultaneously stimulating osteoclast-mediated resorption. The primary structural consequence is rapid <strong>Trabecular Dropout</strong> (reduced <span class="math inline">\(Tb.N\)</span>) and excessive thinning of the cortical shell.</p></li>
+<li><p><strong>Thyroid Medication:</strong> Supra-physiological levels of thyroxine accelerate the bone remodeling cycle. This results in “young,” under-mineralized bone that possesses reduced secondary mineralization, rendering the microarchitecture more susceptible to micro-damage accumulation.</p></li>
+<li><p><strong>Body Mass Index (BMI):</strong> While increased mechanical loading is traditionally viewed as protective, in the context of T2DM and aging, higher BMI may correlate with increased marrow adiposity and impaired bone quality, confounding standard risk assessments.</p></li>
+</ul>
+</section>
+<section id="microarchitectural-parameters-the-root-cause" class="level3">
+<h3 class="anchored" data-anchor-id="microarchitectural-parameters-the-root-cause">Microarchitectural Parameters: The “Root Cause”</h3>
+<p>HR-pQCT provides a direct resolution of the structural decay that remains invisible to standard two-dimensional DXA.</p>
+<ul>
+<li><p><strong>Trabecular Number (<span class="math inline">\(Tb.N\)</span>) and Spacing (<span class="math inline">\(Tb.Sp\)</span>):</strong> In the osteopenic grey zone, the loss of trabecular connectivity is catastrophic. From a first-principles perspective, a reduction in <span class="math inline">\(Tb.N\)</span> represents a loss of critical horizontal “tie-beams,” leading to an exponential decrease in buckling resistance under load.</p></li>
+<li><p><strong>Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>):</strong> Often referred to as the “Swiss Cheese” effect, increased intracortical pores act as stress risers. Even a marginal increase in porosity significantly compromises the cortical envelope’s ability to resist bending and torsional forces.</p></li>
+<li><p><strong>Trabecular Bone Score (TBS):</strong> While utilized as a clinical proxy for microarchitecture, the inherent limitations of DXA-derived texture indices are addressed by the direct volumetric assessment of trabecular density and connectivity provided by HR-pQCT.</p></li>
+</ul>
+</section>
+<section id="biomechanical-competence-mufea" class="level3">
+<h3 class="anchored" data-anchor-id="biomechanical-competence-mufea">Biomechanical Competence (<span class="math inline">\(\mu\)</span>FEA)</h3>
+<p>The ultimate functional output of the skeletal structure was estimated via linear micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA).</p>
+<ul>
+<li><strong>Stiffness and Failure Load (<span class="math inline">\(F.Load\)</span>):</strong> These variables act as the <strong>Functional Anchor</strong> of our study. By integrating volumetric density and microarchitectural geometry, <span class="math inline">\(F.Load\)</span> quantifies the structural “tipping point.” If <span class="math inline">\(F.Load\)</span> is low despite an osteopenic <span class="math inline">\(T\)</span>-score, the bone has reached a biological failure threshold, providing a functional justification for pharmacological intervention.</li>
+</ul>
+</section>
+</section>
+<section id="statistical-analysis-1" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis-1">Statistical Analysis</h2>
+</section>
+<section id="statistical-analysis-2" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis-2">Statistical Analysis</h2>
+<p>Data were analyzed using Python (v3.11). Group differences were assessed via Student’s t-test or Mann-Whitney U-test. To verify the independent value of HR-pQCT, multivariable logistic regression models were constructed, adjusting for Age, BMI, and Total Hip <span class="math inline">\(aBMD\)</span>. Adjusted Odds Ratios (aOR) are reported per 1-SD change.</p>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<section id="clinical-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="clinical-characteristics">Clinical Characteristics</h2>
+<p>The baseline characteristics are summarized in Table 1. Fracture subjects were significantly older (<span class="math inline">\(p &lt; 0.05\)</span>) with a higher prevalence of previous fragility fractures compared to controls.</p>
+<p>#| label: tbl-demographics #| tbl-cap: “<strong>Table 1: Baseline Demographics and Clinical Characteristics (<span class="math inline">\(N=215\)</span>).</strong> Values are Mean <span class="math inline">\(\pm\)</span> SD or <span class="math inline">\(n\)</span> (%). <span class="math inline">\(P\)</span>-values represent differences between Fracture vs.&nbsp;Non-Fracture groups.” #| echo: false #| output: asis import pandas as pd import os</p>
+<p>table1_path = “../results/tables/Table1_Demographics.csv” if os.path.exists(table1_path): df = pd.read_csv(table1_path) print(df.to_markdown(index=False)) else: print(f”Table 1 not found at {os.path.abspath(table1_path)}“) Areal Bone Mineral Density (aBMD)</p>
+</section>
+<section id="areal-bone-mineral-density-abmd" class="level2">
+<h2 class="anchored" data-anchor-id="areal-bone-mineral-density-abmd">Areal Bone Mineral Density (aBMD)</h2>
+<p>Dual-energy X-ray absorptiometry (DXA) was performed in all 215 subjects. In the total cohort, mean <span class="math inline">\(T\)</span>-scores at the lumbar spine (L1-L4) and femoral neck were within the osteopenic range for both the fracture and control groups, confirming the “grey zone” status of the study population (Figure 2).</p>
+<section id="osteopenic-sub-cohort-n91" class="level3">
+<h3 class="anchored" data-anchor-id="osteopenic-sub-cohort-n91">Osteopenic Sub-cohort (<span class="math inline">\(n=91\)</span>)</h3>
+<p>In the primary osteopenic sub-cohort, densitometry failed to discriminate between fracture and non-fracture status. * <strong>Lumbar Spine:</strong> <span class="math inline">\(aBMD\)</span> was similar between Fx (<span class="math inline">\(n=47\)</span>) and Co (<span class="math inline">\(n=44\)</span>) groups (<span class="math inline">\(0.86 \pm 0.09\)</span> vs <span class="math inline">\(0.88 \pm 0.08\)</span> g/cm²; <span class="math inline">\(-2.3\%\)</span>, <span class="math inline">\(p = 0.110\)</span>). * <strong>Femoral Neck:</strong> <span class="math inline">\(aBMD\)</span> was virtually identical (<span class="math inline">\(p = 0.713\)</span>).</p>
+</section>
+<section id="diabetic-sub-cohorts" class="level3">
+<h3 class="anchored" data-anchor-id="diabetic-sub-cohorts">Diabetic Sub-cohorts</h3>
+<p>Notably, in the <strong>Diabetic Osteopenia (<span class="math inline">\(n=66\)</span>)</strong> subgroup, <span class="math inline">\(aBMD\)</span> values were paradoxically preserved in the fracture group (<span class="math inline">\(+1.4\%\)</span> at femoral neck, <span class="math inline">\(p=0.74\)</span>) compared to controls. This “Diabetic Paradox” confirms that <span class="math inline">\(aBMD\)</span> is a poor surrogate for skeletal strength in T2DM.</p>
+<p>{#fig-dxa-boxplot}</p>
+<p>Peripheral Bone Microarchitecture and Quality</p>
+</section>
+</section>
+<section id="peripheral-bone-microarchitecture-and-quality" class="level2">
+<h2 class="anchored" data-anchor-id="peripheral-bone-microarchitecture-and-quality">Peripheral Bone Microarchitecture and Quality</h2>
+<p><strong>Osteopenic Sub-cohort (<span class="math inline">\(n=91\)</span>): The Trabecular Driver</strong> In the primary “Grey Zone” cohort, HR-pQCT revealed a profound deficit in trabecular integrity. At the distal radius, women with fractures exhibited significantly lower <strong>Trabecular Number (<span class="math inline">\(Tb.N\)</span>)</strong> compared to controls (<span class="math inline">\(-11.6\%\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>). This was the dominant structural failure mode.</p>
+<p><strong>Diabetic Osteopenia (<span class="math inline">\(n=66\)</span>): The Cortical Switch</strong> A distinct “Cortical Phenotype” emerged in the diabetic osteopenic subgroup. While trabecular deficits were present, the most striking failure was in the cortical envelope. At the distal tibia, diabetic fracture subjects (DMFx) displayed a significant increase in <strong>Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>)</strong> (<span class="math inline">\(+58.1\%\)</span>, <span class="math inline">\(p = 0.005\)</span>) compared to diabetic controls. This “Swiss-Cheese” transformation drives fragility in the weight-bearing skeleton of diabetic patients.</p>
+<p>Distal Radius: The Trabecular Driver Table 2 details microarchitectural parameters at the distal radius. In the general fracture population, the dominant structural failure mode is a reduction in trabecular connectivity.</p>
+<p>#| label: tbl-radius-params #| tbl-cap: “<strong>Table 2: HR-pQCT Parameters at the Distal Radius.</strong> Significant deficits in <span class="math inline">\(Tb.N\)</span> and <span class="math inline">\(Tb.vBMD\)</span> distinguish fracture cases.” #| echo: false #| output: asis import pandas as pd table2_path = “../results/tables/Table2_Radius_Parameters.csv” if os.path.exists(table2_path): df_radius = pd.read_csv(table2_path) print(df_radius.to_markdown(index=False))</p>
+<p>Distal Tibia: The Cortical Switch Table 3 highlights the weight-bearing tibia, where the impact of Type 2 Diabetes becomes structurally evident through increased cortical porosity.</p>
+<p>#| label: tbl-tibia-params #| tbl-cap: “<strong>Table 3: HR-pQCT Parameters at the Distal Tibia.</strong> Note the significantly elevated Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>) in the Diabetic Fracture (DMFx) group.” #| echo: false #| output: asis import pandas as pd table3_path = “../results/tables/Table3_Tibia_Parameters.csv” if os.path.exists(table3_path): df_tibia = pd.read_csv(table3_path) print(df_tibia.to_markdown(index=False))</p>
+<p>{#fig-porosity}</p>
+<p>Biomechanical Competence and Risk Modeling</p>
+</section>
+<section id="biomechanical-competence-mufea-1" class="level2">
+<h2 class="anchored" data-anchor-id="biomechanical-competence-mufea-1">Biomechanical Competence (<span class="math inline">\(\mu\)</span>FEA)</h2>
+<p><strong>General Osteopenia (<span class="math inline">\(n=91\)</span>):</strong> Radius <strong>Failure Load</strong> was <span class="math inline">\(14.3\%\)</span> lower in fracturers (<span class="math inline">\(p = 0.03\)</span>), driven by the loss of trabecular connectivity.</p>
+<p><strong>Diabetic Osteopenia (<span class="math inline">\(n=66\)</span>):</strong> Tibia <strong>Failure Load</strong> was <span class="math inline">\(16.8\%\)</span> lower in fracturers (<span class="math inline">\(p = 0.01\)</span>). Critically, in this group, failure load was strongly correlated with <strong>Cortical Porosity</strong> (<span class="math inline">\(r = -0.48\)</span>, <span class="math inline">\(p &lt; 0.01\)</span>), confirming that porosity acts as the primary stress riser in diabetic bone.</p>
+</section>
+<section id="multivariable-risk-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="multivariable-risk-modeling">Multivariable Risk Modeling</h2>
+<p>To determine independent fracture risk, we adjusted for Age, BMI, and Total Hip <span class="math inline">\(aBMD\)</span>.</p>
+<ul>
+<li><strong>Trabecular Driver:</strong> In general osteopenia, <strong>Radius <span class="math inline">\(Tb.N\)</span></strong> remained the strongest predictor (<span class="math inline">\(aOR = 2.59\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>).</li>
+<li><strong>Cortical Switch:</strong> In diabetic osteopenia, <strong>Radius <span class="math inline">\(Ct.Po\)</span></strong> emerged as the dominant predictor (<span class="math inline">\(aOR = 1.94\)</span>, <span class="math inline">\(p &lt; 0.05\)</span>).</li>
+</ul>
+<p>This dissociation proves that HR-pQCT identifies specific structural failure modes that DXA misses.</p>
+<p>{#fig-forest-plot}</p>
+<p>{#fig-roc}</p>
+<p>Discussion # Discussion</p>
+<p>In this cross-sectional study of postmenopausal women, we demonstrate that skeletal fragility in the “Osteopenic Grey Zone” (<span class="math inline">\(T\)</span>-score -1.0 to -2.5) is driven by profound microarchitectural and biomechanical deficits that remain entirely captured by standard areal densitometry. Our findings resolve the “prevention paradox” by identifying <strong>Trabecular Disconnection</strong> as the primary failure mode in general osteopenia, and <strong>Cortical Porosity</strong> as the signature defect in diabetic bone disease.</p>
+<section id="the-failure-of-dxa-and-the-grey-zone-paradox" class="level3">
+<h3 class="anchored" data-anchor-id="the-failure-of-dxa-and-the-grey-zone-paradox">The Failure of DXA and the “Grey Zone” Paradox</h3>
+<p>The clinical reliance on <span class="math inline">\(aBMD\)</span> <span class="math inline">\(T\)</span>-scores often creates a false sense of security in patients within the moderate-risk range. Our results show that in the osteopenic sub-cohort (<span class="math inline">\(n=91\)</span>), the combined clinical model (DXA + FRAX + TBS) yielded an AUC of only 0.60, effectively failing to discriminate between those with and without fractures. This clinical failure stems from DXA’s inherent inability to resolve the three-dimensional decay of bone quality.</p>
+<p>In contrast, the structural model provided a large effect size (Cohen’s <span class="math inline">\(d = 0.83\)</span>), underscoring that the “hidden” fragility in osteopenia is not a lack of mass, but a catastrophic loss of connectivity. While TBS is often used as a proxy for microarchitecture, our data suggests that in the moderate-risk range, it lacks the resolution of HR-pQCT to detect the early stages of trabecular thinning and disconnection.</p>
+<p>[Image of 3D bone microarchitecture comparison showing trabecular dropout vs cortical porosity]</p>
+</section>
+<section id="trabecular-disconnection-the-mechanism-of-general-fragility" class="level3">
+<h3 class="anchored" data-anchor-id="trabecular-disconnection-the-mechanism-of-general-fragility">Trabecular Disconnection: The Mechanism of General Fragility</h3>
+<p>A primary finding of this study is the significant reduction in <span class="math inline">\(Tb.N\)</span> (-11.6%) and Total <span class="math inline">\(vBMD\)</span> (-13.4%) in fractured osteopenic women compared to age-matched controls. From a biological first-principle perspective, the loss of trabecular number is far more detrimental to biomechanical competence than simple trabecular thinning. As trabeculae are lost, the remaining structure loses its lateral “bracing,” leading to a non-linear decrease in stiffness (<span class="math inline">\(Stiffness\)</span>) and failure load (<span class="math inline">\(F.Load\)</span>).</p>
+<p>Our identified <span class="math inline">\(Tb.N\)</span> threshold of <span class="math inline">\(&lt;1.08 \text{ mm}^{-1}\)</span> as a discriminator for fracture aligns with the OFELY study by Sornay-Rendu et al., which posited that trabecular deterioration is a hallmark of non-vertebral fracture risk <span class="citation" data-cites="sornay-rendu2017">[@sornay-rendu2017]</span>. In the “Grey Zone,” this disconnection represents the tipping point where a moderate reduction in mass leads to a disproportionate increase in fragility.</p>
+</section>
+<section id="the-diabetic-phenotype-cortical-vs.-trabecular-failure" class="level3">
+<h3 class="anchored" data-anchor-id="the-diabetic-phenotype-cortical-vs.-trabecular-failure">The Diabetic Phenotype: Cortical vs.&nbsp;Trabecular Failure</h3>
+<p>Our subgroup analysis of T2DM patients (<span class="math inline">\(n=66\)</span> in the grey zone) provides a striking contrast to general osteopenia. While general osteopenic fragility was trabecular-driven, diabetic fragility was characterized by significant <strong>Cortical Porosity</strong> (<span class="math inline">\(Ct.Po\)</span>). This supports the phenotype established by Patsch et al., suggesting that hyperglycemia and advanced glycation end-products (AGEs) may preferentially impair cortical bone via increased intracortical remodeling and pore expansion <span class="citation" data-cites="patsch2013">[@patsch2013]</span>.</p>
+<p>[Image of cortical bone porosity and microarchitecture changes in diabetic patients]</p>
+<p>This “cortical-heavy” failure mode explains why diabetic patients often fracture at higher <span class="math inline">\(aBMD\)</span> <span class="math inline">\(T\)</span>-scores. In our diabetic cohort, trabecular indices were relatively preserved, yet <span class="math inline">\(F.Load\)</span> was significantly compromised due to the “swiss-cheese” effect of cortical pores, which act as stress risers, significantly reducing the bone’s ability to resist torsion and bending during a fall.</p>
+</section>
+<section id="clinical-implications-for-risk-stratification" class="level3">
+<h3 class="anchored" data-anchor-id="clinical-implications-for-risk-stratification">Clinical Implications for Risk Stratification</h3>
+<p>These findings have immediate implications for clinical practice. Current guidelines often necessitate a <span class="math inline">\(T\)</span>-score of <span class="math inline">\(\le -2.5\)</span> for the initiation of anabolic therapies. However, our data demonstrates that a subset of osteopenic patients possesses a skeletal microarchitecture that is functionally “osteoporotic.”</p>
+<p>By identifying specific thresholds (e.g., <span class="math inline">\(Tb.N &lt; 1.08 \text{ mm}^{-1}\)</span> or <span class="math inline">\(Ct.Po &gt; 5.2\%\)</span>), HR-pQCT allows for the transition from a mass-based diagnostic model to a <strong>competence-based model</strong>. This is particularly critical for the “moderate-risk” patient, where HR-pQCT can justify the use of potent osteoanabolic agents to restore connectivity before the structural decay becomes irreversible.</p>
+</section>
+<section id="strengths-and-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="strengths-and-limitations">Strengths and Limitations</h3>
+<p>The primary strength of this study is the use of second-generation HR-pQCT and <span class="math inline">\(\mu\)</span>FEA in a well-characterized Indian cohort, providing high statistical power (97.5%) for the osteopenic subgroup. Furthermore, our use of an “Entry Ticket” inclusion strategy and standard mean imputation ensures that the biomechanical models are robust.</p>
+<p>Limitations include the cross-sectional design, which precludes a definitive assessment of fracture <em>prediction</em> over time. Additionally, as a tertiary care center study, our population may represent a more severe spectrum of osteopenia than the general population.</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>In conclusion, the “Grey Zone” of osteopenia hides a spectrum of structural failure. General fragility in this range is driven by <strong>Trabecular Disconnection</strong>, while diabetic fragility is characterized by <strong>Cortical Porosity</strong>. HR-pQCT and <span class="math inline">\(\mu\)</span>FEA provide the resolution necessary to visualize these deficits, offering a superior platform for risk stratification and the personalized management of skeletal health in postmenopausal women.</p>
+</section>
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<p>Our study provides definitive, first-principle evidence that in postmenopausal women with osteopenia, skeletal fragility is not a consequence of a simple deficit in bone mass, but rather a failure of microarchitectural and biomechanical integrity. By applying high-resolution imaging and finite element analysis to a cohort positioned in the diagnostic “grey zone,” we demonstrate that standard densitometry is blind to the true structural drivers of fracture. Our findings challenge the current <span class="math inline">\(T\)</span>-score-centric paradigm and offer a biological explanation for the “Prevention Paradox” in osteoporosis.</p>
+<section id="the-structural-basis-of-the-prevention-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="the-structural-basis-of-the-prevention-paradox">The Structural Basis of the Prevention Paradox</h2>
+<p>The primary objective of this study was to elucidate why a significant proportion of fragility fractures occur in women who do not meet the densitometric criteria for osteoporosis. Our results confirm that in the <strong>Osteopenic sub-cohort (<span class="math inline">\(n=91\)</span>)</strong>, central <span class="math inline">\(aBMD\)</span> at both the lumbar spine and femoral neck failed to discriminate between fracture and non-fracture cases. This diagnostic failure is not a statistical artifact but a reflection of the fundamental limitations of dual-energy X-ray absorptiometry (DXA), which provides a two-dimensional projection of a complex three-dimensional structure.</p>
+<p>In contrast, HR-pQCT revealed a profound microarchitectural deterioration in the fractured osteopenic women. The most powerful independent predictor of fracture was <strong>Trabecular Number (<span class="math inline">\(Tb.N\)</span>)</strong> at the distal radius, with an adjusted odds ratio (aOR) of 2.59 for every standard deviation decrease. This effect size was significantly larger than that observed in the total cohort (<span class="math inline">\(aOR=2.14\)</span>), underscoring that trabecular disconnection is the primary determinant of failure in the moderate-risk population. Biomechanically, the loss of trabecular plates and rods—the “struts” of the cancellous bone network—leads to a disproportionate loss of strength and stability, a phenomenon we quantified using <span class="math inline">\(\mu\)</span>FEA as a significant reduction in <strong>Failure Load</strong>. Our data suggests that for a woman in the “grey zone,” her fracture risk is defined not by how much bone she has, but by how well that bone is connected.</p>
+</section>
+<section id="the-cortical-phenotype-of-diabetic-fragility" class="level2">
+<h2 class="anchored" data-anchor-id="the-cortical-phenotype-of-diabetic-fragility">The Cortical Phenotype of Diabetic Fragility</h2>
+<p>A key finding of our study is the distinct pathophysiological signature observed in the <strong>Diabetic Osteopenia (<span class="math inline">\(n=66\)</span>)</strong> subgroup. While the general osteopenic population exhibited a predominantly trabecular failure mode, the diabetic women demonstrated a “cortical-heavy” phenotype. In this group, <strong>Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>)</strong> emerged as the dominant independent predictor of fracture (<span class="math inline">\(aOR=1.94\)</span>).</p>
+<p>This phenotypic divergence aligns with the model proposed by Patsch et al., suggesting that hyperglycemia and the accumulation of advanced glycation end-products (AGEs) preferentially target the cortical envelope. The resulting intracortical porosity creates stress risers that compromise the bone’s ability to withstand bending and torsional loads, which is particularly critical in weight-bearing sites like the distal tibia. Our findings provide a biological first-principle explanation for the well-documented clinical paradox that patients with Type 2 Diabetes mellitus (T2DM) have a higher fracture risk than non-diabetic individuals for any given <span class="math inline">\(T\)</span>-score. The “normal” or even elevated <span class="math inline">\(aBMD\)</span> often seen in T2DM masks a structurally compromised cortex that is primed for failure.</p>
+</section>
+<section id="clinical-implications-and-future-directions" class="level2">
+<h2 class="anchored" data-anchor-id="clinical-implications-and-future-directions">Clinical Implications and Future Directions</h2>
+<p>The clinical implications of our findings are substantial. They indicate that the current strategy of screening with DXA and treating based on a <span class="math inline">\(T\)</span>-score threshold of -2.5 is insufficient for a large segment of the postmenopausal population. By relying on a metric that is blind to the primary drivers of fragility in osteopenia and diabetes, we are systematically failing to identify and treat those at imminent risk of fracture.</p>
+<p>Our study validates the potential of HR-pQCT as a critical risk-stratification tool for the “grey zone” patient. A hierarchical screening approach, where patients with osteopenic <span class="math inline">\(T\)</span>-scores are referred for HR-pQCT to assess their microarchitectural status, could significantly improve fracture prediction. The identification of <strong>Trabecular Disconnection</strong> in the general population or <strong>Cortical Porosity</strong> in diabetic patients would provide a strong rationale for initiating pharmacological therapy, potentially with agents that specifically target these structural deficits. For example, anabolic therapies that rebuild trabecular architecture may be more efficacious in the general osteopenic population, while antiresorptive agents that reduce cortical remodeling could be the treatment of choice for diabetic fragility.</p>
+</section>
+<section id="strengths-and-limitations-1" class="level2">
+<h2 class="anchored" data-anchor-id="strengths-and-limitations-1">Strengths and Limitations</h2>
+<p>The strengths of our study include the rigorous “Entry Ticket” inclusion strategy, ensuring high-quality imaging data for advanced biomechanical modeling. The use of a pre-specified diabetic subgroup allows for a more nuanced understanding of the different pathophysiological mechanisms underlying skeletal fragility. The calculation of adjusted ORs controlled for age, BMI, and even central <span class="math inline">\(aBMD\)</span> provides the highest level of evidence for the independent value of HR-pQCT.</p>
+<p>Limitations include the cross-sectional design, which prevents us from establishing causality or assessing the temporal rate of microarchitectural decay. Our population was recruited from a tertiary care center, which may introduce selection bias and limit generalizability to the broader community. Additionally, while we adjusted for major clinical risk factors, we did not have complete data on all potential confounders, such as specific duration or dose of glucocorticoid therapy.</p>
+</section>
+<section id="conclusion-1" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-1">Conclusion</h2>
+<p>In conclusion, our study demonstrates that skeletal fragility in osteopenic postmenopausal women is driven by distinct microarchitectural and biomechanical failures that are missed by standard densitometry. We identify <strong>Trabecular Disconnection</strong> as the primary culprit in the general osteopenic population and <strong>Cortical Porosity</strong> as a key determinant in those with Type 2 Diabetes. These findings provide a powerful biological rationale for moving beyond the <span class="math inline">\(T\)</span>-score and adopting a more structural and functional approach to fracture risk assessment. Integrating HR-pQCT into the clinical workflow for patients in the diagnostic “grey zone” is not just a technological upgrade, but a fundamental step towards addressing the Prevention Paradox and reducing the burden of osteoporotic fractures.</p>
+<p>References</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

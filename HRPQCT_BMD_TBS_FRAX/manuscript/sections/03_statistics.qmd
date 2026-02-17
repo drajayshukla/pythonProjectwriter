@@ -1,0 +1,9 @@
+# Statistical Analysis
+
+Statistical analysis was performed using Python (v3.11). Data distribution was evaluated using Shapiro-Wilk tests and Q-Q plots. Continuous variables are presented as mean $\pm$ SD.
+
+## Group Comparisons
+Differences were evaluated using independent Student’s $t$-tests or Mann-Whitney $U$-tests. To quantify the clinical magnitude of structural deficits beyond simple $p$-values, Cohen’s $d$ was calculated ($d > 0.8$ considered a large effect).
+
+## Discriminative Performance
+The primary outcome was the Area Under the Curve (AUC) from Receiver Operating Characteristic (ROC) analysis. We compared the AUC of the Structural Model (HR-pQCT) against the Clinical Model (DXA + TBS) specifically within the $n=91$ osteopenic sub-cohort.
