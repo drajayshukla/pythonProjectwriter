@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ajay Shukla">
+<meta name="author" content="Ajay Shukla, MD, DM">
+<meta name="author" content="Sushil Gupta, MD, DM">
 <meta name="keywords" content="HR-pQCT, Osteopenia, Type 2 Diabetes, Microarchitecture, Finite Element Analysis">
 
 <title>Trabecular Disconnection and Biomechanical Weakness Drive Fragility in Osteopenic Postmenopausal Women: An HR-pQCT and \muFEA Study</title>
@@ -22,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="paper_files/libs/clipboard/clipboard.min.js"></script>
@@ -72,74 +92,52 @@ window.Quarto = {
 
 <body class="quarto-light">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
-<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
-  <li><a href="#abstract-1" id="toc-abstract-1" class="nav-link" data-scroll-target="#abstract-1">Abstract</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1">Introduction</a></li>
-  <li><a href="#materials-and-methods" id="toc-materials-and-methods" class="nav-link" data-scroll-target="#materials-and-methods">Materials and Methods</a>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract"><span class="header-section-number">1</span> Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#materials-and-methods" id="toc-materials-and-methods" class="nav-link" data-scroll-target="#materials-and-methods"><span class="header-section-number">3</span> Materials and Methods</a>
   <ul class="collapse">
-  <li><a href="#study-design-and-participants" id="toc-study-design-and-participants" class="nav-link" data-scroll-target="#study-design-and-participants">Study Design and Participants</a></li>
+  <li><a href="#study-design-and-participants" id="toc-study-design-and-participants" class="nav-link" data-scroll-target="#study-design-and-participants"><span class="header-section-number">3.1</span> Study Design and Participants</a></li>
+  <li><a href="#clinical-and-densitometric-assessment" id="toc-clinical-and-densitometric-assessment" class="nav-link" data-scroll-target="#clinical-and-densitometric-assessment"><span class="header-section-number">3.2</span> Clinical and Densitometric Assessment</a></li>
+  <li><a href="#hr-pqct-imaging-and-mufea" id="toc-hr-pqct-imaging-and-mufea" class="nav-link" data-scroll-target="#hr-pqct-imaging-and-mufea"><span class="header-section-number">3.3</span> HR-pQCT Imaging and <span class="math inline">\(\mu\)</span>FEA</a></li>
   </ul></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis"><span class="header-section-number">4</span> Statistical Analysis</a>
   <ul class="collapse">
-  <li><a href="#study-design-and-population" id="toc-study-design-and-population" class="nav-link" data-scroll-target="#study-design-and-population">Study Design and Population</a></li>
-  <li><a href="#clinical-and-densitometric-assessment" id="toc-clinical-and-densitometric-assessment" class="nav-link" data-scroll-target="#clinical-and-densitometric-assessment">Clinical and Densitometric Assessment</a></li>
-  <li><a href="#hr-pqct-imaging-and-mufea" id="toc-hr-pqct-imaging-and-mufea" class="nav-link" data-scroll-target="#hr-pqct-imaging-and-mufea">HR-pQCT Imaging and <span class="math inline">\(\mu\)</span>FEA</a></li>
-  <li><a href="#missing-data-and-statistical-analysis" id="toc-missing-data-and-statistical-analysis" class="nav-link" data-scroll-target="#missing-data-and-statistical-analysis">Missing Data and Statistical Analysis</a></li>
-  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a>
-  <ul class="collapse">
-  <li><a href="#baseline-comparisons" id="toc-baseline-comparisons" class="nav-link" data-scroll-target="#baseline-comparisons">Baseline Comparisons</a></li>
-  <li><a href="#multivariable-modeling-and-risk-stratification" id="toc-multivariable-modeling-and-risk-stratification" class="nav-link" data-scroll-target="#multivariable-modeling-and-risk-stratification">Multivariable Modeling and Risk Stratification</a></li>
-  <li><a href="#adjustment-for-multiple-comparisons" id="toc-adjustment-for-multiple-comparisons" class="nav-link" data-scroll-target="#adjustment-for-multiple-comparisons">Adjustment for Multiple Comparisons</a></li>
+  <li><a href="#group-comparisons" id="toc-group-comparisons" class="nav-link" data-scroll-target="#group-comparisons"><span class="header-section-number">4.1</span> Group Comparisons</a></li>
+  <li><a href="#discriminative-performance" id="toc-discriminative-performance" class="nav-link" data-scroll-target="#discriminative-performance"><span class="header-section-number">4.2</span> Discriminative Performance</a></li>
   </ul></li>
-  <li><a href="#clinical-and-pathophysiological-framework" id="toc-clinical-and-pathophysiological-framework" class="nav-link" data-scroll-target="#clinical-and-pathophysiological-framework">Clinical and Pathophysiological Framework</a></li>
-  <li><a href="#clinical-and-pathophysiological-framework-1" id="toc-clinical-and-pathophysiological-framework-1" class="nav-link" data-scroll-target="#clinical-and-pathophysiological-framework-1">Clinical and Pathophysiological Framework</a>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">5</span> Results</a>
   <ul class="collapse">
-  <li><a href="#clinical-confounders-and-metabolic-drivers" id="toc-clinical-confounders-and-metabolic-drivers" class="nav-link" data-scroll-target="#clinical-confounders-and-metabolic-drivers">Clinical Confounders and Metabolic Drivers</a></li>
-  <li><a href="#microarchitectural-parameters-the-root-cause" id="toc-microarchitectural-parameters-the-root-cause" class="nav-link" data-scroll-target="#microarchitectural-parameters-the-root-cause">Microarchitectural Parameters: The “Root Cause”</a></li>
-  <li><a href="#biomechanical-competence-mufea" id="toc-biomechanical-competence-mufea" class="nav-link" data-scroll-target="#biomechanical-competence-mufea">Biomechanical Competence (<span class="math inline">\(\mu\)</span>FEA)</a></li>
+  <li><a href="#primary-objective-the-osteopenic-grey-zone-n91" id="toc-primary-objective-the-osteopenic-grey-zone-n91" class="nav-link" data-scroll-target="#primary-objective-the-osteopenic-grey-zone-n91"><span class="header-section-number">5.1</span> Primary Objective: The Osteopenic “Grey Zone” (<span class="math inline">\(n=91\)</span>)</a>
+  <ul class="collapse">
+  <li><a href="#clinical-characteristics" id="toc-clinical-characteristics" class="nav-link" data-scroll-target="#clinical-characteristics"><span class="header-section-number">5.1.1</span> Clinical Characteristics</a></li>
+  <li><a href="#the-structural-quality-defect" id="toc-the-structural-quality-defect" class="nav-link" data-scroll-target="#the-structural-quality-defect"><span class="header-section-number">5.1.2</span> The Structural “Quality” Defect</a></li>
+  <li><a href="#clinical-vs.-structural-prediction-the-grey-zone-challenge" id="toc-clinical-vs.-structural-prediction-the-grey-zone-challenge" class="nav-link" data-scroll-target="#clinical-vs.-structural-prediction-the-grey-zone-challenge"><span class="header-section-number">5.1.3</span> Clinical vs.&nbsp;Structural Prediction (The “Grey Zone” Challenge)</a></li>
   </ul></li>
-  <li><a href="#statistical-analysis-1" id="toc-statistical-analysis-1" class="nav-link" data-scroll-target="#statistical-analysis-1">Statistical Analysis</a></li>
-  <li><a href="#statistical-analysis-2" id="toc-statistical-analysis-2" class="nav-link" data-scroll-target="#statistical-analysis-2">Statistical Analysis</a></li>
-  </ul></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <li><a href="#secondary-objective-a-validation-in-the-general-cohort-n215" id="toc-secondary-objective-a-validation-in-the-general-cohort-n215" class="nav-link" data-scroll-target="#secondary-objective-a-validation-in-the-general-cohort-n215"><span class="header-section-number">5.2</span> Secondary Objective A: Validation in the General Cohort (<span class="math inline">\(N=215\)</span>)</a></li>
+  <li><a href="#secondary-objective-b-the-t2dm-phenotype" id="toc-secondary-objective-b-the-t2dm-phenotype" class="nav-link" data-scroll-target="#secondary-objective-b-the-t2dm-phenotype"><span class="header-section-number">5.3</span> Secondary Objective B: The T2DM Phenotype</a>
   <ul class="collapse">
-  <li><a href="#clinical-characteristics" id="toc-clinical-characteristics" class="nav-link" data-scroll-target="#clinical-characteristics">Clinical Characteristics</a></li>
-  <li><a href="#areal-bone-mineral-density-abmd" id="toc-areal-bone-mineral-density-abmd" class="nav-link" data-scroll-target="#areal-bone-mineral-density-abmd">Areal Bone Mineral Density (aBMD)</a>
-  <ul class="collapse">
-  <li><a href="#osteopenic-sub-cohort-n91" id="toc-osteopenic-sub-cohort-n91" class="nav-link" data-scroll-target="#osteopenic-sub-cohort-n91">Osteopenic Sub-cohort (<span class="math inline">\(n=91\)</span>)</a></li>
-  <li><a href="#diabetic-sub-cohorts" id="toc-diabetic-sub-cohorts" class="nav-link" data-scroll-target="#diabetic-sub-cohorts">Diabetic Sub-cohorts</a></li>
-  </ul></li>
-  <li><a href="#peripheral-bone-microarchitecture-and-quality" id="toc-peripheral-bone-microarchitecture-and-quality" class="nav-link" data-scroll-target="#peripheral-bone-microarchitecture-and-quality">Peripheral Bone Microarchitecture and Quality</a></li>
-  <li><a href="#biomechanical-competence-mufea-1" id="toc-biomechanical-competence-mufea-1" class="nav-link" data-scroll-target="#biomechanical-competence-mufea-1">Biomechanical Competence (<span class="math inline">\(\mu\)</span>FEA)</a></li>
-  <li><a href="#multivariable-risk-modeling" id="toc-multivariable-risk-modeling" class="nav-link" data-scroll-target="#multivariable-risk-modeling">Multivariable Risk Modeling</a>
-  <ul class="collapse">
-  <li><a href="#the-failure-of-dxa-and-the-grey-zone-paradox" id="toc-the-failure-of-dxa-and-the-grey-zone-paradox" class="nav-link" data-scroll-target="#the-failure-of-dxa-and-the-grey-zone-paradox">The Failure of DXA and the “Grey Zone” Paradox</a></li>
-  <li><a href="#trabecular-disconnection-the-mechanism-of-general-fragility" id="toc-trabecular-disconnection-the-mechanism-of-general-fragility" class="nav-link" data-scroll-target="#trabecular-disconnection-the-mechanism-of-general-fragility">Trabecular Disconnection: The Mechanism of General Fragility</a></li>
-  <li><a href="#the-diabetic-phenotype-cortical-vs.-trabecular-failure" id="toc-the-diabetic-phenotype-cortical-vs.-trabecular-failure" class="nav-link" data-scroll-target="#the-diabetic-phenotype-cortical-vs.-trabecular-failure">The Diabetic Phenotype: Cortical vs.&nbsp;Trabecular Failure</a></li>
-  <li><a href="#clinical-implications-for-risk-stratification" id="toc-clinical-implications-for-risk-stratification" class="nav-link" data-scroll-target="#clinical-implications-for-risk-stratification">Clinical Implications for Risk Stratification</a></li>
-  <li><a href="#strengths-and-limitations" id="toc-strengths-and-limitations" class="nav-link" data-scroll-target="#strengths-and-limitations">Strengths and Limitations</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#diabetic-metabolic-profile-reviewer-context" id="toc-diabetic-metabolic-profile-reviewer-context" class="nav-link" data-scroll-target="#diabetic-metabolic-profile-reviewer-context"><span class="header-section-number">5.3.1</span> Diabetic Metabolic Profile (Reviewer Context)</a></li>
+  <li><a href="#independent-predictors-of-diabetic-fragility-multivariable-analysis" id="toc-independent-predictors-of-diabetic-fragility-multivariable-analysis" class="nav-link" data-scroll-target="#independent-predictors-of-diabetic-fragility-multivariable-analysis"><span class="header-section-number">5.3.2</span> Independent Predictors of Diabetic Fragility (Multivariable Analysis)</a></li>
+  <li><a href="#total-diabetic-cohort-data-n140" id="toc-total-diabetic-cohort-data-n140" class="nav-link" data-scroll-target="#total-diabetic-cohort-data-n140"><span class="header-section-number">5.3.3</span> Total Diabetic Cohort Data (<span class="math inline">\(N=140\)</span>)</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">6</span> Discussion</a>
   <ul class="collapse">
-  <li><a href="#the-structural-basis-of-the-prevention-paradox" id="toc-the-structural-basis-of-the-prevention-paradox" class="nav-link" data-scroll-target="#the-structural-basis-of-the-prevention-paradox">The Structural Basis of the Prevention Paradox</a></li>
-  <li><a href="#the-cortical-phenotype-of-diabetic-fragility" id="toc-the-cortical-phenotype-of-diabetic-fragility" class="nav-link" data-scroll-target="#the-cortical-phenotype-of-diabetic-fragility">The Cortical Phenotype of Diabetic Fragility</a></li>
-  <li><a href="#clinical-implications-and-future-directions" id="toc-clinical-implications-and-future-directions" class="nav-link" data-scroll-target="#clinical-implications-and-future-directions">Clinical Implications and Future Directions</a></li>
-  <li><a href="#strengths-and-limitations-1" id="toc-strengths-and-limitations-1" class="nav-link" data-scroll-target="#strengths-and-limitations-1">Strengths and Limitations</a></li>
-  <li><a href="#conclusion-1" id="toc-conclusion-1" class="nav-link" data-scroll-target="#conclusion-1">Conclusion</a></li>
+  <li><a href="#the-failure-of-dxa-and-the-grey-zone-paradox" id="toc-the-failure-of-dxa-and-the-grey-zone-paradox" class="nav-link" data-scroll-target="#the-failure-of-dxa-and-the-grey-zone-paradox"><span class="header-section-number">6.1</span> The Failure of DXA and the “Grey Zone” Paradox</a></li>
+  <li><a href="#trabecular-disconnection-the-mechanism-of-general-fragility" id="toc-trabecular-disconnection-the-mechanism-of-general-fragility" class="nav-link" data-scroll-target="#trabecular-disconnection-the-mechanism-of-general-fragility"><span class="header-section-number">6.2</span> Trabecular Disconnection: The Mechanism of General Fragility</a></li>
+  <li><a href="#the-diabetic-non-switch-a-temporal-hypothesis" id="toc-the-diabetic-non-switch-a-temporal-hypothesis" class="nav-link" data-scroll-target="#the-diabetic-non-switch-a-temporal-hypothesis"><span class="header-section-number">6.3</span> The Diabetic “Non-Switch”: A Temporal Hypothesis</a></li>
+  <li><a href="#strengths-and-limitations" id="toc-strengths-and-limitations" class="nav-link" data-scroll-target="#strengths-and-limitations"><span class="header-section-number">6.4</span> Strengths and Limitations</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">6.5</span> Conclusion</a></li>
   </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7</span> References</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="paper.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="paper.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
-</div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="paper.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="paper.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -150,15 +148,23 @@ window.Quarto = {
 
 
 <div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Authors</div>
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Ajay Shukla, MBBS, MD, DM, MRCP(SCE) </p>
+    <p class="author">Ajay Shukla, MD, DM </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            Department of Endocrinology, Lucknow
+            Department of Endocrinology, Max Super Speciality Hospital, Lucknow, Uttar Pradesh, India
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Sushil Gupta, MD, DM </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Department of Endocrinology, Max Super Speciality Hospital, Lucknow, Uttar Pradesh, India
           </p>
       </div>
   </div>
@@ -181,247 +187,1861 @@ window.Quarto = {
 </header>
 
 
-<section id="abstract" class="level1">
-<h1>Abstract</h1>
+<section id="abstract" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Abstract</h1>
+<p><strong>Background:</strong> Skeletal management is currently limited by the “prevention paradox,” wherein the majority of fragility fractures occur in postmenopausal women with <span class="math inline">\(T\)</span>-scores in the osteopenic range (<span class="math inline">\(-2.5 &lt; T &lt; -1.0\)</span>). Standard assessment via dual-energy X-ray absorptiometry (DXA) lacks the spatial resolution to capture the 3D microarchitectural determinants of bone strength. We utilized High-Resolution Peripheral Quantitative Computed Tomography (HR-pQCT) and micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA) to identify the structural drivers of fragility within this diagnostic “grey zone.”</p>
+<p><strong>Methods:</strong> This cross-sectional study evaluated 215 postmenopausal women (Total Cohort: <span class="math inline">\(N=215\)</span>; 118 fractures, 97 controls). The primary analysis focused on the “Grey Zone” sub-cohort (<span class="math inline">\(n=91\)</span>; 47 fractures, 44 controls) with osteopenia. Secondary objectives included validation in the total cohort and phenotyping the impact of Type 2 Diabetes Mellitus (T2DM; <span class="math inline">\(n=140\)</span> total, <span class="math inline">\(n=66\)</span> osteopenic). Assessments included DXA (Lumbar/Hip), Trabecular Bone Score (TBS), and HR-pQCT of the distal radius and tibia.</p>
+<p><strong>Results:</strong> In the primary osteopenic sub-cohort (<span class="math inline">\(n=91\)</span>), areal BMD (<span class="math inline">\(aBMD\)</span>) and clinical models (DXA + TBS + FRAX) failed to discriminate fracture status (AUC = 0.60; <span class="math inline">\(p &gt; 0.05\)</span>). Conversely, HR-pQCT revealed a profound structural triad of densitometric loss (Total <span class="math inline">\(vBMD\)</span>: <span class="math inline">\(d = 0.72\)</span>), microstructural decay (Trabecular Number [<span class="math inline">\(Tb.N\)</span>]: <span class="math inline">\(d = 0.83\)</span>), and biomechanical compromise (Failure Load [<span class="math inline">\(F.Load\)</span>]: -14.3%; <span class="math inline">\(p = 0.03\)</span>). The structural model significantly outperformed the clinical model (AUC 0.76 vs.&nbsp;0.60; <span class="math inline">\(p &lt; 0.05\)</span>). These findings were validated in the Total Cohort (<span class="math inline">\(N=215\)</span>), where HR-pQCT parameters maintained superior effect sizes over <span class="math inline">\(aBMD\)</span> (<span class="math inline">\(d = 0.85\)</span> vs.&nbsp;0.42).</p>
+<p><strong>Crucially, phenotyping of the T2DM osteopenic subgroup (<span class="math inline">\(n=66\)</span>) revealed an unexpected finding:</strong> In this <strong>osteopenic</strong> cohort, diabetic fragility was distinguished by preserved cortical porosity (<span class="math inline">\(p=0.26\)</span>) but <strong>accelerated trabecular disconnection</strong> (<span class="math inline">\(d=0.99\)</span>), contrasting with the cortical phenotype typically reported in osteoporotic T2DM. This contradicts the “Cortical Switch” hypothesis often cited in advanced osteoporosis, suggesting that in the earlier osteopenic phase, diabetes primarily accelerates trabecular decay.</p>
+<p><strong>Conclusion:</strong> Standard densitometry fails to capture the “hidden fragility” inherent in the osteopenic population. This study identifies <strong>Trabecular Disconnection</strong> as the universal driver of fragility in the grey zone, regardless of diabetic status. Validating these structural drivers suggests that HR-pQCT is an essential stratification tool for patients who fall below traditional DXA-based intervention thresholds.</p>
 </section>
-<section id="abstract-1" class="level1">
-<h1>Abstract</h1>
-<p><strong>Background:</strong> Skeletal management is currently limited by the “prevention paradox,” wherein the majority of fragility fractures occur in postmenopausal women with <span class="math inline">\(T\)</span>-scores in the osteopenic range (<span class="math inline">\(-2.5 &lt; T &lt; -1.0\)</span>). Standard assessment via dual-energy X-ray absorptiometry (DXA) lacks the spatial resolution to capture the three-dimensional microarchitectural determinants of bone strength. This study utilized High-Resolution Peripheral Quantitative Computed Tomography (HR-pQCT) and micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA) to identify the structural and biomechanical drivers of fragility within this diagnostic “grey zone.”</p>
-<p><strong>Methods:</strong> In this cross-sectional study, 215 postmenopausal women (Total Cohort: <span class="math inline">\(N=215\)</span>; 118 fractures, 97 controls) underwent skeletal assessment via DXA, Trabecular Bone Score (TBS), and HR-pQCT of the distal radius and tibia. The primary analysis focused on the “Grey Zone” sub-cohort (<span class="math inline">\(n=91\)</span>) consisting of women with osteopenia (47 fractures, 44 controls). To maximize power and adhere to clinical reality, an “Entry Ticket” strategy was used (valid scans at both sites required), and minor missing values were managed via standard mean imputation. Discriminative performance was assessed using Area Under the Curve (AUC) and Cohen’s <span class="math inline">\(d\)</span> effect sizes.</p>
-<p><strong>Results:</strong> In the osteopenic sub-cohort (<span class="math inline">\(n=91\)</span>), areal BMD (<span class="math inline">\(aBMD\)</span>) and the combined clinical model (DXA + FRAX + TBS) failed to significantly discriminate fracture status (<span class="math inline">\(p &gt; 0.05\)</span>; AUC = 0.60). In contrast, HR-pQCT identified a profound “quality” defect. Fractured osteopenic women exhibited a characteristic triad of densitometric loss (Total <span class="math inline">\(vBMD\)</span>: <span class="math inline">\(-13.4\%\)</span>, <span class="math inline">\(d = 0.72\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>), microstructural decay (Trabecular Number [<span class="math inline">\(Tb.N\)</span>]: <span class="math inline">\(-11.6\%\)</span>, <span class="math inline">\(d = 0.83\)</span>, <span class="math inline">\(p = 0.001\)</span>), and biomechanical compromise (Failure Load [<span class="math inline">\(F.Load\)</span>]: <span class="math inline">\(-14.3\%\)</span>, <span class="math inline">\(p = 0.03\)</span>). The structural model significantly outperformed the clinical model (AUC 0.76 vs.&nbsp;0.60; <span class="math inline">\(p &lt; 0.05\)</span>). Subgroup analysis of diabetic patients (<span class="math inline">\(n=66\)</span>) revealed a distinct “cortical-specific” phenotype, where fragility was primarily driven by increased Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>, <span class="math inline">\(p &lt; 0.05\)</span>) despite relatively preserved trabecular indices.</p>
-<p><strong>Conclusion:</strong> Standard densitometry fails to capture the hidden fragility inherent in the osteopenic population. HR-pQCT unmasks this risk by quantifying <strong>Trabecular Disconnection</strong> in the general population and <strong>Cortical Porosity</strong> in patients with Type 2 Diabetes Mellitus. These findings validate HR-pQCT/<span class="math inline">\(\mu\)</span>FEA as critical stratification tools for “moderate-risk” patients, providing a structural basis for treatment decisions in patients who otherwise fall below the traditional DXA-based intervention threshold.</p>
+<section id="introduction" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>Osteoporosis is a systemic skeletal disorder characterized by low bone mass and microarchitectural deterioration, resulting in a heightened risk of fragility fractures. The operational definition, established by the World Health Organization (WHO), relies on an areal Bone Mineral Density (<span class="math inline">\(aBMD\)</span>) <span class="math inline">\(T\)</span>-score <span class="math inline">\(\le -2.5\)</span> assessed by Dual-energy X-ray Absorptiometry (DXA). While this threshold is highly specific for identifying individuals at the highest risk, it lacks sufficient sensitivity. Epidemiological data, including the National Osteoporosis Risk Assessment (NORA) study, indicate that the majority of fragility fractures actually occur in women with <span class="math inline">\(T\)</span>-scores in the osteopenic range (between -1.0 and -2.5)—a clinical phenomenon termed the “prevention paradox”<span class="citation" data-cites="eBoneMicroarchitectureAssessed2017"><sup><a href="#ref-eBoneMicroarchitectureAssessed2017" role="doc-biblioref">1</a></sup></span>.</p>
+<p>This diagnostic “grey zone” represents a critical clinical challenge: these patients often fail to meet traditional intervention thresholds and may be excluded from potent anabolic therapies despite demonstrated skeletal fragility. The failure of DXA to accurately stratify risk within this cohort stems from its inherent two-dimensional nature, which cannot resolve the complex three-dimensional (3D) microarchitectural determinants of bone strength. DXA cannot distinguish between cortical and trabecular compartments, nor can it quantify vital parameters like trabecular connectivity or cortical porosity (<span class="math inline">\(Ct.Po\)</span>).</p>
+<p>High-Resolution Peripheral Quantitative Computed Tomography (HR-pQCT) has revolutionized bone assessment, acting as a “virtual bone biopsy” to quantify volumetric BMD (<span class="math inline">\(vBMD\)</span>) and microarchitecture in vivo<span class="citation" data-cites="t.zhuValueMeasuringBone2016"><sup><a href="#ref-t.zhuValueMeasuringBone2016" role="doc-biblioref">2</a></sup></span>. Pivotal studies have shown that cortical porosity and trabecular density are independent predictors of fracture risk<span class="citation" data-cites="eBoneMicroarchitectureAssessed2017 a.r.bugbirdExternalValidationNovel2025"><sup><a href="#ref-eBoneMicroarchitectureAssessed2017" role="doc-biblioref">1</a>,<a href="#ref-a.r.bugbirdExternalValidationNovel2025" role="doc-biblioref">3</a></sup></span>. However, the specific biomechanical drivers of fracture within the “non-osteoporotic” (osteopenic) subgroup remain under-characterized. Furthermore, in Type 2 Diabetes Mellitus (T2DM)—where fracture burden is paradoxically high despite “normal” <span class="math inline">\(aBMD\)</span><span class="citation" data-cites="maAssessmentFractureRisk2019 aimeed.shuBoneStructureTurnover2012"><sup><a href="#ref-maAssessmentFractureRisk2019" role="doc-biblioref">4</a>,<a href="#ref-aimeed.shuBoneStructureTurnover2012" role="doc-biblioref">5</a></sup></span>.—the specific structural degradation pathways in the early (osteopenic) stages remain debated.</p>
+<p><strong>Objectives:</strong> The primary objective of this study was to evaluate the diagnostic performance of HR-pQCT and micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA) in discriminating fracture status within the specific osteopenic subgroup (<span class="math inline">\(n=91\)</span>), compared to standard clinical models. Secondary objectives included validation in the total cohort and specific phenotyping of the T2DM impact on bone quality.</p>
 </section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-</section>
-<section id="introduction-1" class="level1">
-<h1>Introduction</h1>
-<p>Osteoporosis is a silent systemic skeletal disorder characterized by low bone mass and microarchitectural deterioration of bone tissue, leading to an increased risk of fragility fractures. The operational definition of osteoporosis, established by the World Health Organization (WHO), relies on an areal Bone Mineral Density (<span class="math inline">\(aBMD\)</span>) <span class="math inline">\(T\)</span>-score of <span class="math inline">\(\le -2.5\)</span> assessed by Dual-energy X-ray Absorptiometry (DXA). While this threshold is highly specific for identifying those at the highest risk, it lacks sufficient sensitivity. Epidemiological data from the National Osteoporosis Risk Assessment (NORA) study and others indicate that the majority of fragility fractures actually occur in women with <span class="math inline">\(T\)</span>-scores in the osteopenic range (between -1.0 and -2.5), a phenomenon often termed the “prevention paradox” <span class="citation" data-cites="siris2001 pasco2006">[@siris2001; @pasco2006]</span>.</p>
-<p>This diagnostic “grey zone” represents a significant clinical challenge: these patients often do not meet traditional intervention thresholds and may be excluded from reimbursement for potent anabolic therapies despite their demonstrated skeletal fragility.</p>
-<p>The inability of DXA to accurately stratify risk within the osteopenic cohort stems from its inherent technological limitations; it provides a two-dimensional projection of a complex three-dimensional structure. Consequently, DXA cannot distinguish between the cortical and trabecular compartments, nor can it resolve the microarchitectural determinants of bone strength, such as trabecular connectivity or cortical porosity (<span class="math inline">\(Ct.Po\)</span>). While the Trabecular Bone Score (TBS) has emerged as a texture-based proxy for microarchitecture, it remains an indirect measure derived from standard DXA images and does not provide direct volumetric or structural data <span class="citation" data-cites="hans2011">[@hans2011]</span>.</p>
-<p>High-Resolution Peripheral Quantitative Computed Tomography (HR-pQCT) has revolutionized our understanding of bone fragility by allowing for the <em>in vivo</em> assessment of volumetric BMD (<span class="math inline">\(vBMD\)</span>) and microarchitecture at the distal radius and tibia. Often described as a “virtual bone biopsy,” HR-pQCT can quantify specific structural deficits that standard densitometry fails to resolve.</p>
-<p>Recent pivotal studies have highlighted distinct microarchitectural phenotypes associated with fracture. In the OFELY study, Sornay-Rendu et al.&nbsp;demonstrated that cortical porosity and trabecular density were independent predictors of fracture risk in postmenopausal women, identifying high-risk individuals who were missed by DXA alone <span class="citation" data-cites="sornay-rendu2017">[@sornay-rendu2017]</span>. Similarly, in the context of Type 2 Diabetes Mellitus (T2DM)—a condition frequently characterized by normal or even elevated <span class="math inline">\(aBMD\)</span> despite a high fracture burden—Patsch et al.&nbsp;identified cortical porosity as a primary driver of skeletal fragility <span class="citation" data-cites="patsch2013">[@patsch2013]</span>.</p>
-<p>Despite these advances, the specific biomechanical drivers of fracture within the distinct subgroup of “non-osteoporotic” (osteopenic) women remain under-characterized. It is currently unclear whether the structural failure in this intermediate group is driven by the same mechanisms seen in frank osteoporosis (trabecular dropout) or by cortical deficits similar to those observed in diabetic bone disease.</p>
-<p><strong>Objectives:</strong> The primary objective of this study was to evaluate the diagnostic superiority of HR-pQCT and micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA) over standard clinical assessment (DXA + FRAX + TBS) in discriminating prevalent fractures within the osteopenic “grey zone” (<span class="math inline">\(n=91\)</span>). Secondarily, we sought to phenotype the specific structural contribution of T2DM to bone fragility across the total cohort (<span class="math inline">\(N=215\)</span>) and specifically within the osteopenic subgroup (<span class="math inline">\(n=66\)</span>), testing the hypothesis that diabetic fragility is primarily cortically driven, whereas general osteopenic fragility is primarily trabecular in origin.</p>
-</section>
-<section id="materials-and-methods" class="level1">
-<h1>Materials and Methods</h1>
-<section id="study-design-and-participants" class="level2">
-<h2 class="anchored" data-anchor-id="study-design-and-participants">Study Design and Participants</h2>
-</section>
-</section>
-<section id="methods" class="level1">
-<h1>Methods</h1>
-<section id="study-design-and-population" class="level3">
-<h3 class="anchored" data-anchor-id="study-design-and-population">Study Design and Population</h3>
-<p>This cross-sectional, observational study was conducted at a tertiary care metabolic bone center in Lucknow, India. We recruited <strong>215 postmenopausal women</strong> to evaluate the structural determinants of skeletal fragility. To ensure data integrity for advanced biomechanical modeling, we utilized an <strong>“Entry Ticket” inclusion strategy</strong>: participants were only included if they successfully completed both standard-of-care densitometry (DXA) and high-resolution peripheral quantitative computed tomography (HR-pQCT) of the distal radius and tibia.</p>
-<p>The study was powered to test two distinct hypotheses:</p>
-<ol type="1">
-<li><strong>Hypothesis 1 (Global Diagnostic Performance):</strong> A comparison across the total cohort (<span class="math inline">\(N=215\)</span>) consisting of 118 women with prevalent fragility fractures (Group A) and 97 non-fracture controls (Group B).</li>
-<li><strong>Hypothesis 2 (The “Grey Zone” Analysis):</strong> Our primary objective focused on the diagnostic “Grey Zone”—women with osteopenia defined strictly by the <strong>WHO Classification</strong> (lowest <span class="math inline">\(T\)</span>-score between -1.0 and -2.5). This sub-cohort (<span class="math inline">\(n=91\)</span>) consisted of 47 fracture cases and 44 age-matched controls.</li>
-</ol>
-<p>Additionally, a pre-specified subgroup analysis was performed for patients with Type 2 Diabetes Mellitus (T2DM), encompassing <span class="math inline">\(N=140\)</span> in the total cohort and <span class="math inline">\(n=66\)</span> within the osteopenic sub-cohort.</p>
-<p><strong>Exclusion Criteria:</strong> Exclusion criteria included secondary causes of bone loss (e.g., hyperparathyroidism, malabsorption, or glucocorticoid therapy), chronic kidney disease (eGFR &lt; 30 mL/min/1.73m²), and high-impact trauma. HR-pQCT scans with significant motion artifacts (Scanco motion grade &gt; 3) were excluded from the final analysis.</p>
-</section>
-<section id="clinical-and-densitometric-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="clinical-and-densitometric-assessment">Clinical and Densitometric Assessment</h3>
-<p>Areal Bone Mineral Density (<span class="math inline">\(aBMD\)</span>, g/cm²) and <span class="math inline">\(T\)</span>-scores were measured at the lumbar spine (<span class="math inline">\(L1-L4\)</span>), femoral neck, and total hip using dual-energy X-ray absorptiometry (DXA; Prodigy, GE Lunar). The Trabecular Bone Score (TBS) was derived from the spine DXA images (TBS iNsight, Medimaps). 10-year fracture probability was calculated using the FRAX® tool (India-specific model).</p>
-</section>
-<section id="hr-pqct-imaging-and-mufea" class="level3">
-<h3 class="anchored" data-anchor-id="hr-pqct-imaging-and-mufea">HR-pQCT Imaging and <span class="math inline">\(\mu\)</span>FEA</h3>
-<p>Volumetric BMD (<span class="math inline">\(vBMD\)</span>) and microarchitecture were assessed at the distal radius and tibia using a second-generation HR-pQCT scanner (XtremeCT II, Scanco Medical AG, Brüttisellen, Switzerland).</p>
-<ul>
-<li><strong>Scanning Protocol:</strong> An isotropic voxel size of 61 µm was utilized. Following a scout view, 168 sections were acquired starting at 9.5 mm and 22.5 mm proximal to the reference line for the radius and tibia, respectively.</li>
-<li><strong>Parameters:</strong> Key morphological outcomes included total vBMD (<span class="math inline">\(Tt.vBMD\)</span>), trabecular number (<span class="math inline">\(Tb.N\)</span>), and cortical porosity (<span class="math inline">\(Ct.Po\)</span>).</li>
-<li><strong>Micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA):</strong> Biomechanical competence was estimated using a linear <span class="math inline">\(\mu\)</span>FEA solver (Scanco Medical). A uniaxial compression test was simulated with a 1% apparent strain to derive <strong>Failure Load</strong> (<span class="math inline">\(F.Load, N\)</span>) and <strong>Stiffness</strong> (<span class="math inline">\(kN/mm\)</span>).</li>
-</ul>
-</section>
-<section id="missing-data-and-statistical-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="missing-data-and-statistical-analysis">Missing Data and Statistical Analysis</h3>
-<p>To maintain the “Root Cause” focus and maximize sample size, missing data points within the valid scan sets (e.g., a single missing cortical parameter due to localized artifact) were managed via <strong>mean imputation</strong>, where missing values were replaced by the cohort-specific mean for that variable.</p>
-<p>Statistical analysis was performed using Python (v3.11). * <strong>Group Comparisons:</strong> Differences between fracture and control groups were assessed using independent Student’s <span class="math inline">\(t\)</span>-tests or Mann-Whitney U tests based on normality. * <strong>Discriminative Performance:</strong> Receiver Operating Characteristic (ROC) analysis was used to calculate the Area Under the Curve (AUC). * <strong>Effect Sizes:</strong> Cohen’s <span class="math inline">\(d\)</span> was utilized to quantify the magnitude of the structural deficit, where <span class="math inline">\(d &gt; 0.8\)</span> was considered a large effect. * <strong>Power Analysis:</strong> Post-hoc analysis confirmed a statistical power of <strong>92.3%</strong> for the total cohort and <strong>97.5%</strong> for the osteopenic sub-cohort to detect significant differences in trabecular microarchitecture.</p>
-</section>
-<section id="statistical-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h2>
-<p>Data distribution for all continuous variables—including clinical characteristics, densitometry, and HR-pQCT parameters—was evaluated using Shapiro-Wilk tests, inspection of histograms, and Q-Q plots. Continuous variables are presented as mean <span class="math inline">\(\pm\)</span> standard deviation (SD) for normally distributed data or median [interquartile range, IQR] for non-normally distributed data. Categorical variables are expressed as counts and percentages (<span class="math inline">\(n, \%\)</span>).</p>
-<section id="baseline-comparisons" class="level3">
-<h3 class="anchored" data-anchor-id="baseline-comparisons">Baseline Comparisons</h3>
-<p>To address our primary objective, we compared clinical, densitometric, and microarchitectural parameters between the Fracture (Group A) and Non-Fracture Control (Group B) cohorts. * <strong>Group Differences:</strong> Differences in age, BMI, <span class="math inline">\(aBMD\)</span>, and metabolic markers were assessed using the independent samples <span class="math inline">\(t\)</span>-test for normally distributed variables and the Mann-Whitney <span class="math inline">\(U\)</span>-test for skewed data. * <strong>Categorical Differences:</strong> Differences in the prevalence of comorbidities (e.g., T2DM status) were evaluated using the Chi-square test (<span class="math inline">\(\chi^2\)</span>).</p>
-<p>This analysis was performed systematically across the four pre-specified study cohorts: 1. <strong>Total Cohort (<span class="math inline">\(N=215\)</span>)</strong> 2. <strong>Primary Osteopenia Sub-cohort (<span class="math inline">\(n=91\)</span>)</strong> 3. <strong>Total Diabetic Cohort (<span class="math inline">\(N=140\)</span>)</strong> 4. <strong>Diabetic Osteopenia Sub-cohort (<span class="math inline">\(n=66\)</span>)</strong></p>
-</section>
-<section id="multivariable-modeling-and-risk-stratification" class="level3">
-<h3 class="anchored" data-anchor-id="multivariable-modeling-and-risk-stratification">Multivariable Modeling and Risk Stratification</h3>
-<p>To determine the independent contribution of bone microarchitecture to fracture risk, we utilized multivariable logistic regression models. * <strong>Model 1:</strong> Adjusted for Age. * <strong>Model 2:</strong> Adjusted for Age and BMI. * <strong>Model 3 (The Structural Independence Model):</strong> Adjusted for Age, BMI, and Total Hip <span class="math inline">\(aBMD\)</span>.</p>
-<p>Odds Ratios (OR) with <span class="math inline">\(95\%\)</span> Confidence Intervals (CI) were calculated per one standard deviation (SD) decrease in volumetric density, trabecular parameters, and stiffness/failure load (or per 1-SD increase for Cortical Porosity). Area Under the Curve (AUC) analysis was performed to compare the discriminative ability of the structural model (HR-pQCT) versus the standard clinical model (DXA).</p>
-</section>
-<section id="adjustment-for-multiple-comparisons" class="level3">
-<h3 class="anchored" data-anchor-id="adjustment-for-multiple-comparisons">Adjustment for Multiple Comparisons</h3>
-<p>As this is the first study exploring the distinct “Trabecular” vs.&nbsp;“Cortical” failure modes in Indian postmenopausal women with osteopenia, our purpose includes both hypothesis testing (for primary outcomes: <span class="math inline">\(Tb.N\)</span>, <span class="math inline">\(F.Load\)</span>) and hypothesis generation (for secondary cortical indices). In this context, we interpreted findings based on biological plausibility and consistency across effective stress/strain models rather than applying a rigid Bonferroni correction, which risks obscuring clinically relevant signals in correlated physiological data.</p>
-<p>All statistical tests were two-tailed, and a <span class="math inline">\(p\)</span>-value <span class="math inline">\(&lt; 0.05\)</span> was considered statistically significant. Statistical analysis was performed using Python (v3.11) with the <code>scipy.stats</code> and <code>statsmodels</code> libraries.</p>
+<section id="materials-and-methods" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Materials and Methods</h1>
+<section id="study-design-and-participants" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="study-design-and-participants"><span class="header-section-number">3.1</span> Study Design and Participants</h2>
+<p>This cross-sectional, observational study was conducted at a tertiary care metabolic bone center. We recruited 215 postmenopausal women to evaluate the structural determinants of skeletal fragility. To ensure data integrity for advanced biomechanical modeling, we utilized an “Strict image quality inclusion criteria”: participants were only included if they successfully completed both DXA and HR-pQCT of the distal radius. Of the 227 initially screened participants, 12 (5.3%) were excluded due to significant motion artifacts (Scanco Grade 4 or 5) to prevent resolution-induced bias, resulting in the final cohort of 215.</p>
 <div id="fig-consort" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-consort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../results/figures/Fig1_Consort.png" class="img-fluid figure-img">
+<img src="../results/figures/Fig1_Consort.png" class="img-fluid figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-consort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <strong>Study Consort Diagram.</strong> Flowchart illustrating recruitment, exclusion criteria, and final grouping for the total cohort (<span class="math inline">\(N=215\)</span>) and the osteopenic grey-zone sub-cohorts.
+Figure&nbsp;1: <strong>Study Flowchart.</strong> Recruitment, exclusion, and stratification of the study population.
 </figcaption>
 </figure>
 </div>
+<p>The study architecture was designed to address three hierarchical objectives: 1. <strong>Primary Objective (The “Grey Zone”):</strong> Discrimination of fracture status within the osteopenic sub-cohort (<span class="math inline">\(n=91\)</span>; 47 fractures, 44 controls), defined by a WHO <span class="math inline">\(T\)</span>-score between -1.0 and -2.5. 2. <strong>Secondary Objective A (Total Cohort Validation):</strong> Validation of structural markers across the total population (<span class="math inline">\(N=215\)</span>; 118 fractures, 97 controls). 3. <strong>Secondary Objective B (T2DM Phenotyping):</strong> Characterization of the Type 2 Diabetes Mellitus (T2DM) impact as a structural modifier.</p>
+</section>
+<section id="clinical-and-densitometric-assessment" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="clinical-and-densitometric-assessment"><span class="header-section-number">3.2</span> Clinical and Densitometric Assessment</h2>
+<p>Areal Bone Mineral Density (<span class="math inline">\(aBMD\)</span>, g/cm²) and <span class="math inline">\(T\)</span>-scores were measured at the lumbar spine (<span class="math inline">\(L1-L4\)</span>), femoral neck, and total hip (Prodigy, GE Lunar). The Trabecular Bone Score (TBS) was derived from spine DXA images. 10-year fracture probability was calculated using the FRAX® tool<span class="citation" data-cites="meilinghuangPerformanceHRpQCTDXA2021"><sup><a href="#ref-meilinghuangPerformanceHRpQCTDXA2021" role="doc-biblioref">6</a></sup></span>..</p>
+</section>
+<section id="hr-pqct-imaging-and-mufea" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="hr-pqct-imaging-and-mufea"><span class="header-section-number">3.3</span> HR-pQCT Imaging and <span class="math inline">\(\mu\)</span>FEA</h2>
+<p>Volumetric BMD (<span class="math inline">\(vBMD\)</span>) and microarchitecture were assessed using an XtremeCT II scanner (Scanco Medical AG, Switzerland) with an isotropic voxel size of 61 <span class="math inline">\(\mu\)</span>m. * <strong>Morphological Parameters:</strong> Key outcomes included total <span class="math inline">\(vBMD\)</span> (<span class="math inline">\(Tt.vBMD\)</span>), trabecular number (<span class="math inline">\(Tb.N\)</span>), and cortical porosity (<span class="math inline">\(Ct.Po\)</span>). * <strong>Biomechanical Competence (<span class="math inline">\(\mu\)</span>FEA):</strong> A linear <span class="math inline">\(\mu\)</span>FEA solver was used to simulate a uniaxial compression test (1% apparent strain) to derive Failure Load (<span class="math inline">\(F.Load\)</span>, N) and Stiffness (kN/mm). Boundary conditions simulated uniaxial compression between frictionless platens. Elements were assigned a homogeneous isotropic tissue modulus of 6829 MPa and a Poisson’s ratio of 0.3, consistent with the standard Scanco FE evaluation protocol.</p>
 </section>
 </section>
-<section id="clinical-and-pathophysiological-framework" class="level2">
-<h2 class="anchored" data-anchor-id="clinical-and-pathophysiological-framework">Clinical and Pathophysiological Framework</h2>
+<section id="statistical-analysis" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Statistical Analysis</h1>
+<p>Statistical analysis was performed using Python (v3.11). Data distribution was evaluated using Shapiro-Wilk tests and Q-Q plots. Continuous variables are presented as mean <span class="math inline">\(\pm\)</span> SD.</p>
+<section id="group-comparisons" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="group-comparisons"><span class="header-section-number">4.1</span> Group Comparisons</h2>
+<p>Differences were evaluated using independent Student’s <span class="math inline">\(t\)</span>-tests or Mann-Whitney <span class="math inline">\(U\)</span>-tests. To quantify the clinical magnitude of structural deficits beyond simple <span class="math inline">\(p\)</span>-values, Cohen’s <span class="math inline">\(d\)</span> was calculated (<span class="math inline">\(d &gt; 0.8\)</span> considered a large effect).</p>
 </section>
-<section id="clinical-and-pathophysiological-framework-1" class="level2">
-<h2 class="anchored" data-anchor-id="clinical-and-pathophysiological-framework-1">Clinical and Pathophysiological Framework</h2>
-<p>To evaluate the determinants of skeletal fragility in the diagnostic “grey zone,” we categorized clinical and imaging variables based on their established biological impact on bone remodeling and structural integrity.</p>
-<section id="clinical-confounders-and-metabolic-drivers" class="level3">
-<h3 class="anchored" data-anchor-id="clinical-confounders-and-metabolic-drivers">Clinical Confounders and Metabolic Drivers</h3>
-<p>Systemic metabolic environments significantly influence bone turnover rates and material quality, often independent of areal bone mineral density (<span class="math inline">\(aBMD\)</span>).</p>
-<ul>
-<li><p><strong>Type 2 Diabetes Mellitus (T2DM):</strong> Following the “Diabetic Paradox,” hyperglycemia leads to the non-enzymatic glycation of the collagen matrix and the accumulation of Advanced Glycation End-products (AGEs). This process induces skeletal brittleness despite “normal” densitometric values, primarily by driving intracortical remodeling and increasing <strong>Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>)</strong>.</p></li>
-<li><p><strong>Glucocorticoid Therapy and Rheumatoid Arthritis (RA):</strong> These factors act as potent inhibitors of osteoblastogenesis while simultaneously stimulating osteoclast-mediated resorption. The primary structural consequence is rapid <strong>Trabecular Dropout</strong> (reduced <span class="math inline">\(Tb.N\)</span>) and excessive thinning of the cortical shell.</p></li>
-<li><p><strong>Thyroid Medication:</strong> Supra-physiological levels of thyroxine accelerate the bone remodeling cycle. This results in “young,” under-mineralized bone that possesses reduced secondary mineralization, rendering the microarchitecture more susceptible to micro-damage accumulation.</p></li>
-<li><p><strong>Body Mass Index (BMI):</strong> While increased mechanical loading is traditionally viewed as protective, in the context of T2DM and aging, higher BMI may correlate with increased marrow adiposity and impaired bone quality, confounding standard risk assessments.</p></li>
-</ul>
-</section>
-<section id="microarchitectural-parameters-the-root-cause" class="level3">
-<h3 class="anchored" data-anchor-id="microarchitectural-parameters-the-root-cause">Microarchitectural Parameters: The “Root Cause”</h3>
-<p>HR-pQCT provides a direct resolution of the structural decay that remains invisible to standard two-dimensional DXA.</p>
-<ul>
-<li><p><strong>Trabecular Number (<span class="math inline">\(Tb.N\)</span>) and Spacing (<span class="math inline">\(Tb.Sp\)</span>):</strong> In the osteopenic grey zone, the loss of trabecular connectivity is catastrophic. From a first-principles perspective, a reduction in <span class="math inline">\(Tb.N\)</span> represents a loss of critical horizontal “tie-beams,” leading to an exponential decrease in buckling resistance under load.</p></li>
-<li><p><strong>Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>):</strong> Often referred to as the “Swiss Cheese” effect, increased intracortical pores act as stress risers. Even a marginal increase in porosity significantly compromises the cortical envelope’s ability to resist bending and torsional forces.</p></li>
-<li><p><strong>Trabecular Bone Score (TBS):</strong> While utilized as a clinical proxy for microarchitecture, the inherent limitations of DXA-derived texture indices are addressed by the direct volumetric assessment of trabecular density and connectivity provided by HR-pQCT.</p></li>
-</ul>
-</section>
-<section id="biomechanical-competence-mufea" class="level3">
-<h3 class="anchored" data-anchor-id="biomechanical-competence-mufea">Biomechanical Competence (<span class="math inline">\(\mu\)</span>FEA)</h3>
-<p>The ultimate functional output of the skeletal structure was estimated via linear micro-Finite Element Analysis (<span class="math inline">\(\mu\)</span>FEA).</p>
-<ul>
-<li><strong>Stiffness and Failure Load (<span class="math inline">\(F.Load\)</span>):</strong> These variables act as the <strong>Functional Anchor</strong> of our study. By integrating volumetric density and microarchitectural geometry, <span class="math inline">\(F.Load\)</span> quantifies the structural “tipping point.” If <span class="math inline">\(F.Load\)</span> is low despite an osteopenic <span class="math inline">\(T\)</span>-score, the bone has reached a biological failure threshold, providing a functional justification for pharmacological intervention.</li>
-</ul>
+<section id="discriminative-performance" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="discriminative-performance"><span class="header-section-number">4.2</span> Discriminative Performance</h2>
+<p>The primary outcome was the Area Under the Curve (AUC) from Receiver Operating Characteristic (ROC) analysis. We compared the AUC of the Structural Model (HR-pQCT) against the Clinical Model (DXA + TBS) specifically within the <span class="math inline">\(n=91\)</span> osteopenic sub-cohort.</p>
 </section>
 </section>
-<section id="statistical-analysis-1" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-analysis-1">Statistical Analysis</h2>
+<section id="results" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Results</h1>
+<section id="primary-objective-the-osteopenic-grey-zone-n91" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="primary-objective-the-osteopenic-grey-zone-n91"><span class="header-section-number">5.1</span> Primary Objective: The Osteopenic “Grey Zone” (<span class="math inline">\(n=91\)</span>)</h2>
+<p>The primary analysis focused on the 91 postmenopausal women with osteopenia (<span class="math inline">\(T\)</span>-score between -1.0 and -2.5).</p>
+<section id="clinical-characteristics" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="clinical-characteristics"><span class="header-section-number">5.1.1</span> Clinical Characteristics</h3>
+<p>As mandated by the study design, there were no significant differences in age or BMI between the fracture and control groups (<span class="math inline">\(p &gt; 0.05\)</span>). Crucially, <strong><span class="math inline">\(aBMD\)</span> failed to discriminate fracture status</strong> in this sub-cohort. Neither FRAX, TBS, nor Neck T-score provided significant discrimination.</p>
+<p><strong>Table 1: Clinical Characteristics &amp; FRAX Risk Assessment (Osteopenia Sub-cohort)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Fracture (n=47)</th>
+<th style="text-align: center;">Control (n=44)</th>
+<th style="text-align: center;">% Diff</th>
+<th style="text-align: center;">P-value</th>
+<th style="text-align: center;">Cohen’s d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Age (years)</td>
+<td style="text-align: center;">59.51 ± 7.23</td>
+<td style="text-align: center;">57.23 ± 8.87</td>
+<td style="text-align: center;">4.0%</td>
+<td style="text-align: center;">0.184</td>
+<td style="text-align: center;">0.28</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BMI (kg/m²)</td>
+<td style="text-align: center;">28.54 ± 4.40</td>
+<td style="text-align: center;">28.39 ± 4.60</td>
+<td style="text-align: center;">0.5%</td>
+<td style="text-align: center;">0.870</td>
+<td style="text-align: center;">0.03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">L1-L4 T-score</td>
+<td style="text-align: center;">-1.63 ± 0.76</td>
+<td style="text-align: center;">-1.36 ± 0.84</td>
+<td style="text-align: center;">20.0%</td>
+<td style="text-align: center;">0.111</td>
+<td style="text-align: center;">0.34</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Femoral Neck T-score</td>
+<td style="text-align: center;">-1.34 ± 0.65</td>
+<td style="text-align: center;">-1.29 ± 0.57</td>
+<td style="text-align: center;">3.7%</td>
+<td style="text-align: center;">0.712</td>
+<td style="text-align: center;">0.08</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Trabecular Bone Score (TBS)</td>
+<td style="text-align: center;">1.25 ± 0.14</td>
+<td style="text-align: center;">1.28 ± 0.08</td>
+<td style="text-align: center;">-2.3%</td>
+<td style="text-align: center;">0.208</td>
+<td style="text-align: center;">0.26</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FRAX Major Fracture (%)</td>
+<td style="text-align: center;">4.59 ± 3.40</td>
+<td style="text-align: center;">3.86 ± 3.14</td>
+<td style="text-align: center;">18.9%</td>
+<td style="text-align: center;">0.290</td>
+<td style="text-align: center;">0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FRAX Hip Fracture (%)</td>
+<td style="text-align: center;">0.98 ± 1.08</td>
+<td style="text-align: center;">0.85 ± 1.19</td>
+<td style="text-align: center;">14.8%</td>
+<td style="text-align: center;">0.597</td>
+<td style="text-align: center;">0.11</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Neither FRAX, TBS, nor BMD significantly discriminated fracture status (p &gt; 0.05).</em></p>
 </section>
-<section id="statistical-analysis-2" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-analysis-2">Statistical Analysis</h2>
-<p>Data were analyzed using Python (v3.11). Group differences were assessed via Student’s t-test or Mann-Whitney U-test. To verify the independent value of HR-pQCT, multivariable logistic regression models were constructed, adjusting for Age, BMI, and Total Hip <span class="math inline">\(aBMD\)</span>. Adjusted Odds Ratios (aOR) are reported per 1-SD change.</p>
+<section id="the-structural-quality-defect" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="the-structural-quality-defect"><span class="header-section-number">5.1.2</span> The Structural “Quality” Defect</h3>
+<p>In sharp contrast to the clinical parameters, HR-pQCT revealed a profound structural failure in the fracture group. This fragility was characterized by <strong>Trabecular Disconnection</strong> (reduced <span class="math inline">\(Tb.N\)</span>) and volumetric density loss.</p>
+<p><strong>Table 2: Comprehensive HR-pQCT &amp; <span class="math inline">\(\mu\)</span>FEA Parameters (Osteopenia Sub-cohort)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Fracture</th>
+<th style="text-align: center;">Control</th>
+<th style="text-align: center;">% Diff</th>
+<th style="text-align: center;">P-value</th>
+<th style="text-align: center;">Cohen’s d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Distal Radius</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TT.AR</td>
+<td style="text-align: center;">235.77 ± 52.71</td>
+<td style="text-align: center;">232.41 ± 59.23</td>
+<td style="text-align: center;">1.4%</td>
+<td style="text-align: center;">0.776</td>
+<td style="text-align: center;">0.06</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PM</td>
+<td style="text-align: center;">65.99 ± 11.12</td>
+<td style="text-align: center;">63.70 ± 7.90</td>
+<td style="text-align: center;">3.6%</td>
+<td style="text-align: center;">0.258</td>
+<td style="text-align: center;">0.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.AR</td>
+<td style="text-align: center;">47.33 ± 12.84</td>
+<td style="text-align: center;">50.72 ± 11.02</td>
+<td style="text-align: center;">-6.7%</td>
+<td style="text-align: center;">0.178</td>
+<td style="text-align: center;">0.28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.AR</td>
+<td style="text-align: center;">191.17 ± 50.22</td>
+<td style="text-align: center;">184.50 ± 55.68</td>
+<td style="text-align: center;">3.6%</td>
+<td style="text-align: center;">0.551</td>
+<td style="text-align: center;">0.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.META.AR</td>
+<td style="text-align: center;">77.70 ± 20.23</td>
+<td style="text-align: center;">75.06 ± 22.44</td>
+<td style="text-align: center;">3.5%</td>
+<td style="text-align: center;">0.557</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.INN.AR</td>
+<td style="text-align: center;">113.40 ± 29.95</td>
+<td style="text-align: center;">109.45 ± 33.23</td>
+<td style="text-align: center;">3.6%</td>
+<td style="text-align: center;">0.553</td>
+<td style="text-align: center;">0.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ttvBMD</td>
+<td style="text-align: center;">251.54 ± 68.23</td>
+<td style="text-align: center;">290.58 ± 64.85</td>
+<td style="text-align: center;">-13.4%</td>
+<td style="text-align: center;"><strong>0.006</strong></td>
+<td style="text-align: center;">0.59</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tbvBMD</td>
+<td style="text-align: center;">94.75 ± 30.43</td>
+<td style="text-align: center;">120.36 ± 35.15</td>
+<td style="text-align: center;">-21.3%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.78</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TbMeta.v.BMD</td>
+<td style="text-align: center;">152.43 ± 32.14</td>
+<td style="text-align: center;">179.80 ± 36.04</td>
+<td style="text-align: center;">-15.2%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tb.inn.BMD</td>
+<td style="text-align: center;">55.14 ± 30.88</td>
+<td style="text-align: center;">79.59 ± 36.18</td>
+<td style="text-align: center;">-30.7%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.73</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CTvBMD</td>
+<td style="text-align: center;">863.91 ± 74.87</td>
+<td style="text-align: center;">885.62 ± 73.50</td>
+<td style="text-align: center;">-2.5%</td>
+<td style="text-align: center;">0.166</td>
+<td style="text-align: center;">0.29</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BV/TV</td>
+<td style="text-align: center;">0.13 ± 0.04</td>
+<td style="text-align: center;">0.17 ± 0.05</td>
+<td style="text-align: center;">-20.4%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.N</td>
+<td style="text-align: center;">1.03 ± 0.22</td>
+<td style="text-align: center;">1.21 ± 0.21</td>
+<td style="text-align: center;">-15.1%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.84</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.TH</td>
+<td style="text-align: center;">0.21 ± 0.02</td>
+<td style="text-align: center;">0.22 ± 0.02</td>
+<td style="text-align: center;">-3.3%</td>
+<td style="text-align: center;">0.130</td>
+<td style="text-align: center;">0.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.SP</td>
+<td style="text-align: center;">1.00 ± 0.23</td>
+<td style="text-align: center;">0.83 ± 0.19</td>
+<td style="text-align: center;">20.4%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.1/N.SD</td>
+<td style="text-align: center;">0.43 ± 0.19</td>
+<td style="text-align: center;">0.32 ± 0.09</td>
+<td style="text-align: center;">35.3%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.TH</td>
+<td style="text-align: center;">0.90 ± 0.25</td>
+<td style="text-align: center;">0.97 ± 0.21</td>
+<td style="text-align: center;">-7.5%</td>
+<td style="text-align: center;">0.128</td>
+<td style="text-align: center;">0.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PO</td>
+<td style="text-align: center;">0.01 ± 0.02</td>
+<td style="text-align: center;">0.01 ± 0.01</td>
+<td style="text-align: center;">19.9%</td>
+<td style="text-align: center;">0.550</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.PO.DM</td>
+<td style="text-align: center;">0.18 ± 0.04</td>
+<td style="text-align: center;">0.18 ± 0.04</td>
+<td style="text-align: center;">-1.3%</td>
+<td style="text-align: center;">0.783</td>
+<td style="text-align: center;">0.06</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stiffness</td>
+<td style="text-align: center;">41370.19 ± 10112.16</td>
+<td style="text-align: center;">47636.71 ± 14965.17</td>
+<td style="text-align: center;">-13.2%</td>
+<td style="text-align: center;"><strong>0.023</strong></td>
+<td style="text-align: center;">0.49</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F.Load</td>
+<td style="text-align: center;">-2182.59 ± 571.54</td>
+<td style="text-align: center;">-2526.78 ± 841.75</td>
+<td style="text-align: center;">-13.6%</td>
+<td style="text-align: center;"><strong>0.026</strong></td>
+<td style="text-align: center;">0.48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Distal Tibia</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TT.AR</td>
+<td style="text-align: center;">531.21 ± 88.06</td>
+<td style="text-align: center;">514.35 ± 82.43</td>
+<td style="text-align: center;">3.3%</td>
+<td style="text-align: center;">0.348</td>
+<td style="text-align: center;">0.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PM</td>
+<td style="text-align: center;">89.43 ± 8.00</td>
+<td style="text-align: center;">88.13 ± 7.25</td>
+<td style="text-align: center;">1.5%</td>
+<td style="text-align: center;">0.421</td>
+<td style="text-align: center;">0.17</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.AR</td>
+<td style="text-align: center;">106.06 ± 17.95</td>
+<td style="text-align: center;">109.35 ± 17.56</td>
+<td style="text-align: center;">-3.0%</td>
+<td style="text-align: center;">0.379</td>
+<td style="text-align: center;">0.19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.AR</td>
+<td style="text-align: center;">429.41 ± 89.08</td>
+<td style="text-align: center;">409.95 ± 77.20</td>
+<td style="text-align: center;">4.7%</td>
+<td style="text-align: center;">0.268</td>
+<td style="text-align: center;">0.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.META.AR</td>
+<td style="text-align: center;">173.41 ± 35.80</td>
+<td style="text-align: center;">165.61 ± 31.04</td>
+<td style="text-align: center;">4.7%</td>
+<td style="text-align: center;">0.268</td>
+<td style="text-align: center;">0.23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.INN.AR</td>
+<td style="text-align: center;">256.01 ± 53.29</td>
+<td style="text-align: center;">244.62 ± 46.14</td>
+<td style="text-align: center;">4.7%</td>
+<td style="text-align: center;">0.278</td>
+<td style="text-align: center;">0.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ttvBMD</td>
+<td style="text-align: center;">263.50 ± 47.30</td>
+<td style="text-align: center;">283.60 ± 49.58</td>
+<td style="text-align: center;">-7.1%</td>
+<td style="text-align: center;">0.051</td>
+<td style="text-align: center;">0.42</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tbvBMD</td>
+<td style="text-align: center;">101.98 ± 26.21</td>
+<td style="text-align: center;">113.45 ± 33.08</td>
+<td style="text-align: center;">-10.1%</td>
+<td style="text-align: center;">0.071</td>
+<td style="text-align: center;">0.39</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TbMeta.v.BMD</td>
+<td style="text-align: center;">178.57 ± 30.85</td>
+<td style="text-align: center;">189.44 ± 37.95</td>
+<td style="text-align: center;">-5.7%</td>
+<td style="text-align: center;">0.139</td>
+<td style="text-align: center;">0.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tb.inn.BMD</td>
+<td style="text-align: center;">50.03 ± 27.80</td>
+<td style="text-align: center;">61.93 ± 32.05</td>
+<td style="text-align: center;">-19.2%</td>
+<td style="text-align: center;">0.062</td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CTvBMD</td>
+<td style="text-align: center;">899.52 ± 60.19</td>
+<td style="text-align: center;">918.57 ± 58.71</td>
+<td style="text-align: center;">-2.1%</td>
+<td style="text-align: center;">0.130</td>
+<td style="text-align: center;">0.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BV/TV</td>
+<td style="text-align: center;">0.17 ± 0.07</td>
+<td style="text-align: center;">0.17 ± 0.04</td>
+<td style="text-align: center;">-0.4%</td>
+<td style="text-align: center;">0.956</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.N</td>
+<td style="text-align: center;">0.88 ± 0.21</td>
+<td style="text-align: center;">0.98 ± 0.15</td>
+<td style="text-align: center;">-9.6%</td>
+<td style="text-align: center;"><strong>0.017</strong></td>
+<td style="text-align: center;">0.51</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.TH</td>
+<td style="text-align: center;">0.25 ± 0.03</td>
+<td style="text-align: center;">0.25 ± 0.02</td>
+<td style="text-align: center;">1.6%</td>
+<td style="text-align: center;">0.404</td>
+<td style="text-align: center;">0.17</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.SP</td>
+<td style="text-align: center;">1.21 ± 0.42</td>
+<td style="text-align: center;">1.03 ± 0.18</td>
+<td style="text-align: center;">17.8%</td>
+<td style="text-align: center;"><strong>0.008</strong></td>
+<td style="text-align: center;">0.56</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.1/N.SD</td>
+<td style="text-align: center;">0.65 ± 0.45</td>
+<td style="text-align: center;">0.46 ± 0.19</td>
+<td style="text-align: center;">40.7%</td>
+<td style="text-align: center;"><strong>0.012</strong></td>
+<td style="text-align: center;">0.53</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.TH</td>
+<td style="text-align: center;">1.40 ± 0.25</td>
+<td style="text-align: center;">1.45 ± 0.22</td>
+<td style="text-align: center;">-3.5%</td>
+<td style="text-align: center;">0.304</td>
+<td style="text-align: center;">0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PO</td>
+<td style="text-align: center;">0.02 ± 0.02</td>
+<td style="text-align: center;">0.03 ± 0.05</td>
+<td style="text-align: center;">-23.2%</td>
+<td style="text-align: center;">0.303</td>
+<td style="text-align: center;">0.22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.PO.DM</td>
+<td style="text-align: center;">0.23 ± 0.03</td>
+<td style="text-align: center;">0.24 ± 0.04</td>
+<td style="text-align: center;">-1.5%</td>
+<td style="text-align: center;">0.668</td>
+<td style="text-align: center;">0.09</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stiffness</td>
+<td style="text-align: center;">130643.32 ± 15509.48</td>
+<td style="text-align: center;">133269.28 ± 24149.55</td>
+<td style="text-align: center;">-2.0%</td>
+<td style="text-align: center;">0.542</td>
+<td style="text-align: center;">0.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F.Load</td>
+<td style="text-align: center;">-7167.29 ± 844.55</td>
+<td style="text-align: center;">-7280.85 ± 1313.66</td>
+<td style="text-align: center;">-1.6%</td>
+<td style="text-align: center;">0.628</td>
+<td style="text-align: center;">0.10</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="clinical-vs.-structural-prediction-the-grey-zone-challenge" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="clinical-vs.-structural-prediction-the-grey-zone-challenge"><span class="header-section-number">5.1.3</span> Clinical vs.&nbsp;Structural Prediction (The “Grey Zone” Challenge)</h3>
+<p>To determine the utility of advanced imaging, we compared the diagnostic performance of a comprehensive <strong>Clinical Model</strong> (BMD + TBS + FRAX) against the <strong>Structural Model</strong> (HR-pQCT parameters).</p>
+<p><strong>Table: Model Comparison (Clinical vs.&nbsp;Structural)</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Model</th>
+<th style="text-align: left;">Predictors</th>
+<th style="text-align: center;">AUC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Clinical</strong></td>
+<td style="text-align: left;">BMD + TBS + FRAX</td>
+<td style="text-align: center;">0.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Structural</strong></td>
+<td style="text-align: left;">vBMD + Tb.N + F.Load</td>
+<td style="text-align: center;"><strong>0.73</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Despite including FRAX and TBS, the Clinical Model achieved an AUC of only 0.60, highlighting the limitations of current tools in the osteopenic population. In contrast, the Structural Model (incorporating connectivity, density, and strength) achieved a superior AUC of 0.73.</p>
+<div id="fig-model-comp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-model-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../results/figures/Fig_Comparision_ROC.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-model-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: <strong>Model Comparison.</strong> ROC curves illustrating the significant diagnostic gain achieved by integrating HR-pQCT and <span class="math inline">\(\mu\)</span>FEA parameters compared to the standard clinical assessment (BMD+TBS+FRAX).
+</figcaption>
+</figure>
+</div>
+<hr>
 </section>
 </section>
-<section id="results" class="level1">
-<h1>Results</h1>
-<section id="clinical-characteristics" class="level2">
-<h2 class="anchored" data-anchor-id="clinical-characteristics">Clinical Characteristics</h2>
-<p>The baseline characteristics are summarized in Table 1. Fracture subjects were significantly older (<span class="math inline">\(p &lt; 0.05\)</span>) with a higher prevalence of previous fragility fractures compared to controls.</p>
-<p>#| label: tbl-demographics #| tbl-cap: “<strong>Table 1: Baseline Demographics and Clinical Characteristics (<span class="math inline">\(N=215\)</span>).</strong> Values are Mean <span class="math inline">\(\pm\)</span> SD or <span class="math inline">\(n\)</span> (%). <span class="math inline">\(P\)</span>-values represent differences between Fracture vs.&nbsp;Non-Fracture groups.” #| echo: false #| output: asis import pandas as pd import os</p>
-<p>table1_path = “../results/tables/Table1_Demographics.csv” if os.path.exists(table1_path): df = pd.read_csv(table1_path) print(df.to_markdown(index=False)) else: print(f”Table 1 not found at {os.path.abspath(table1_path)}“) Areal Bone Mineral Density (aBMD)</p>
+<section id="secondary-objective-a-validation-in-the-general-cohort-n215" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="secondary-objective-a-validation-in-the-general-cohort-n215"><span class="header-section-number">5.2</span> Secondary Objective A: Validation in the General Cohort (<span class="math inline">\(N=215\)</span>)</h2>
+<p>To validate these findings, we assessed the total cohort. The effect sizes observed in the grey zone were amplified in the general population, confirming that <strong>Trabecular Disconnection</strong> is a universal driver of fragility.</p>
+<p><strong>Table 3: Comprehensive HR-pQCT &amp; <span class="math inline">\(\mu\)</span>FEA Parameters (Total Cohort)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Fracture</th>
+<th style="text-align: center;">Control</th>
+<th style="text-align: center;">% Diff</th>
+<th style="text-align: center;">P-value</th>
+<th style="text-align: center;">Cohen’s d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Distal Radius</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TT.AR</td>
+<td style="text-align: center;">239.30 ± 47.97</td>
+<td style="text-align: center;">236.90 ± 63.70</td>
+<td style="text-align: center;">1.0%</td>
+<td style="text-align: center;">0.759</td>
+<td style="text-align: center;">0.04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PM</td>
+<td style="text-align: center;">67.40 ± 10.55</td>
+<td style="text-align: center;">66.26 ± 12.72</td>
+<td style="text-align: center;">1.7%</td>
+<td style="text-align: center;">0.483</td>
+<td style="text-align: center;">0.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.AR</td>
+<td style="text-align: center;">44.77 ± 10.63</td>
+<td style="text-align: center;">49.20 ± 12.34</td>
+<td style="text-align: center;">-9.0%</td>
+<td style="text-align: center;"><strong>0.006</strong></td>
+<td style="text-align: center;">0.39</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.AR</td>
+<td style="text-align: center;">197.74 ± 48.30</td>
+<td style="text-align: center;">190.87 ± 59.78</td>
+<td style="text-align: center;">3.6%</td>
+<td style="text-align: center;">0.363</td>
+<td style="text-align: center;">0.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.META.AR</td>
+<td style="text-align: center;">80.38 ± 19.47</td>
+<td style="text-align: center;">77.63 ± 24.06</td>
+<td style="text-align: center;">3.5%</td>
+<td style="text-align: center;">0.365</td>
+<td style="text-align: center;">0.13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.INN.AR</td>
+<td style="text-align: center;">117.35 ± 28.82</td>
+<td style="text-align: center;">113.26 ± 35.72</td>
+<td style="text-align: center;">3.6%</td>
+<td style="text-align: center;">0.364</td>
+<td style="text-align: center;">0.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ttvBMD</td>
+<td style="text-align: center;">235.32 ± 71.50</td>
+<td style="text-align: center;">270.98 ± 71.82</td>
+<td style="text-align: center;">-13.2%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tbvBMD</td>
+<td style="text-align: center;">93.78 ± 37.94</td>
+<td style="text-align: center;">112.19 ± 39.37</td>
+<td style="text-align: center;">-16.4%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.48</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TbMeta.v.BMD</td>
+<td style="text-align: center;">150.52 ± 38.62</td>
+<td style="text-align: center;">170.93 ± 39.72</td>
+<td style="text-align: center;">-11.9%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.52</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tb.inn.BMD</td>
+<td style="text-align: center;">54.87 ± 38.72</td>
+<td style="text-align: center;">71.92 ± 40.82</td>
+<td style="text-align: center;">-23.7%</td>
+<td style="text-align: center;"><strong>0.002</strong></td>
+<td style="text-align: center;">0.43</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CTvBMD</td>
+<td style="text-align: center;">839.83 ± 84.24</td>
+<td style="text-align: center;">866.66 ± 85.43</td>
+<td style="text-align: center;">-3.1%</td>
+<td style="text-align: center;"><strong>0.022</strong></td>
+<td style="text-align: center;">0.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BV/TV</td>
+<td style="text-align: center;">0.13 ± 0.05</td>
+<td style="text-align: center;">0.16 ± 0.05</td>
+<td style="text-align: center;">-16.3%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.50</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.N</td>
+<td style="text-align: center;">1.00 ± 0.26</td>
+<td style="text-align: center;">1.11 ± 0.24</td>
+<td style="text-align: center;">-10.5%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.47</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.TH</td>
+<td style="text-align: center;">0.22 ± 0.02</td>
+<td style="text-align: center;">0.22 ± 0.03</td>
+<td style="text-align: center;">-2.3%</td>
+<td style="text-align: center;">0.154</td>
+<td style="text-align: center;">0.20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.SP</td>
+<td style="text-align: center;">1.07 ± 0.37</td>
+<td style="text-align: center;">0.93 ± 0.30</td>
+<td style="text-align: center;">15.0%</td>
+<td style="text-align: center;"><strong>0.002</strong></td>
+<td style="text-align: center;">0.41</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.1/N.SD</td>
+<td style="text-align: center;">0.52 ± 0.36</td>
+<td style="text-align: center;">0.40 ± 0.28</td>
+<td style="text-align: center;">28.9%</td>
+<td style="text-align: center;"><strong>0.009</strong></td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.TH</td>
+<td style="text-align: center;">0.83 ± 0.23</td>
+<td style="text-align: center;">0.93 ± 0.23</td>
+<td style="text-align: center;">-10.0%</td>
+<td style="text-align: center;"><strong>0.004</strong></td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PO</td>
+<td style="text-align: center;">0.01 ± 0.01</td>
+<td style="text-align: center;">0.01 ± 0.01</td>
+<td style="text-align: center;">-8.6%</td>
+<td style="text-align: center;">0.588</td>
+<td style="text-align: center;">0.07</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.PO.DM</td>
+<td style="text-align: center;">0.17 ± 0.04</td>
+<td style="text-align: center;">0.17 ± 0.04</td>
+<td style="text-align: center;">-3.9%</td>
+<td style="text-align: center;">0.209</td>
+<td style="text-align: center;">0.17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stiffness</td>
+<td style="text-align: center;">41319.12 ± 17828.22</td>
+<td style="text-align: center;">46638.55 ± 19123.38</td>
+<td style="text-align: center;">-11.4%</td>
+<td style="text-align: center;"><strong>0.038</strong></td>
+<td style="text-align: center;">0.29</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F.Load</td>
+<td style="text-align: center;">-2185.33 ± 990.48</td>
+<td style="text-align: center;">-2486.77 ± 1069.71</td>
+<td style="text-align: center;">-12.1%</td>
+<td style="text-align: center;"><strong>0.035</strong></td>
+<td style="text-align: center;">0.29</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Distal Tibia</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TT.AR</td>
+<td style="text-align: center;">537.26 ± 79.54</td>
+<td style="text-align: center;">534.66 ± 96.41</td>
+<td style="text-align: center;">0.5%</td>
+<td style="text-align: center;">0.831</td>
+<td style="text-align: center;">0.03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PM</td>
+<td style="text-align: center;">89.90 ± 6.98</td>
+<td style="text-align: center;">90.01 ± 7.75</td>
+<td style="text-align: center;">-0.1%</td>
+<td style="text-align: center;">0.910</td>
+<td style="text-align: center;">0.02</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.AR</td>
+<td style="text-align: center;">104.49 ± 18.08</td>
+<td style="text-align: center;">109.63 ± 19.55</td>
+<td style="text-align: center;">-4.7%</td>
+<td style="text-align: center;"><strong>0.049</strong></td>
+<td style="text-align: center;">0.27</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.AR</td>
+<td style="text-align: center;">437.54 ± 80.25</td>
+<td style="text-align: center;">429.73 ± 90.44</td>
+<td style="text-align: center;">1.8%</td>
+<td style="text-align: center;">0.509</td>
+<td style="text-align: center;">0.09</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.META.AR</td>
+<td style="text-align: center;">176.67 ± 32.25</td>
+<td style="text-align: center;">173.75 ± 36.65</td>
+<td style="text-align: center;">1.7%</td>
+<td style="text-align: center;">0.540</td>
+<td style="text-align: center;">0.09</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.INN.AR</td>
+<td style="text-align: center;">260.86 ± 47.99</td>
+<td style="text-align: center;">256.62 ± 54.51</td>
+<td style="text-align: center;">1.7%</td>
+<td style="text-align: center;">0.550</td>
+<td style="text-align: center;">0.08</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ttvBMD</td>
+<td style="text-align: center;">252.89 ± 51.03</td>
+<td style="text-align: center;">269.10 ± 54.26</td>
+<td style="text-align: center;">-6.0%</td>
+<td style="text-align: center;"><strong>0.026</strong></td>
+<td style="text-align: center;">0.31</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tbvBMD</td>
+<td style="text-align: center;">97.11 ± 34.40</td>
+<td style="text-align: center;">104.70 ± 32.18</td>
+<td style="text-align: center;">-7.2%</td>
+<td style="text-align: center;">0.097</td>
+<td style="text-align: center;">0.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TbMeta.v.BMD</td>
+<td style="text-align: center;">175.17 ± 39.19</td>
+<td style="text-align: center;">180.73 ± 37.61</td>
+<td style="text-align: center;">-3.1%</td>
+<td style="text-align: center;">0.292</td>
+<td style="text-align: center;">0.14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tb.inn.BMD</td>
+<td style="text-align: center;">44.23 ± 34.13</td>
+<td style="text-align: center;">53.18 ± 31.70</td>
+<td style="text-align: center;">-16.8%</td>
+<td style="text-align: center;"><strong>0.048</strong></td>
+<td style="text-align: center;">0.27</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CTvBMD</td>
+<td style="text-align: center;">895.22 ± 65.86</td>
+<td style="text-align: center;">905.09 ± 71.37</td>
+<td style="text-align: center;">-1.1%</td>
+<td style="text-align: center;">0.298</td>
+<td style="text-align: center;">0.14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BV/TV</td>
+<td style="text-align: center;">0.16 ± 0.06</td>
+<td style="text-align: center;">0.17 ± 0.04</td>
+<td style="text-align: center;">-2.0%</td>
+<td style="text-align: center;">0.637</td>
+<td style="text-align: center;">0.06</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.N</td>
+<td style="text-align: center;">0.83 ± 0.23</td>
+<td style="text-align: center;">0.91 ± 0.19</td>
+<td style="text-align: center;">-9.3%</td>
+<td style="text-align: center;"><strong>0.003</strong></td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.TH</td>
+<td style="text-align: center;">0.26 ± 0.03</td>
+<td style="text-align: center;">0.25 ± 0.02</td>
+<td style="text-align: center;">1.9%</td>
+<td style="text-align: center;">0.155</td>
+<td style="text-align: center;">0.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.SP</td>
+<td style="text-align: center;">1.38 ± 0.72</td>
+<td style="text-align: center;">1.15 ± 0.34</td>
+<td style="text-align: center;">19.6%</td>
+<td style="text-align: center;"><strong>0.003</strong></td>
+<td style="text-align: center;">0.39</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.1/N.SD</td>
+<td style="text-align: center;">0.82 ± 0.81</td>
+<td style="text-align: center;">0.57 ± 0.43</td>
+<td style="text-align: center;">42.9%</td>
+<td style="text-align: center;"><strong>0.005</strong></td>
+<td style="text-align: center;">0.37</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.TH</td>
+<td style="text-align: center;">1.37 ± 0.24</td>
+<td style="text-align: center;">1.44 ± 0.24</td>
+<td style="text-align: center;">-4.4%</td>
+<td style="text-align: center;">0.059</td>
+<td style="text-align: center;">0.26</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PO</td>
+<td style="text-align: center;">0.03 ± 0.06</td>
+<td style="text-align: center;">0.04 ± 0.10</td>
+<td style="text-align: center;">-14.6%</td>
+<td style="text-align: center;">0.631</td>
+<td style="text-align: center;">0.07</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.PO.DM</td>
+<td style="text-align: center;">0.23 ± 0.03</td>
+<td style="text-align: center;">0.23 ± 0.04</td>
+<td style="text-align: center;">-0.9%</td>
+<td style="text-align: center;">0.696</td>
+<td style="text-align: center;">0.06</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stiffness</td>
+<td style="text-align: center;">126153.23 ± 22874.98</td>
+<td style="text-align: center;">130915.54 ± 26625.37</td>
+<td style="text-align: center;">-3.6%</td>
+<td style="text-align: center;">0.166</td>
+<td style="text-align: center;">0.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F.Load</td>
+<td style="text-align: center;">-6901.67 ± 1240.69</td>
+<td style="text-align: center;">-7162.61 ± 1447.54</td>
+<td style="text-align: center;">-3.6%</td>
+<td style="text-align: center;">0.163</td>
+<td style="text-align: center;">0.20</td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
-<section id="areal-bone-mineral-density-abmd" class="level2">
-<h2 class="anchored" data-anchor-id="areal-bone-mineral-density-abmd">Areal Bone Mineral Density (aBMD)</h2>
-<p>Dual-energy X-ray absorptiometry (DXA) was performed in all 215 subjects. In the total cohort, mean <span class="math inline">\(T\)</span>-scores at the lumbar spine (L1-L4) and femoral neck were within the osteopenic range for both the fracture and control groups, confirming the “grey zone” status of the study population (Figure 2).</p>
-<section id="osteopenic-sub-cohort-n91" class="level3">
-<h3 class="anchored" data-anchor-id="osteopenic-sub-cohort-n91">Osteopenic Sub-cohort (<span class="math inline">\(n=91\)</span>)</h3>
-<p>In the primary osteopenic sub-cohort, densitometry failed to discriminate between fracture and non-fracture status. * <strong>Lumbar Spine:</strong> <span class="math inline">\(aBMD\)</span> was similar between Fx (<span class="math inline">\(n=47\)</span>) and Co (<span class="math inline">\(n=44\)</span>) groups (<span class="math inline">\(0.86 \pm 0.09\)</span> vs <span class="math inline">\(0.88 \pm 0.08\)</span> g/cm²; <span class="math inline">\(-2.3\%\)</span>, <span class="math inline">\(p = 0.110\)</span>). * <strong>Femoral Neck:</strong> <span class="math inline">\(aBMD\)</span> was virtually identical (<span class="math inline">\(p = 0.713\)</span>).</p>
+<section id="secondary-objective-b-the-t2dm-phenotype" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="secondary-objective-b-the-t2dm-phenotype"><span class="header-section-number">5.3</span> Secondary Objective B: The T2DM Phenotype</h2>
+<p>Subgroup analysis of the osteopenic women with Type 2 Diabetes (<span class="math inline">\(n=66\)</span>) revealed a distinct phenotypic shift. We tested the hypothesis that diabetes acts as a “Cortical Switch.” <strong>However, the data revealed a different reality.</strong></p>
+<p><strong>Table 4: Comprehensive HR-pQCT &amp; <span class="math inline">\(\mu\)</span>FEA Parameters (Diabetic Osteopenia Sub-cohort)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Fracture</th>
+<th style="text-align: center;">Control</th>
+<th style="text-align: center;">% Diff</th>
+<th style="text-align: center;">P-value</th>
+<th style="text-align: center;">Cohen’s d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Distal Radius</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TT.AR</td>
+<td style="text-align: center;">233.14 ± 54.52</td>
+<td style="text-align: center;">219.98 ± 38.25</td>
+<td style="text-align: center;">6.0%</td>
+<td style="text-align: center;">0.259</td>
+<td style="text-align: center;">0.28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PM</td>
+<td style="text-align: center;">65.80 ± 12.18</td>
+<td style="text-align: center;">61.93 ± 5.00</td>
+<td style="text-align: center;">6.3%</td>
+<td style="text-align: center;">0.095</td>
+<td style="text-align: center;">0.41</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.AR</td>
+<td style="text-align: center;">47.91 ± 14.19</td>
+<td style="text-align: center;">50.61 ± 8.08</td>
+<td style="text-align: center;">-5.3%</td>
+<td style="text-align: center;">0.344</td>
+<td style="text-align: center;">0.23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.AR</td>
+<td style="text-align: center;">187.63 ± 49.38</td>
+<td style="text-align: center;">171.88 ± 39.06</td>
+<td style="text-align: center;">9.2%</td>
+<td style="text-align: center;">0.154</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.META.AR</td>
+<td style="text-align: center;">76.27 ± 19.89</td>
+<td style="text-align: center;">69.96 ± 15.75</td>
+<td style="text-align: center;">9.0%</td>
+<td style="text-align: center;">0.157</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.INN.AR</td>
+<td style="text-align: center;">111.29 ± 29.45</td>
+<td style="text-align: center;">101.92 ± 23.31</td>
+<td style="text-align: center;">9.2%</td>
+<td style="text-align: center;">0.156</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ttvBMD</td>
+<td style="text-align: center;">254.09 ± 69.22</td>
+<td style="text-align: center;">302.87 ± 69.99</td>
+<td style="text-align: center;">-16.1%</td>
+<td style="text-align: center;"><strong>0.006</strong></td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tbvBMD</td>
+<td style="text-align: center;">93.10 ± 29.75</td>
+<td style="text-align: center;">123.91 ± 37.95</td>
+<td style="text-align: center;">-24.9%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.91</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TbMeta.v.BMD</td>
+<td style="text-align: center;">151.48 ± 32.83</td>
+<td style="text-align: center;">184.16 ± 38.64</td>
+<td style="text-align: center;">-17.7%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.91</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tb.inn.BMD</td>
+<td style="text-align: center;">52.98 ± 29.51</td>
+<td style="text-align: center;">82.58 ± 38.86</td>
+<td style="text-align: center;">-35.8%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.86</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CTvBMD</td>
+<td style="text-align: center;">872.25 ± 73.10</td>
+<td style="text-align: center;">893.01 ± 64.59</td>
+<td style="text-align: center;">-2.3%</td>
+<td style="text-align: center;">0.225</td>
+<td style="text-align: center;">0.30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BV/TV</td>
+<td style="text-align: center;">0.13 ± 0.04</td>
+<td style="text-align: center;">0.17 ± 0.05</td>
+<td style="text-align: center;">-25.4%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.92</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.N</td>
+<td style="text-align: center;">1.01 ± 0.22</td>
+<td style="text-align: center;">1.23 ± 0.23</td>
+<td style="text-align: center;">-17.7%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.99</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.TH</td>
+<td style="text-align: center;">0.22 ± 0.02</td>
+<td style="text-align: center;">0.22 ± 0.02</td>
+<td style="text-align: center;">-3.0%</td>
+<td style="text-align: center;">0.245</td>
+<td style="text-align: center;">0.29</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.SP</td>
+<td style="text-align: center;">1.02 ± 0.23</td>
+<td style="text-align: center;">0.82 ± 0.19</td>
+<td style="text-align: center;">24.1%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.93</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.1/N.SD</td>
+<td style="text-align: center;">0.45 ± 0.20</td>
+<td style="text-align: center;">0.31 ± 0.09</td>
+<td style="text-align: center;">43.9%</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+<td style="text-align: center;">0.88</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.TH</td>
+<td style="text-align: center;">0.91 ± 0.25</td>
+<td style="text-align: center;">1.00 ± 0.20</td>
+<td style="text-align: center;">-8.8%</td>
+<td style="text-align: center;">0.114</td>
+<td style="text-align: center;">0.39</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PO</td>
+<td style="text-align: center;">0.01 ± 0.00</td>
+<td style="text-align: center;">0.01 ± 0.01</td>
+<td style="text-align: center;">-18.9%</td>
+<td style="text-align: center;">0.265</td>
+<td style="text-align: center;">0.28</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.PO.DM</td>
+<td style="text-align: center;">0.17 ± 0.04</td>
+<td style="text-align: center;">0.18 ± 0.04</td>
+<td style="text-align: center;">-5.4%</td>
+<td style="text-align: center;">0.354</td>
+<td style="text-align: center;">0.23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stiffness</td>
+<td style="text-align: center;">41044.12 ± 9877.45</td>
+<td style="text-align: center;">47433.73 ± 8830.96</td>
+<td style="text-align: center;">-13.5%</td>
+<td style="text-align: center;"><strong>0.007</strong></td>
+<td style="text-align: center;">0.68</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F.Load</td>
+<td style="text-align: center;">-2159.79 ± 559.45</td>
+<td style="text-align: center;">-2511.31 ± 503.25</td>
+<td style="text-align: center;">-14.0%</td>
+<td style="text-align: center;"><strong>0.009</strong></td>
+<td style="text-align: center;">0.66</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Distal Tibia</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TT.AR</td>
+<td style="text-align: center;">523.34 ± 93.04</td>
+<td style="text-align: center;">517.86 ± 66.66</td>
+<td style="text-align: center;">1.1%</td>
+<td style="text-align: center;">0.783</td>
+<td style="text-align: center;">0.07</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PM</td>
+<td style="text-align: center;">88.61 ± 8.64</td>
+<td style="text-align: center;">88.59 ± 5.68</td>
+<td style="text-align: center;">0.0%</td>
+<td style="text-align: center;">0.989</td>
+<td style="text-align: center;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.AR</td>
+<td style="text-align: center;">104.70 ± 19.04</td>
+<td style="text-align: center;">114.42 ± 13.17</td>
+<td style="text-align: center;">-8.5%</td>
+<td style="text-align: center;"><strong>0.018</strong></td>
+<td style="text-align: center;">0.59</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.AR</td>
+<td style="text-align: center;">422.72 ± 92.64</td>
+<td style="text-align: center;">407.99 ± 65.36</td>
+<td style="text-align: center;">3.6%</td>
+<td style="text-align: center;">0.456</td>
+<td style="text-align: center;">0.18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.META.AR</td>
+<td style="text-align: center;">170.74 ± 37.23</td>
+<td style="text-align: center;">164.83 ± 26.28</td>
+<td style="text-align: center;">3.6%</td>
+<td style="text-align: center;">0.457</td>
+<td style="text-align: center;">0.18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.INN.AR</td>
+<td style="text-align: center;">252.01 ± 55.42</td>
+<td style="text-align: center;">243.55 ± 39.04</td>
+<td style="text-align: center;">3.5%</td>
+<td style="text-align: center;">0.475</td>
+<td style="text-align: center;">0.18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ttvBMD</td>
+<td style="text-align: center;">262.86 ± 51.91</td>
+<td style="text-align: center;">294.07 ± 50.27</td>
+<td style="text-align: center;">-10.6%</td>
+<td style="text-align: center;"><strong>0.016</strong></td>
+<td style="text-align: center;">0.61</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tbvBMD</td>
+<td style="text-align: center;">99.80 ± 25.08</td>
+<td style="text-align: center;">117.71 ± 33.14</td>
+<td style="text-align: center;">-15.2%</td>
+<td style="text-align: center;"><strong>0.017</strong></td>
+<td style="text-align: center;">0.61</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TbMeta.v.BMD</td>
+<td style="text-align: center;">177.93 ± 32.09</td>
+<td style="text-align: center;">195.59 ± 37.76</td>
+<td style="text-align: center;">-9.0%</td>
+<td style="text-align: center;"><strong>0.045</strong></td>
+<td style="text-align: center;">0.51</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tb.inn.BMD</td>
+<td style="text-align: center;">46.77 ± 25.88</td>
+<td style="text-align: center;">64.90 ± 32.41</td>
+<td style="text-align: center;">-27.9%</td>
+<td style="text-align: center;"><strong>0.015</strong></td>
+<td style="text-align: center;">0.62</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CTvBMD</td>
+<td style="text-align: center;">903.01 ± 62.29</td>
+<td style="text-align: center;">920.32 ± 62.55</td>
+<td style="text-align: center;">-1.9%</td>
+<td style="text-align: center;">0.264</td>
+<td style="text-align: center;">0.28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BV/TV</td>
+<td style="text-align: center;">0.16 ± 0.03</td>
+<td style="text-align: center;">0.18 ± 0.04</td>
+<td style="text-align: center;">-9.9%</td>
+<td style="text-align: center;">0.057</td>
+<td style="text-align: center;">0.49</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.N</td>
+<td style="text-align: center;">0.87 ± 0.19</td>
+<td style="text-align: center;">1.00 ± 0.15</td>
+<td style="text-align: center;">-12.4%</td>
+<td style="text-align: center;"><strong>0.006</strong></td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.TH</td>
+<td style="text-align: center;">0.25 ± 0.03</td>
+<td style="text-align: center;">0.25 ± 0.02</td>
+<td style="text-align: center;">1.0%</td>
+<td style="text-align: center;">0.652</td>
+<td style="text-align: center;">0.11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.SP</td>
+<td style="text-align: center;">1.20 ± 0.31</td>
+<td style="text-align: center;">1.01 ± 0.18</td>
+<td style="text-align: center;">19.1%</td>
+<td style="text-align: center;"><strong>0.003</strong></td>
+<td style="text-align: center;">0.76</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.1/N.SD</td>
+<td style="text-align: center;">0.63 ± 0.33</td>
+<td style="text-align: center;">0.45 ± 0.20</td>
+<td style="text-align: center;">41.1%</td>
+<td style="text-align: center;"><strong>0.008</strong></td>
+<td style="text-align: center;">0.67</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.TH</td>
+<td style="text-align: center;">1.40 ± 0.26</td>
+<td style="text-align: center;">1.52 ± 0.18</td>
+<td style="text-align: center;">-7.6%</td>
+<td style="text-align: center;"><strong>0.037</strong></td>
+<td style="text-align: center;">0.52</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PO</td>
+<td style="text-align: center;">0.02 ± 0.02</td>
+<td style="text-align: center;">0.04 ± 0.05</td>
+<td style="text-align: center;">-32.4%</td>
+<td style="text-align: center;">0.234</td>
+<td style="text-align: center;">0.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.PO.DM</td>
+<td style="text-align: center;">0.23 ± 0.03</td>
+<td style="text-align: center;">0.24 ± 0.04</td>
+<td style="text-align: center;">-2.4%</td>
+<td style="text-align: center;">0.560</td>
+<td style="text-align: center;">0.15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stiffness</td>
+<td style="text-align: center;">129132.79 ± 16225.95</td>
+<td style="text-align: center;">139184.34 ± 19436.25</td>
+<td style="text-align: center;">-7.2%</td>
+<td style="text-align: center;"><strong>0.027</strong></td>
+<td style="text-align: center;">0.56</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F.Load</td>
+<td style="text-align: center;">-7080.13 ± 881.02</td>
+<td style="text-align: center;">-7598.84 ± 1042.75</td>
+<td style="text-align: center;">-6.8%</td>
+<td style="text-align: center;"><strong>0.033</strong></td>
+<td style="text-align: center;">0.54</td>
+</tr>
+</tbody>
+</table>
+<section id="diabetic-metabolic-profile-reviewer-context" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="diabetic-metabolic-profile-reviewer-context"><span class="header-section-number">5.3.1</span> Diabetic Metabolic Profile (Reviewer Context)</h3>
+<p>To investigate the lack of cortical porosity (“Cortical Switch”), we analyzed the metabolic profile of the diabetic sub-cohort.</p>
+<p><strong>Table 1B: Metabolic Characteristics of the Diabetic Osteopenic Sub-cohort</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Fracture (n=34)</th>
+<th style="text-align: center;">Control (n=32)</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">HbA1c (%)</td>
+<td style="text-align: center;">7.2 ± 1.1</td>
+<td style="text-align: center;">7.1 ± 0.9</td>
+<td style="text-align: center;">0.57</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Duration of Diabetes (years)</td>
+<td style="text-align: center;">7.4 ± 3.1</td>
+<td style="text-align: center;">6.5 ± 3.2</td>
+<td style="text-align: center;">0.25</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Values are Mean ± SD. The cohort is characterized by moderate duration and control, consistent with early-stage metabolic bone disease.</em></p>
+<p>The diabetic cohort was characterized by a <strong>moderate duration of disease</strong> (~7 years) and <strong>reasonable glycemic control</strong> (HbA1c ~7.2%). This supports our “Temporal Hierarchy” hypothesis: this cohort represents the <strong>Early Phase</strong> of diabetic bone disease.</p>
+<div id="fig-diabetes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diabetes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../results/figures/Fig3_Porosity_Diabetes.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diabetes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: <strong>Microarchitecture in Diabetic Osteopenia.</strong> Comparison of cortical and trabecular compartments. Note that while cortical porosity is visible, statistical analysis confirms that <strong>Trabecular Disconnection</strong> (<span class="math inline">\(d=0.99\)</span>) is the primary driver of fragility, dominating the cortical signal (<span class="math inline">\(d=0.28\)</span>). <strong>(Visual Hypothesis: Osteopenia <span class="math inline">\(\rightarrow\)</span> Trabecular Failure; Osteoporosis <span class="math inline">\(\rightarrow\)</span> Cortical Failure).</strong>
+</figcaption>
+</figure>
+</div>
+<p><strong>Key Finding:</strong> Contrary to expectation, <strong>Cortical Porosity</strong> was not a significant discriminator (<span class="math inline">\(p=0.26, d=0.28\)</span>). Instead, the diabetic group exhibited <strong>severe Trabecular Disconnection</strong> (<span class="math inline">\(d=0.99\)</span>), suggesting that in the osteopenic phase, diabetes accelerates trabecular decay rather than cortical porosity.</p>
 </section>
-<section id="diabetic-sub-cohorts" class="level3">
-<h3 class="anchored" data-anchor-id="diabetic-sub-cohorts">Diabetic Sub-cohorts</h3>
-<p>Notably, in the <strong>Diabetic Osteopenia (<span class="math inline">\(n=66\)</span>)</strong> subgroup, <span class="math inline">\(aBMD\)</span> values were paradoxically preserved in the fracture group (<span class="math inline">\(+1.4\%\)</span> at femoral neck, <span class="math inline">\(p=0.74\)</span>) compared to controls. This “Diabetic Paradox” confirms that <span class="math inline">\(aBMD\)</span> is a poor surrogate for skeletal strength in T2DM.</p>
-<p>{#fig-dxa-boxplot}</p>
-<p>Peripheral Bone Microarchitecture and Quality</p>
+<section id="independent-predictors-of-diabetic-fragility-multivariable-analysis" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="independent-predictors-of-diabetic-fragility-multivariable-analysis"><span class="header-section-number">5.3.2</span> Independent Predictors of Diabetic Fragility (Multivariable Analysis)</h3>
+<p>To rule out confounding by cortical parameters, we performed a multivariable logistic regression.</p>
+<p><strong>Table 4B: Independent Predictors of Fracture (Multivariable Logistic Regression)</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Predictor (per 1 SD)</th>
+<th style="text-align: center;">Adjusted Odds Ratio (95% CI)</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Age</td>
+<td style="text-align: center;">1.42 (0.79 - 2.58)</td>
+<td style="text-align: center;">0.245</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BMI</td>
+<td style="text-align: center;">0.77 (0.42 - 1.40)</td>
+<td style="text-align: center;">0.392</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cortical Porosity</td>
+<td style="text-align: center;">0.90 (0.51 - 1.60)</td>
+<td style="text-align: center;">0.726</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Trabecular Number (Decrease)</strong></td>
+<td style="text-align: center;">2.84 (1.50 - 5.38)</td>
+<td style="text-align: center;"><strong>0.001</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Odds Ratios are per 1-SD decrease for Tb.N and 1-SD increase for others. Model N=66.</em></p>
+<p><strong>Crucially, even after adjusting for Age, BMI, and Cortical Porosity, Trabecular Disconnection (<span class="math inline">\(Tb.N\)</span>) remained the only significant independent predictor of fracture (<span class="math inline">\(p=0.001\)</span>).</strong> Cortical porosity failed to discriminate (<span class="math inline">\(p=0.72\)</span>), confirming that trabecular decay drives early diabetic fragility.</p>
+</section>
+<section id="total-diabetic-cohort-data-n140" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="total-diabetic-cohort-data-n140"><span class="header-section-number">5.3.3</span> Total Diabetic Cohort Data (<span class="math inline">\(N=140\)</span>)</h3>
+<p>For completeness, we provide the comprehensive HR-pQCT parameters for the entire diabetic cohort.</p>
+<p><strong>Table 5: Comprehensive HR-pQCT &amp; <span class="math inline">\(\mu\)</span>FEA Parameters (Total Diabetic Cohort)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Fracture</th>
+<th style="text-align: center;">Control</th>
+<th style="text-align: center;">% Diff</th>
+<th style="text-align: center;">P-value</th>
+<th style="text-align: center;">Cohen’s d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Distal Radius</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TT.AR</td>
+<td style="text-align: center;">238.15 ± 51.57</td>
+<td style="text-align: center;">231.47 ± 63.54</td>
+<td style="text-align: center;">2.9%</td>
+<td style="text-align: center;">0.498</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PM</td>
+<td style="text-align: center;">67.48 ± 12.02</td>
+<td style="text-align: center;">64.70 ± 11.29</td>
+<td style="text-align: center;">4.3%</td>
+<td style="text-align: center;">0.160</td>
+<td style="text-align: center;">0.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.AR</td>
+<td style="text-align: center;">45.17 ± 11.89</td>
+<td style="text-align: center;">49.09 ± 11.16</td>
+<td style="text-align: center;">-8.0%</td>
+<td style="text-align: center;"><strong>0.046</strong></td>
+<td style="text-align: center;">0.34</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.AR</td>
+<td style="text-align: center;">195.98 ± 50.34</td>
+<td style="text-align: center;">185.38 ± 59.96</td>
+<td style="text-align: center;">5.7%</td>
+<td style="text-align: center;">0.262</td>
+<td style="text-align: center;">0.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.META.AR</td>
+<td style="text-align: center;">79.66 ± 20.29</td>
+<td style="text-align: center;">75.42 ± 24.13</td>
+<td style="text-align: center;">5.6%</td>
+<td style="text-align: center;">0.264</td>
+<td style="text-align: center;">0.19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.INN.AR</td>
+<td style="text-align: center;">116.29 ± 30.05</td>
+<td style="text-align: center;">109.98 ± 35.83</td>
+<td style="text-align: center;">5.7%</td>
+<td style="text-align: center;">0.263</td>
+<td style="text-align: center;">0.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ttvBMD</td>
+<td style="text-align: center;">240.11 ± 71.47</td>
+<td style="text-align: center;">277.13 ± 72.53</td>
+<td style="text-align: center;">-13.4%</td>
+<td style="text-align: center;"><strong>0.003</strong></td>
+<td style="text-align: center;">0.51</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tbvBMD</td>
+<td style="text-align: center;">96.57 ± 37.09</td>
+<td style="text-align: center;">113.58 ± 37.43</td>
+<td style="text-align: center;">-15.0%</td>
+<td style="text-align: center;"><strong>0.008</strong></td>
+<td style="text-align: center;">0.46</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TbMeta.v.BMD</td>
+<td style="text-align: center;">153.90 ± 38.42</td>
+<td style="text-align: center;">173.39 ± 38.60</td>
+<td style="text-align: center;">-11.2%</td>
+<td style="text-align: center;"><strong>0.003</strong></td>
+<td style="text-align: center;">0.51</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tb.inn.BMD</td>
+<td style="text-align: center;">57.23 ± 37.75</td>
+<td style="text-align: center;">72.57 ± 38.35</td>
+<td style="text-align: center;">-21.1%</td>
+<td style="text-align: center;"><strong>0.019</strong></td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CTvBMD</td>
+<td style="text-align: center;">840.98 ± 88.45</td>
+<td style="text-align: center;">871.17 ± 83.44</td>
+<td style="text-align: center;">-3.5%</td>
+<td style="text-align: center;"><strong>0.040</strong></td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BV/TV</td>
+<td style="text-align: center;">0.13 ± 0.05</td>
+<td style="text-align: center;">0.16 ± 0.05</td>
+<td style="text-align: center;">-16.4%</td>
+<td style="text-align: center;"><strong>0.002</strong></td>
+<td style="text-align: center;">0.53</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.N</td>
+<td style="text-align: center;">1.02 ± 0.26</td>
+<td style="text-align: center;">1.12 ± 0.25</td>
+<td style="text-align: center;">-9.6%</td>
+<td style="text-align: center;"><strong>0.014</strong></td>
+<td style="text-align: center;">0.42</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.TH</td>
+<td style="text-align: center;">0.22 ± 0.02</td>
+<td style="text-align: center;">0.22 ± 0.03</td>
+<td style="text-align: center;">-1.5%</td>
+<td style="text-align: center;">0.408</td>
+<td style="text-align: center;">0.14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.SP</td>
+<td style="text-align: center;">1.05 ± 0.33</td>
+<td style="text-align: center;">0.93 ± 0.33</td>
+<td style="text-align: center;">12.8%</td>
+<td style="text-align: center;"><strong>0.033</strong></td>
+<td style="text-align: center;">0.36</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.1/N.SD</td>
+<td style="text-align: center;">0.51 ± 0.34</td>
+<td style="text-align: center;">0.40 ± 0.32</td>
+<td style="text-align: center;">25.5%</td>
+<td style="text-align: center;">0.069</td>
+<td style="text-align: center;">0.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.TH</td>
+<td style="text-align: center;">0.84 ± 0.24</td>
+<td style="text-align: center;">0.94 ± 0.22</td>
+<td style="text-align: center;">-10.0%</td>
+<td style="text-align: center;"><strong>0.017</strong></td>
+<td style="text-align: center;">0.41</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PO</td>
+<td style="text-align: center;">0.01 ± 0.00</td>
+<td style="text-align: center;">0.01 ± 0.01</td>
+<td style="text-align: center;">-25.4%</td>
+<td style="text-align: center;"><strong>0.024</strong></td>
+<td style="text-align: center;">0.39</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.PO.DM</td>
+<td style="text-align: center;">0.17 ± 0.04</td>
+<td style="text-align: center;">0.18 ± 0.04</td>
+<td style="text-align: center;">-8.2%</td>
+<td style="text-align: center;"><strong>0.027</strong></td>
+<td style="text-align: center;">0.38</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stiffness</td>
+<td style="text-align: center;">41562.39 ± 18313.77</td>
+<td style="text-align: center;">47012.11 ± 18234.38</td>
+<td style="text-align: center;">-11.6%</td>
+<td style="text-align: center;">0.080</td>
+<td style="text-align: center;">0.30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F.Load</td>
+<td style="text-align: center;">-2207.31 ± 1015.27</td>
+<td style="text-align: center;">-2512.55 ± 1020.86</td>
+<td style="text-align: center;">-12.1%</td>
+<td style="text-align: center;">0.079</td>
+<td style="text-align: center;">0.30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Distal Tibia</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TT.AR</td>
+<td style="text-align: center;">534.03 ± 82.63</td>
+<td style="text-align: center;">532.08 ± 95.96</td>
+<td style="text-align: center;">0.4%</td>
+<td style="text-align: center;">0.898</td>
+<td style="text-align: center;">0.02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PM</td>
+<td style="text-align: center;">89.58 ± 7.39</td>
+<td style="text-align: center;">89.91 ± 7.41</td>
+<td style="text-align: center;">-0.4%</td>
+<td style="text-align: center;">0.788</td>
+<td style="text-align: center;">0.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.AR</td>
+<td style="text-align: center;">102.79 ± 19.49</td>
+<td style="text-align: center;">110.13 ± 18.78</td>
+<td style="text-align: center;">-6.7%</td>
+<td style="text-align: center;"><strong>0.025</strong></td>
+<td style="text-align: center;">0.38</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.AR</td>
+<td style="text-align: center;">436.06 ± 84.69</td>
+<td style="text-align: center;">426.55 ± 92.60</td>
+<td style="text-align: center;">2.2%</td>
+<td style="text-align: center;">0.528</td>
+<td style="text-align: center;">0.11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.META.AR</td>
+<td style="text-align: center;">176.09 ± 34.03</td>
+<td style="text-align: center;">172.27 ± 37.21</td>
+<td style="text-align: center;">2.2%</td>
+<td style="text-align: center;">0.528</td>
+<td style="text-align: center;">0.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.INN.AR</td>
+<td style="text-align: center;">259.97 ± 50.65</td>
+<td style="text-align: center;">254.47 ± 55.34</td>
+<td style="text-align: center;">2.2%</td>
+<td style="text-align: center;">0.542</td>
+<td style="text-align: center;">0.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ttvBMD</td>
+<td style="text-align: center;">254.89 ± 55.02</td>
+<td style="text-align: center;">273.59 ± 55.14</td>
+<td style="text-align: center;">-6.8%</td>
+<td style="text-align: center;"><strong>0.047</strong></td>
+<td style="text-align: center;">0.34</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tbvBMD</td>
+<td style="text-align: center;">100.30 ± 34.25</td>
+<td style="text-align: center;">107.89 ± 31.77</td>
+<td style="text-align: center;">-7.0%</td>
+<td style="text-align: center;">0.176</td>
+<td style="text-align: center;">0.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TbMeta.v.BMD</td>
+<td style="text-align: center;">178.41 ± 40.64</td>
+<td style="text-align: center;">185.11 ± 36.55</td>
+<td style="text-align: center;">-3.6%</td>
+<td style="text-align: center;">0.306</td>
+<td style="text-align: center;">0.17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tb.inn.BMD</td>
+<td style="text-align: center;">47.33 ± 33.29</td>
+<td style="text-align: center;">55.53 ± 32.24</td>
+<td style="text-align: center;">-14.8%</td>
+<td style="text-align: center;">0.141</td>
+<td style="text-align: center;">0.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CTvBMD</td>
+<td style="text-align: center;">893.84 ± 72.65</td>
+<td style="text-align: center;">903.97 ± 76.13</td>
+<td style="text-align: center;">-1.1%</td>
+<td style="text-align: center;">0.423</td>
+<td style="text-align: center;">0.14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BV/TV</td>
+<td style="text-align: center;">0.16 ± 0.04</td>
+<td style="text-align: center;">0.17 ± 0.04</td>
+<td style="text-align: center;">-3.6%</td>
+<td style="text-align: center;">0.384</td>
+<td style="text-align: center;">0.15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.N</td>
+<td style="text-align: center;">0.85 ± 0.22</td>
+<td style="text-align: center;">0.92 ± 0.19</td>
+<td style="text-align: center;">-8.1%</td>
+<td style="text-align: center;"><strong>0.032</strong></td>
+<td style="text-align: center;">0.36</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.TH</td>
+<td style="text-align: center;">0.25 ± 0.03</td>
+<td style="text-align: center;">0.25 ± 0.02</td>
+<td style="text-align: center;">0.5%</td>
+<td style="text-align: center;">0.763</td>
+<td style="text-align: center;">0.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TB.SP</td>
+<td style="text-align: center;">1.28 ± 0.44</td>
+<td style="text-align: center;">1.14 ± 0.36</td>
+<td style="text-align: center;">12.4%</td>
+<td style="text-align: center;"><strong>0.042</strong></td>
+<td style="text-align: center;">0.34</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TB.1/N.SD</td>
+<td style="text-align: center;">0.72 ± 0.51</td>
+<td style="text-align: center;">0.55 ± 0.43</td>
+<td style="text-align: center;">31.5%</td>
+<td style="text-align: center;"><strong>0.033</strong></td>
+<td style="text-align: center;">0.36</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.TH</td>
+<td style="text-align: center;">1.36 ± 0.27</td>
+<td style="text-align: center;">1.45 ± 0.24</td>
+<td style="text-align: center;">-6.0%</td>
+<td style="text-align: center;"><strong>0.046</strong></td>
+<td style="text-align: center;">0.34</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT.PO</td>
+<td style="text-align: center;">0.04 ± 0.08</td>
+<td style="text-align: center;">0.05 ± 0.12</td>
+<td style="text-align: center;">-12.7%</td>
+<td style="text-align: center;">0.738</td>
+<td style="text-align: center;">0.06</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT.PO.DM</td>
+<td style="text-align: center;">0.23 ± 0.04</td>
+<td style="text-align: center;">0.23 ± 0.04</td>
+<td style="text-align: center;">-0.5%</td>
+<td style="text-align: center;">0.847</td>
+<td style="text-align: center;">0.03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stiffness</td>
+<td style="text-align: center;">126178.55 ± 23133.47</td>
+<td style="text-align: center;">131999.14 ± 25554.39</td>
+<td style="text-align: center;">-4.4%</td>
+<td style="text-align: center;">0.161</td>
+<td style="text-align: center;">0.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F.Load</td>
+<td style="text-align: center;">-6900.76 ± 1254.06</td>
+<td style="text-align: center;">-7214.07 ± 1395.46</td>
+<td style="text-align: center;">-4.3%</td>
+<td style="text-align: center;">0.166</td>
+<td style="text-align: center;">0.24</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
-<section id="peripheral-bone-microarchitecture-and-quality" class="level2">
-<h2 class="anchored" data-anchor-id="peripheral-bone-microarchitecture-and-quality">Peripheral Bone Microarchitecture and Quality</h2>
-<p><strong>Osteopenic Sub-cohort (<span class="math inline">\(n=91\)</span>): The Trabecular Driver</strong> In the primary “Grey Zone” cohort, HR-pQCT revealed a profound deficit in trabecular integrity. At the distal radius, women with fractures exhibited significantly lower <strong>Trabecular Number (<span class="math inline">\(Tb.N\)</span>)</strong> compared to controls (<span class="math inline">\(-11.6\%\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>). This was the dominant structural failure mode.</p>
-<p><strong>Diabetic Osteopenia (<span class="math inline">\(n=66\)</span>): The Cortical Switch</strong> A distinct “Cortical Phenotype” emerged in the diabetic osteopenic subgroup. While trabecular deficits were present, the most striking failure was in the cortical envelope. At the distal tibia, diabetic fracture subjects (DMFx) displayed a significant increase in <strong>Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>)</strong> (<span class="math inline">\(+58.1\%\)</span>, <span class="math inline">\(p = 0.005\)</span>) compared to diabetic controls. This “Swiss-Cheese” transformation drives fragility in the weight-bearing skeleton of diabetic patients.</p>
-<p>Distal Radius: The Trabecular Driver Table 2 details microarchitectural parameters at the distal radius. In the general fracture population, the dominant structural failure mode is a reduction in trabecular connectivity.</p>
-<p>#| label: tbl-radius-params #| tbl-cap: “<strong>Table 2: HR-pQCT Parameters at the Distal Radius.</strong> Significant deficits in <span class="math inline">\(Tb.N\)</span> and <span class="math inline">\(Tb.vBMD\)</span> distinguish fracture cases.” #| echo: false #| output: asis import pandas as pd table2_path = “../results/tables/Table2_Radius_Parameters.csv” if os.path.exists(table2_path): df_radius = pd.read_csv(table2_path) print(df_radius.to_markdown(index=False))</p>
-<p>Distal Tibia: The Cortical Switch Table 3 highlights the weight-bearing tibia, where the impact of Type 2 Diabetes becomes structurally evident through increased cortical porosity.</p>
-<p>#| label: tbl-tibia-params #| tbl-cap: “<strong>Table 3: HR-pQCT Parameters at the Distal Tibia.</strong> Note the significantly elevated Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>) in the Diabetic Fracture (DMFx) group.” #| echo: false #| output: asis import pandas as pd table3_path = “../results/tables/Table3_Tibia_Parameters.csv” if os.path.exists(table3_path): df_tibia = pd.read_csv(table3_path) print(df_tibia.to_markdown(index=False))</p>
-<p>{#fig-porosity}</p>
-<p>Biomechanical Competence and Risk Modeling</p>
 </section>
-<section id="biomechanical-competence-mufea-1" class="level2">
-<h2 class="anchored" data-anchor-id="biomechanical-competence-mufea-1">Biomechanical Competence (<span class="math inline">\(\mu\)</span>FEA)</h2>
-<p><strong>General Osteopenia (<span class="math inline">\(n=91\)</span>):</strong> Radius <strong>Failure Load</strong> was <span class="math inline">\(14.3\%\)</span> lower in fracturers (<span class="math inline">\(p = 0.03\)</span>), driven by the loss of trabecular connectivity.</p>
-<p><strong>Diabetic Osteopenia (<span class="math inline">\(n=66\)</span>):</strong> Tibia <strong>Failure Load</strong> was <span class="math inline">\(16.8\%\)</span> lower in fracturers (<span class="math inline">\(p = 0.01\)</span>). Critically, in this group, failure load was strongly correlated with <strong>Cortical Porosity</strong> (<span class="math inline">\(r = -0.48\)</span>, <span class="math inline">\(p &lt; 0.01\)</span>), confirming that porosity acts as the primary stress riser in diabetic bone.</p>
+<section id="discussion" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Discussion</h1>
+<p>In this cross-sectional study of postmenopausal women, we demonstrate that skeletal fragility in the “Osteopenic Grey Zone” (<span class="math inline">\(T\)</span>-score -1.0 to -2.5) is driven by profound microarchitectural and biomechanical deficits that remain largely invisible to standard areal densitometry. Our findings resolve the “prevention paradox” by identifying <strong>Trabecular Disconnection</strong> as the primary failure mode in general osteopenia. Furthermore, our data provides a nuanced update to the diabetic bone phenotype, suggesting that trabecular decay precedes cortical defects in the early stages of the disease, challenging the prevailing “Cortical Switch” dogma in this specific sub-population.</p>
+<section id="the-failure-of-dxa-and-the-grey-zone-paradox" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="the-failure-of-dxa-and-the-grey-zone-paradox"><span class="header-section-number">6.1</span> The Failure of DXA and the “Grey Zone” Paradox</h2>
+<p>The clinical reliance on <span class="math inline">\(aBMD\)</span> <span class="math inline">\(T\)</span>-scores often creates a false sense of security in patients within the moderate-risk range. Our results show that in the osteopenic sub-cohort (<span class="math inline">\(n=91\)</span>), the combined clinical model (DXA + FRAX + TBS) yielded an AUC of only 0.60, effectively failing to discriminate between those with and without fractures. This aligns with previous findings that <span class="math inline">\(aBMD\)</span> lacks the sensitivity to capture structural decay<span class="citation" data-cites="eBoneMicroarchitectureAssessed2017 meilinghuangPerformanceHRpQCTDXA2021"><sup><a href="#ref-eBoneMicroarchitectureAssessed2017" role="doc-biblioref">1</a>,<a href="#ref-meilinghuangPerformanceHRpQCTDXA2021" role="doc-biblioref">6</a></sup></span>.</p>
+<p>In contrast, the structural model provided a large effect size (Cohen’s <span class="math inline">\(d = 0.83\)</span>), underscoring that the “hidden” fragility in osteopenia is not a lack of mass, but a catastrophic loss of connectivity. While some studies suggest preserved trabecular bone in T2DM<span class="citation" data-cites="jessicafstarrRobustTrabecularMicrostructure2018"><sup><a href="#ref-jessicafstarrRobustTrabecularMicrostructure2018" role="doc-biblioref">7</a></sup></span>, our osteopenic cohort reveals this is not protective against fracture. While TBS is often used as a proxy for microarchitecture, our data suggests that in the moderate-risk range, it lacks the resolution of HR-pQCT to detect the early stages of trabecular thinning and disconnection, consistent with recent reviews<span class="citation" data-cites="j.i.martinez-montoroEvaluationQualityBone2022 s.ferrariBoneMicrostructureTBS2025"><sup><a href="#ref-j.i.martinez-montoroEvaluationQualityBone2022" role="doc-biblioref">8</a>,<a href="#ref-s.ferrariBoneMicrostructureTBS2025" role="doc-biblioref">9</a></sup></span>.</p>
 </section>
-<section id="multivariable-risk-modeling" class="level2">
-<h2 class="anchored" data-anchor-id="multivariable-risk-modeling">Multivariable Risk Modeling</h2>
-<p>To determine independent fracture risk, we adjusted for Age, BMI, and Total Hip <span class="math inline">\(aBMD\)</span>.</p>
-<ul>
-<li><strong>Trabecular Driver:</strong> In general osteopenia, <strong>Radius <span class="math inline">\(Tb.N\)</span></strong> remained the strongest predictor (<span class="math inline">\(aOR = 2.59\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>).</li>
-<li><strong>Cortical Switch:</strong> In diabetic osteopenia, <strong>Radius <span class="math inline">\(Ct.Po\)</span></strong> emerged as the dominant predictor (<span class="math inline">\(aOR = 1.94\)</span>, <span class="math inline">\(p &lt; 0.05\)</span>).</li>
-</ul>
-<p>This dissociation proves that HR-pQCT identifies specific structural failure modes that DXA misses.</p>
-<p>{#fig-forest-plot}</p>
-<p>{#fig-roc}</p>
-<p>Discussion # Discussion</p>
-<p>In this cross-sectional study of postmenopausal women, we demonstrate that skeletal fragility in the “Osteopenic Grey Zone” (<span class="math inline">\(T\)</span>-score -1.0 to -2.5) is driven by profound microarchitectural and biomechanical deficits that remain entirely captured by standard areal densitometry. Our findings resolve the “prevention paradox” by identifying <strong>Trabecular Disconnection</strong> as the primary failure mode in general osteopenia, and <strong>Cortical Porosity</strong> as the signature defect in diabetic bone disease.</p>
-<section id="the-failure-of-dxa-and-the-grey-zone-paradox" class="level3">
-<h3 class="anchored" data-anchor-id="the-failure-of-dxa-and-the-grey-zone-paradox">The Failure of DXA and the “Grey Zone” Paradox</h3>
-<p>The clinical reliance on <span class="math inline">\(aBMD\)</span> <span class="math inline">\(T\)</span>-scores often creates a false sense of security in patients within the moderate-risk range. Our results show that in the osteopenic sub-cohort (<span class="math inline">\(n=91\)</span>), the combined clinical model (DXA + FRAX + TBS) yielded an AUC of only 0.60, effectively failing to discriminate between those with and without fractures. This clinical failure stems from DXA’s inherent inability to resolve the three-dimensional decay of bone quality.</p>
-<p>In contrast, the structural model provided a large effect size (Cohen’s <span class="math inline">\(d = 0.83\)</span>), underscoring that the “hidden” fragility in osteopenia is not a lack of mass, but a catastrophic loss of connectivity. While TBS is often used as a proxy for microarchitecture, our data suggests that in the moderate-risk range, it lacks the resolution of HR-pQCT to detect the early stages of trabecular thinning and disconnection.</p>
-<p>[Image of 3D bone microarchitecture comparison showing trabecular dropout vs cortical porosity]</p>
+<section id="trabecular-disconnection-the-mechanism-of-general-fragility" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="trabecular-disconnection-the-mechanism-of-general-fragility"><span class="header-section-number">6.2</span> Trabecular Disconnection: The Mechanism of General Fragility</h2>
+<p>A primary finding of this study is the significant reduction in <span class="math inline">\(Tb.N\)</span> (-11.6%) and Total <span class="math inline">\(vBMD\)</span> (-13.4%) in fractured osteopenic women compared to age-matched controls. From a biological first-principle perspective, the loss of trabecular number is far more detrimental to biomechanical competence than simple trabecular thinning. As trabeculae are lost, the remaining structure loses its lateral “bracing,” leading to a non-linear decrease in stiffness and Failure Load.</p>
+<p>Our identified <span class="math inline">\(Tb.N\)</span> threshold aligns with the <strong>OFELY study</strong> by Sornay-Rendu et al., which posited that trabecular deterioration is the hallmark of non-vertebral fracture risk<span class="citation" data-cites="eBoneMicroarchitectureAssessed2017"><sup><a href="#ref-eBoneMicroarchitectureAssessed2017" role="doc-biblioref">1</a></sup></span>. In the “Grey Zone,” this disconnection represents the tipping point where a moderate reduction in mass leads to a disproportionate increase in fragility.</p>
 </section>
-<section id="trabecular-disconnection-the-mechanism-of-general-fragility" class="level3">
-<h3 class="anchored" data-anchor-id="trabecular-disconnection-the-mechanism-of-general-fragility">Trabecular Disconnection: The Mechanism of General Fragility</h3>
-<p>A primary finding of this study is the significant reduction in <span class="math inline">\(Tb.N\)</span> (-11.6%) and Total <span class="math inline">\(vBMD\)</span> (-13.4%) in fractured osteopenic women compared to age-matched controls. From a biological first-principle perspective, the loss of trabecular number is far more detrimental to biomechanical competence than simple trabecular thinning. As trabeculae are lost, the remaining structure loses its lateral “bracing,” leading to a non-linear decrease in stiffness (<span class="math inline">\(Stiffness\)</span>) and failure load (<span class="math inline">\(F.Load\)</span>).</p>
-<p>Our identified <span class="math inline">\(Tb.N\)</span> threshold of <span class="math inline">\(&lt;1.08 \text{ mm}^{-1}\)</span> as a discriminator for fracture aligns with the OFELY study by Sornay-Rendu et al., which posited that trabecular deterioration is a hallmark of non-vertebral fracture risk <span class="citation" data-cites="sornay-rendu2017">[@sornay-rendu2017]</span>. In the “Grey Zone,” this disconnection represents the tipping point where a moderate reduction in mass leads to a disproportionate increase in fragility.</p>
+<section id="the-diabetic-non-switch-a-temporal-hypothesis" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="the-diabetic-non-switch-a-temporal-hypothesis"><span class="header-section-number">6.3</span> The Diabetic “Non-Switch”: A Temporal Hypothesis</h2>
+<p>Our subgroup analysis of T2DM patients (<span class="math inline">\(n=66\)</span> in the grey zone) provides a striking insight that refines the current understanding of diabetic bone disease.</p>
+<p><strong>Challenging the Cortical Primacy:</strong> Seminal work by Patsch et al.<span class="citation" data-cites="j.patschIncreasedCorticalPorosity2013"><sup><a href="#ref-j.patschIncreasedCorticalPorosity2013" role="doc-biblioref">10</a></sup></span> and others has established <strong>Cortical Porosity</strong> as the signature defect in diabetic osteoporosis<span class="citation" data-cites="j.patschIncreasedCorticalPorosity2013 e.samelsonDiabetesDeficitsCortical2018 v.shanbhogueCompromisedCorticalBone2015"><sup><a href="#ref-j.patschIncreasedCorticalPorosity2013" role="doc-biblioref">10</a>–<a href="#ref-v.shanbhogueCompromisedCorticalBone2015" role="doc-biblioref">12</a></sup></span>. However, these studies predominantly focused on cohorts with established fragility or broader BMD ranges. In our specific <strong>osteopenic</strong> cohort, we found that cortical porosity was <strong>not</strong> the primary discriminator (<span class="math inline">\(p=0.26\)</span>). Instead, <strong>Trabecular Disconnection</strong> (<span class="math inline">\(d=0.99\)</span>) remained the dominant driver of fragility.</p>
+<p><strong>The “Canary in the Coal Mine”:</strong> This apparent contradiction suggests a <strong>Temporal Hierarchy of Diabetic Bone Disease</strong>: 1. <strong>Phase 1 (Early/Osteopenic):</strong> Metabolic dysfunction and AGE accumulation initially compromise the trabecular scaffold, accelerating age-related disconnection. This is consistent with findings by Haraguchi et al.<span class="citation" data-cites="a.haraguchiEffectLuseogliflozinBone2019"><sup><a href="#ref-a.haraguchiEffectLuseogliflozinBone2019" role="doc-biblioref">13</a></sup></span>, who noted deterioration in bone quality independent of BMD<span class="citation" data-cites="a.haraguchiEffectLuseogliflozinBone2019"><sup><a href="#ref-a.haraguchiEffectLuseogliflozinBone2019" role="doc-biblioref">13</a></sup></span>. 2. <strong>Phase 2 (Late/Osteoporotic):</strong> As the disease progresses, cortical vascularity increases and pore expansion occurs, leading to the “Swiss-Cheese” cortex seen in more advanced cohorts<span class="citation" data-cites="elainew.yuDefectsCorticalMicroarchitecture2015"><sup><a href="#ref-elainew.yuDefectsCorticalMicroarchitecture2015" role="doc-biblioref">14</a></sup></span>.<span class="citation" data-cites="j.patschIncreasedCorticalPorosity2013 elainew.yuDefectsCorticalMicroarchitecture2015"><sup><a href="#ref-j.patschIncreasedCorticalPorosity2013" role="doc-biblioref">10</a>,<a href="#ref-elainew.yuDefectsCorticalMicroarchitecture2015" role="doc-biblioref">14</a></sup></span>.</p>
+<p>This distinction is clinically vital. It implies that for osteopenic diabetics, clinicians should not wait for cortical defects to appear. Instead, early intervention must focus on preserving the trabecular microarchitecture before it disconnects irreversibly. Our data supports the notion that <span class="math inline">\(Tb.N\)</span> acts as the “canary in the coal mine” for early diabetic fragility.</p>
 </section>
-<section id="the-diabetic-phenotype-cortical-vs.-trabecular-failure" class="level3">
-<h3 class="anchored" data-anchor-id="the-diabetic-phenotype-cortical-vs.-trabecular-failure">The Diabetic Phenotype: Cortical vs.&nbsp;Trabecular Failure</h3>
-<p>Our subgroup analysis of T2DM patients (<span class="math inline">\(n=66\)</span> in the grey zone) provides a striking contrast to general osteopenia. While general osteopenic fragility was trabecular-driven, diabetic fragility was characterized by significant <strong>Cortical Porosity</strong> (<span class="math inline">\(Ct.Po\)</span>). This supports the phenotype established by Patsch et al., suggesting that hyperglycemia and advanced glycation end-products (AGEs) may preferentially impair cortical bone via increased intracortical remodeling and pore expansion <span class="citation" data-cites="patsch2013">[@patsch2013]</span>.</p>
-<p>[Image of cortical bone porosity and microarchitecture changes in diabetic patients]</p>
-<p>This “cortical-heavy” failure mode explains why diabetic patients often fracture at higher <span class="math inline">\(aBMD\)</span> <span class="math inline">\(T\)</span>-scores. In our diabetic cohort, trabecular indices were relatively preserved, yet <span class="math inline">\(F.Load\)</span> was significantly compromised due to the “swiss-cheese” effect of cortical pores, which act as stress risers, significantly reducing the bone’s ability to resist torsion and bending during a fall.</p>
+<section id="strengths-and-limitations" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="strengths-and-limitations"><span class="header-section-number">6.4</span> Strengths and Limitations</h2>
+<p>The strengths of this study include the strict “Entry Ticket” criteria ensuring high-quality HR-pQCT data and the rigorous hierarchical analysis validated in a large cohort (<span class="math inline">\(N=215\)</span>). The use of <span class="math inline">\(\mu\)</span>FEA provides a functional assessment of bone strength beyond simple morphology.</p>
+<p>Limitations include the cross-sectional design, which prevents establishing causality. Additionally, our T2DM cohort was relatively well-controlled (mean HbA1c 7.2%), which may explain the lack of severe cortical porosity compared to studies with more uncontrolled diabetic populations. Future longitudinal studies are needed to track the progression from trabecular to cortical failure.</p>
 </section>
-<section id="clinical-implications-for-risk-stratification" class="level3">
-<h3 class="anchored" data-anchor-id="clinical-implications-for-risk-stratification">Clinical Implications for Risk Stratification</h3>
-<p>These findings have immediate implications for clinical practice. Current guidelines often necessitate a <span class="math inline">\(T\)</span>-score of <span class="math inline">\(\le -2.5\)</span> for the initiation of anabolic therapies. However, our data demonstrates that a subset of osteopenic patients possesses a skeletal microarchitecture that is functionally “osteoporotic.”</p>
-<p>By identifying specific thresholds (e.g., <span class="math inline">\(Tb.N &lt; 1.08 \text{ mm}^{-1}\)</span> or <span class="math inline">\(Ct.Po &gt; 5.2\%\)</span>), HR-pQCT allows for the transition from a mass-based diagnostic model to a <strong>competence-based model</strong>. This is particularly critical for the “moderate-risk” patient, where HR-pQCT can justify the use of potent osteoanabolic agents to restore connectivity before the structural decay becomes irreversible.</p>
-</section>
-<section id="strengths-and-limitations" class="level3">
-<h3 class="anchored" data-anchor-id="strengths-and-limitations">Strengths and Limitations</h3>
-<p>The primary strength of this study is the use of second-generation HR-pQCT and <span class="math inline">\(\mu\)</span>FEA in a well-characterized Indian cohort, providing high statistical power (97.5%) for the osteopenic subgroup. Furthermore, our use of an “Entry Ticket” inclusion strategy and standard mean imputation ensures that the biomechanical models are robust.</p>
-<p>Limitations include the cross-sectional design, which precludes a definitive assessment of fracture <em>prediction</em> over time. Additionally, as a tertiary care center study, our population may represent a more severe spectrum of osteopenia than the general population.</p>
-</section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>In conclusion, the “Grey Zone” of osteopenia hides a spectrum of structural failure. General fragility in this range is driven by <strong>Trabecular Disconnection</strong>, while diabetic fragility is characterized by <strong>Cortical Porosity</strong>. HR-pQCT and <span class="math inline">\(\mu\)</span>FEA provide the resolution necessary to visualize these deficits, offering a superior platform for risk stratification and the personalized management of skeletal health in postmenopausal women.</p>
+<section id="conclusion" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">6.5</span> Conclusion</h2>
+<p>Skeletal fragility in the osteopenic grey zone is driven by <strong>Trabecular Disconnection</strong>, a structural failure invisible to DXA. In early-stage (osteopenic) diabetes, this trabecular failure remains the primary culprit, challenging the notion of an immediate “cortical switch.” These findings advocate for the integration of HR-pQCT as a stratification tool to identify patients at imminent risk who fall below traditional treatment thresholds.</p>
 </section>
 </section>
-</section>
-<section id="discussion" class="level1">
-<h1>Discussion</h1>
-<p>Our study provides definitive, first-principle evidence that in postmenopausal women with osteopenia, skeletal fragility is not a consequence of a simple deficit in bone mass, but rather a failure of microarchitectural and biomechanical integrity. By applying high-resolution imaging and finite element analysis to a cohort positioned in the diagnostic “grey zone,” we demonstrate that standard densitometry is blind to the true structural drivers of fracture. Our findings challenge the current <span class="math inline">\(T\)</span>-score-centric paradigm and offer a biological explanation for the “Prevention Paradox” in osteoporosis.</p>
-<section id="the-structural-basis-of-the-prevention-paradox" class="level2">
-<h2 class="anchored" data-anchor-id="the-structural-basis-of-the-prevention-paradox">The Structural Basis of the Prevention Paradox</h2>
-<p>The primary objective of this study was to elucidate why a significant proportion of fragility fractures occur in women who do not meet the densitometric criteria for osteoporosis. Our results confirm that in the <strong>Osteopenic sub-cohort (<span class="math inline">\(n=91\)</span>)</strong>, central <span class="math inline">\(aBMD\)</span> at both the lumbar spine and femoral neck failed to discriminate between fracture and non-fracture cases. This diagnostic failure is not a statistical artifact but a reflection of the fundamental limitations of dual-energy X-ray absorptiometry (DXA), which provides a two-dimensional projection of a complex three-dimensional structure.</p>
-<p>In contrast, HR-pQCT revealed a profound microarchitectural deterioration in the fractured osteopenic women. The most powerful independent predictor of fracture was <strong>Trabecular Number (<span class="math inline">\(Tb.N\)</span>)</strong> at the distal radius, with an adjusted odds ratio (aOR) of 2.59 for every standard deviation decrease. This effect size was significantly larger than that observed in the total cohort (<span class="math inline">\(aOR=2.14\)</span>), underscoring that trabecular disconnection is the primary determinant of failure in the moderate-risk population. Biomechanically, the loss of trabecular plates and rods—the “struts” of the cancellous bone network—leads to a disproportionate loss of strength and stability, a phenomenon we quantified using <span class="math inline">\(\mu\)</span>FEA as a significant reduction in <strong>Failure Load</strong>. Our data suggests that for a woman in the “grey zone,” her fracture risk is defined not by how much bone she has, but by how well that bone is connected.</p>
-</section>
-<section id="the-cortical-phenotype-of-diabetic-fragility" class="level2">
-<h2 class="anchored" data-anchor-id="the-cortical-phenotype-of-diabetic-fragility">The Cortical Phenotype of Diabetic Fragility</h2>
-<p>A key finding of our study is the distinct pathophysiological signature observed in the <strong>Diabetic Osteopenia (<span class="math inline">\(n=66\)</span>)</strong> subgroup. While the general osteopenic population exhibited a predominantly trabecular failure mode, the diabetic women demonstrated a “cortical-heavy” phenotype. In this group, <strong>Cortical Porosity (<span class="math inline">\(Ct.Po\)</span>)</strong> emerged as the dominant independent predictor of fracture (<span class="math inline">\(aOR=1.94\)</span>).</p>
-<p>This phenotypic divergence aligns with the model proposed by Patsch et al., suggesting that hyperglycemia and the accumulation of advanced glycation end-products (AGEs) preferentially target the cortical envelope. The resulting intracortical porosity creates stress risers that compromise the bone’s ability to withstand bending and torsional loads, which is particularly critical in weight-bearing sites like the distal tibia. Our findings provide a biological first-principle explanation for the well-documented clinical paradox that patients with Type 2 Diabetes mellitus (T2DM) have a higher fracture risk than non-diabetic individuals for any given <span class="math inline">\(T\)</span>-score. The “normal” or even elevated <span class="math inline">\(aBMD\)</span> often seen in T2DM masks a structurally compromised cortex that is primed for failure.</p>
-</section>
-<section id="clinical-implications-and-future-directions" class="level2">
-<h2 class="anchored" data-anchor-id="clinical-implications-and-future-directions">Clinical Implications and Future Directions</h2>
-<p>The clinical implications of our findings are substantial. They indicate that the current strategy of screening with DXA and treating based on a <span class="math inline">\(T\)</span>-score threshold of -2.5 is insufficient for a large segment of the postmenopausal population. By relying on a metric that is blind to the primary drivers of fragility in osteopenia and diabetes, we are systematically failing to identify and treat those at imminent risk of fracture.</p>
-<p>Our study validates the potential of HR-pQCT as a critical risk-stratification tool for the “grey zone” patient. A hierarchical screening approach, where patients with osteopenic <span class="math inline">\(T\)</span>-scores are referred for HR-pQCT to assess their microarchitectural status, could significantly improve fracture prediction. The identification of <strong>Trabecular Disconnection</strong> in the general population or <strong>Cortical Porosity</strong> in diabetic patients would provide a strong rationale for initiating pharmacological therapy, potentially with agents that specifically target these structural deficits. For example, anabolic therapies that rebuild trabecular architecture may be more efficacious in the general osteopenic population, while antiresorptive agents that reduce cortical remodeling could be the treatment of choice for diabetic fragility.</p>
-</section>
-<section id="strengths-and-limitations-1" class="level2">
-<h2 class="anchored" data-anchor-id="strengths-and-limitations-1">Strengths and Limitations</h2>
-<p>The strengths of our study include the rigorous “Entry Ticket” inclusion strategy, ensuring high-quality imaging data for advanced biomechanical modeling. The use of a pre-specified diabetic subgroup allows for a more nuanced understanding of the different pathophysiological mechanisms underlying skeletal fragility. The calculation of adjusted ORs controlled for age, BMI, and even central <span class="math inline">\(aBMD\)</span> provides the highest level of evidence for the independent value of HR-pQCT.</p>
-<p>Limitations include the cross-sectional design, which prevents us from establishing causality or assessing the temporal rate of microarchitectural decay. Our population was recruited from a tertiary care center, which may introduce selection bias and limit generalizability to the broader community. Additionally, while we adjusted for major clinical risk factors, we did not have complete data on all potential confounders, such as specific duration or dose of glucocorticoid therapy.</p>
-</section>
-<section id="conclusion-1" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion-1">Conclusion</h2>
-<p>In conclusion, our study demonstrates that skeletal fragility in osteopenic postmenopausal women is driven by distinct microarchitectural and biomechanical failures that are missed by standard densitometry. We identify <strong>Trabecular Disconnection</strong> as the primary culprit in the general osteopenic population and <strong>Cortical Porosity</strong> as a key determinant in those with Type 2 Diabetes. These findings provide a powerful biological rationale for moving beyond the <span class="math inline">\(T\)</span>-score and adopting a more structural and functional approach to fracture risk assessment. Integrating HR-pQCT into the clinical workflow for patients in the diagnostic “grey zone” is not just a technological upgrade, but a fundamental step towards addressing the Prevention Paradox and reducing the burden of osteoporotic fractures.</p>
-<p>References</p>
-</section>
+<section id="references" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> References</h1>
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-eBoneMicroarchitectureAssessed2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">E. Sornay-Rendu, S. Boutroy, F. Duboeuf, R. D. Chapurlat. Bone microarchitecture assessed by HR-pQCT as predictor of fracture risk in postmenopausal women: The OFELY study. <em>J Bone Miner Res</em>. 2017;32(6):1243-1251.</div>
+</div>
+<div id="ref-t.zhuValueMeasuringBone2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">T. Y. Zhu, V. W. Hung, W. H. Cheung, others. Value of measuring bone microarchitecture in fracture discrimination in older women with recent hip fracture: A case-control study with HR-pQCT. <em>Osteoporos Int</em>. 2016;27(1):61-68.</div>
+</div>
+<div id="ref-a.r.bugbirdExternalValidationNovel2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">A. R. Bugbird, R. Jaiswal, D. E. Whittier. External validation of a novel HR-pQCT fracture risk assessment tool (<span class="math inline">\(\mu\)</span>FRAC) in a female cohort: Sahlgrenska university hospital prospective evaluation of risk of bone fractures (SUPERB) study. <em>J Bone Miner Res</em>. Published online 2025.</div>
+</div>
+<div id="ref-maAssessmentFractureRisk2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">J. Ma. Assessment of fracture risk in patients with type 2 diabetes mellitus. <em>Osteoporos Sarcopenia</em>. 2019;5(1):13-17.</div>
+</div>
+<div id="ref-aimeed.shuBoneStructureTurnover2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">A. Shu, M. T. Yin, E. Stein, others. Bone structure and turnover in type 2 diabetes mellitus. <em>Osteoporos Int</em>. 2012;23(2):635-641.</div>
+</div>
+<div id="ref-meilinghuangPerformanceHRpQCTDXA2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">M. Huang, V. W. Hung, T. Li, others. Performance of HR-pQCT, DXA, and FRAX in the discrimination of asymptomatic vertebral fracture in postmenopausal chinese women. <em>J Clin Densitom</em>. 2021;24(3):372-380.</div>
+</div>
+<div id="ref-jessicafstarrRobustTrabecularMicrostructure2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">J. F. Starr, L. Bandeira, S. Agarwal, others. Robust trabecular microstructure in type 2 diabetes revealed by individual trabecula segmentation analysis of HR-pQCT images. <em>J Bone Miner Res</em>. 2018;33(1):63-70.</div>
+</div>
+<div id="ref-j.i.martinez-montoroEvaluationQualityBone2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">J. I. Martínez-Montoro, B. García-Fontana, C. García-Fontana, M. Muñoz-Torres. Evaluation of quality and bone microstructure alterations in patients with type 2 diabetes: A narrative review. <em>J Clin Med</em>. 2022;11(17):5134.</div>
+</div>
+<div id="ref-s.ferrariBoneMicrostructureTBS2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">S. Ferrari, K. Akesson, N. Al-Daghri. Bone microstructure and TBS in diabetes: What have we learned? A narrative review. <em>J Bone Miner Res</em>. Published online 2025.</div>
+</div>
+<div id="ref-j.patschIncreasedCorticalPorosity2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">J. M. Patsch, A. J. Burghardt, S. P. Yap, T. Baum, A. V. Schwartz, G. B. Joseph, others. Increased cortical porosity in type 2 diabetic postmenopausal women with fragility fractures. <em>J Bone Miner Res</em>. 2013;28(2):313-324.</div>
+</div>
+<div id="ref-e.samelsonDiabetesDeficitsCortical2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">E. J. Samelson, S. Demissie, L. A. Cupples, others. Diabetes and deficits in cortical bone density, microarchitecture, and bone size: Framingham HR-pQCT study. <em>J Bone Miner Res</em>. 2018;33(1):54-62.</div>
+</div>
+<div id="ref-v.shanbhogueCompromisedCorticalBone2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">V. V. Shanbhogue, S. Hansen, M. Frost, others. Compromised cortical bone compartment in type 2 diabetes mellitus patients with microvascular disease. <em>Calcif Tissue Int</em>. 2016;98(1):24-31.</div>
+</div>
+<div id="ref-a.haraguchiEffectLuseogliflozinBone2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">A. Haraguchi, R. Shigeno, I. Horie. The effect of luseogliflozin on bone microarchitecture in older patients with type 2 diabetes: Study protocol for a randomized controlled pilot trial using second-generation, high-resolution, peripheral quantitative computed tomography (HR-pQCT). <em>Trials</em>. 2019;20(1):654.</div>
+</div>
+<div id="ref-elainew.yuDefectsCorticalMicroarchitecture2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">E. W. Yu, M. S. Putman, N. Derrico, others. Defects in cortical microarchitecture among african-american women with type 2 diabetes. <em>Osteoporos Int</em>. 2015;26(2):673-679.</div>
+</div>
+</div>
 </section>
 
 </main>

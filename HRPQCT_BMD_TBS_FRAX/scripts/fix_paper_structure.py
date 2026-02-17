@@ -1,37 +1,36 @@
 import os
+import subprocess
 
 
-def write_final_complete_paper():
-    print("🚀 Generating Final Complete 'paper.qmd'...")
+def produce_all_formats():
+    print("🚀 Configuring and Generating Manuscript in PDF, Word, and HTML...")
 
     # --- 1. SETUP PATHS ---
     script_path = os.path.abspath(__file__)
     project_root = os.path.dirname(os.path.dirname(script_path))
     paper_path = os.path.join(project_root, "manuscript", "paper.qmd")
 
-    # --- 2. DEFINE CONTENT ---
+    # --- 2. DEFINE UNIVERSAL CONTENT ---
+    # This YAML header is "Safe" for all formats (PDF/Word/HTML).
+    # It uses single quotes for the title to handle the Greek letter $\mu$.
 
     content = r"""---
-title: "Trabecular Disconnection and Biomechanical Weakness Drive Fragility in Osteopenic Postmenopausal Women: An HR-pQCT and $\mu$FEA Study"
+title: 'Trabecular Disconnection and Biomechanical Weakness Drive Fragility in Osteopenic Postmenopausal Women: An HR-pQCT and $\mu$FEA Study'
 
 author:
   - name: Ajay Shukla, MD, DM
-    email: dr.ajayshukla@gmail.com
     affiliations:
       - ref: 1
     attributes:
       corresponding: true
+      email: dr.ajayshukla@gmail.com
   - name: Sushil Gupta, MD, DM
     affiliations:
       - ref: 1
 
 affiliations:
   - id: 1
-    name: Max Super Speciality Hospital
-    department: Department of Endocrinology
-    city: Lucknow
-    state: Uttar Pradesh
-    country: India
+    name: Department of Endocrinology, Max Super Speciality Hospital, Lucknow, Uttar Pradesh, India
 
 format:
   pdf:
@@ -47,11 +46,13 @@ format:
       - right=25mm
       - bottom=25mm
   docx:
-    toc: true
+    toc: false
     number-sections: true
+    highlight-style: github
   html:
     toc: true
     theme: cosmo
+    number-sections: true
 
 keywords:
   - HR-pQCT
@@ -61,7 +62,7 @@ keywords:
   - Finite Element Analysis
 
 bibliography: HRPQCT_BMD.bib
-csl: https://raw.githubusercontent.com/citation-style-language/styles/master/journal-of-bone-and-mineral-research.csl
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/american-medical-association.csl
 ---
 
 {{< include sections/01_abstract.qmd >}}
@@ -84,19 +85,33 @@ csl: https://raw.githubusercontent.com/citation-style-language/styles/master/jou
 
     # --- 3. WRITE FILE ---
     try:
-        os.makedirs(os.path.dirname(paper_path), exist_ok=True)
         with open(paper_path, "w", encoding="utf-8") as f:
             f.write(content)
-        print(f"✅ SUCCESS: Complete 'paper.qmd' written to: {paper_path}")
-        print("   - Authors: Ajay Shukla, Sushil Gupta")
-        print("   - Affiliation: Max Super Speciality Hospital")
-        print("   - CSL: JBMR Style linked")
-        print("   - Sections: Abstract -> Discussion fully integrated")
+        print(f"✅ SUCCESS: 'paper.qmd' updated for universal compatibility.")
     except Exception as e:
-        print(f"❌ ERROR: {e}")
+        print(f"❌ ERROR writing file: {e}")
+        return
 
-    print("\n🚀 FINAL STEP: Run 'quarto render manuscript/paper.qmd --to pdf'")
+    # --- 4. RENDER ALL FORMATS ---
+    print("\n--- Starting Render Process ---")
+
+    commands = [
+        ("PDF", "quarto render manuscript/paper.qmd --to pdf"),
+        ("Word", "quarto render manuscript/paper.qmd --to docx"),
+        ("HTML", "quarto render manuscript/paper.qmd --to html")
+    ]
+
+    for label, cmd in commands:
+        print(f"\n...Rendering {label}...")
+        try:
+            # We run the command using subprocess (works like running in terminal)
+            subprocess.run(cmd, shell=True, check=True, cwd=project_root)
+            print(f"✅ {label} Generation Complete.")
+        except subprocess.CalledProcessError:
+            print(f"❌ {label} Generation Failed.")
+
+    print("\n🎉 DONE! Check the 'manuscript/' folder for your files.")
 
 
 if __name__ == "__main__":
-    write_final_complete_paper()
+    produce_all_formats()

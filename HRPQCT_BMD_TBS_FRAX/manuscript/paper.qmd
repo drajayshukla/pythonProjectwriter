@@ -1,24 +1,20 @@
 ---
-title: "Trabecular Disconnection and Biomechanical Weakness Drive Fragility in Osteopenic Postmenopausal Women: An HR-pQCT and $\mu$FEA Study"
+title: 'Trabecular Disconnection and Biomechanical Weakness Drive Fragility in Osteopenic Postmenopausal Women: An HR-pQCT and $\mu$FEA Study'
 
 author:
   - name: Ajay Shukla, MD, DM
-    email: dr.ajayshukla@gmail.com
     affiliations:
       - ref: 1
     attributes:
       corresponding: true
+      email: dr.ajayshukla@gmail.com
   - name: Sushil Gupta, MD, DM
     affiliations:
       - ref: 1
 
 affiliations:
   - id: 1
-    name: Max Super Speciality Hospital
-    department: Department of Endocrinology
-    city: Lucknow
-    state: Uttar Pradesh
-    country: India
+    name: Department of Endocrinology, Max Super Speciality Hospital, Lucknow, Uttar Pradesh, India
 
 format:
   pdf:
@@ -34,11 +30,13 @@ format:
       - right=25mm
       - bottom=25mm
   docx:
-    toc: true
+    toc: false
     number-sections: true
+    highlight-style: github
   html:
     toc: true
     theme: cosmo
+    number-sections: true
 
 keywords:
   - HR-pQCT
@@ -48,7 +46,7 @@ keywords:
   - Finite Element Analysis
 
 bibliography: HRPQCT_BMD.bib
-csl: https://raw.githubusercontent.com/citation-style-language/styles/master/journal-of-bone-and-mineral-research.csl
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/american-medical-association.csl
 ---
 
 {{< include sections/01_abstract.qmd >}}
