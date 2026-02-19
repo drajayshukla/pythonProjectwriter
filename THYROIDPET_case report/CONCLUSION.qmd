@@ -1,0 +1,3 @@
+# Conclusion
+
+High-grade diffuse FDG uptake ($SUV_{max} > 10$) in the thyroid does not always indicate malignancy. In the setting of severe hypothyroidism ($TSH > 100$), it is often a marker of **TSH-mediated GLUT-1 upregulation** and a predictor of future thyroid dysfunction.[5] Clinicians must correlate PET findings with Ultrasound; if the USG is benign, treat the hypothyroidism and observe, rather than biopsy.

@@ -2,7 +2,7 @@
 
 | Parameter | Fracture (n=34) | Control (n=32) | P-value |
 |:---|:---:|:---:|:---:|
-| HbA1c (%) | 7.2 ± 1.1 | 7.1 ± 0.9 | 0.57 |
-| Duration of Diabetes (years) | 7.4 ± 3.1 | 6.5 ± 3.2 | 0.25 |
+| HbA1c (%) | **[PENDING DATA]** | **[PENDING DATA]** | **[PENDING]** |
+| Duration of Diabetes (years) | **[PENDING DATA]** | **[PENDING DATA]** | **[PENDING]** |
 
-*Note: Values are Mean ± SD. The cohort is characterized by moderate duration and control, consistent with early-stage metabolic bone disease.*
+*Note: Values are Mean ± SD. Data regarding diabetes duration and glycemic control is currently being retrieved from supplementary records.*

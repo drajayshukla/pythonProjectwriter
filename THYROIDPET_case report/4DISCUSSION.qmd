@@ -1,0 +1,17 @@
+# Discussion
+
+This case illustrates a "Physiological False Positive" driven by a perfect storm of **Radiation Damage**, **PTU Suppression**, and **TSH Overdrive**.
+
+### The Diagnostic Trap
+An $SUV_{max}$ of 14.0 is alarmingly high. Karantanis et al. note that diffuse uptake is typically associated with autoimmune thyroiditis, but usually with lower intensity.[3] Haber et al. demonstrated that GLUT-1 expression (the driver of FDG uptake) is a marker of malignancy in 46% of thyroid cancers.[4] The absence of structural abnormalities on USG and the **Negative TRAb** were the pivot points against malignancy and Graves' disease.
+
+### Retrospective Root Cause Analysis
+The initial presentation was mismanaged with PTU. The initial **T3/T4 ratio of 10.6** (256/24) strongly supports **destructive radiation thyroiditis** (leakage of preformed T4) rather than Graves' disease (which favors T3 hypersecretion, ratio >20). The use of PTU likely accelerated the hypothyroid phase by blocking new hormone synthesis while the gland was already leaking.
+
+### First Principles: The GLUT-1 Mechanism
+Why was the thyroid "glowing" without a tumor?
+1.  **TSH Stimulation:** TSH receptors on thyroid follicular cells utilize the cAMP pathway to upregulate **GLUT-1 glucose transporters**.[1]
+2.  **The "Starving Cell" Hypothesis:** The gland, damaged by radiation and previously blocked by PTU, was functionally failing. The pituitary responded with massive TSH secretion ($>100$). This forced the remaining viable thyrocytes to hyper-express GLUT-1 and avidly trap FDG to fuel hormone synthesis.[6]
+
+### Management
+Recognizing this as a functional rather than pathological uptake, we initiated **Levothyroxine replacement (1.6 mcg/kg)**. Biopsy was deferred. While chronic thyroiditis typically causes persistent low-grade uptake independent of TSH,[3] a **significant reduction** in the high-grade FDG avidity ($SUV_{max}$ 14) is expected after TSH normalization, confirming the functional "overdrive" component.

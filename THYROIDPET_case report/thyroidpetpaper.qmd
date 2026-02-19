@@ -1,0 +1,45 @@
+---
+format:
+  docx:
+    toc: false
+  pdf:
+    documentclass: article
+    papersize: a4
+    geometry:
+      - margin=2.5cm
+  html:
+    theme: cosmo
+    toc: true
+---
+
+# The Metabolic Mirage: High FDG Avidity ($SUV_{max}$ 14) in Severe Radiation-Induced Hypothyroidism with Normal Ultrasound
+
+**Dr. Ajay Shukla**¹, **Dr. Gargi Tignath Shukla**²
+
+¹Department of Endocrinology, Max Super Speciality Hospital, Lucknow, Uttar Pradesh, India
+²Associate Professor, Hind Institute of Medical Sciences, Barabanki, Uttar Pradesh, India
+
+**Address for correspondence:**
+Dr. Ajay Shukla, Department of Endocrinology, Max Super Speciality Hospital, Lucknow, Uttar Pradesh, India.
+**E-mail:** dr.ajayshukla@gmail.com
+
+---
+
+{{< include 1Abstract.qmd >}}
+
+{{< include 2introduction.qmd >}}
+
+{{< include 3CASE_REPORT.qmd >}}
+
+{{< include 4DISCUSSION.qmd >}}
+
+{{< include CONCLUSION.qmd >}}
+
+# References
+
+1. Vera P, Kuhn-Lansoy C, Edet-Sanson A, et al. Does TSH trigger 18F-FDG uptake by the thyroid? *Eur J Nucl Med Mol Imaging*. 2014;41:126–127.
+2. Soelberg KK, Bonnema SJ, Brix TH, Hegedüs L. Risk of malignancy in thyroid incidentalomas detected by 18F-FDG PET: a systematic review. *Thyroid*. 2012;22(9):918-925.
+3. Karantanis D, Bogsrud TV, Wiseman GA, et al. Clinical significance of diffusely increased 18F-FDG uptake in the thyroid gland. *J Nucl Med*. 2007;48(6):896-901.
+4. Haber RS, Weiser KR, Pritsker A, Reder I, Burstein DE. GLUT1 glucose transporter expression in benign and malignant thyroid nodules. *Thyroid*. 1997;7(3):363-367.
+5. Kim YH, Chang Y, Kim Y, et al. Diffusely Increased 18F-FDG Uptake in the Thyroid Gland and Risk of Thyroid Dysfunction: A Cohort Study. *J Clin Med*. 2019;8(5):603.
+6. Gabriele E, Pellicori S, Romano L, et al. Thyroid uptake of 18F-FDG in patients with severe hypothyroidism. *Endocrine*. 2017;55:976–978.

@@ -1,0 +1,27 @@
+# Case Report
+
+A 51-year-old female presented to the Endocrine clinic in February 2026 with fatigue and weight gain. She had a known history of **Carcinoma of the Left Buccal Mucosa**, managed with composite resection (Nov 2024) followed by 30 cycles of radiotherapy (completed Feb 08, 2025).
+
+**Drug History:**
+Following radiotherapy, she was prescribed **Propylthiouracil (PTU) 100 mg BD** for 6 months by an outside physician for thyrotoxicosis.
+* **Initial Reports (Post-RT):** $TSH < 0.001 \ \mu IU/mL$, Total $T4 \ 24 \ mcg/dL$, Total $T3 \ 256 \ ng/dL$.
+* **Current Analysis:** Retrospective calculation of the **T3/T4 ratio** (ng/mcg) yielded a value of **10.6**, which typically indicates destructive thyroiditis rather than Graves' disease ($>20$). PTU was stopped in May 2025.
+
+**Biochemical Evaluation (Feb 2026):**
+* **TSH:** $> 100 \ \mu IU/mL$ (Ref: 0.27–4.2)
+* **Free T4:** $0.97 \ ng/dL$ (Ref: 0.93–1.7)
+* **Free T3:** $0.2 \ pg/mL$ (Ref: 2.0–4.4)
+* **TSH Receptor Antibody (TRAb):** **Negative** (Ruling out Graves' disease).
+
+**Imaging Findings (PET/CT - 30.01.2026):**
+An 18F-FDG PET/CT was performed for oncological surveillance.
+* **Head & Neck:** Post-surgical changes with diffuse mucosal FDG avidity ($SUV_{max}$ 6.6) in the flap region.
+* **Thyroid:** **Intense, diffuse FDG avidity** was noted in both thyroid lobes with an **$SUV_{max}$ of 14.0** (right lobe).
+* **Structural:** The CT component showed a morphologically normal thyroid gland.
+
+![**Figure 1A:** Coronal Fused PET/CT showing intense diffuse FDG uptake in the thyroid gland ($SUV_{max}$ 14.0), mimicking malignancy.](data/image/PETCORONAL.jpg){width=80%}
+
+**Ultrasound Neck:**
+Despite the history of radiation, the gland showed **preserved volume and absence of focal nodularity** on high-resolution imaging, ruling out a discrete mass or lymphoma.
+
+![**Figure 1B:** High-Resolution Ultrasound of the Left Lobe showing normal echotexture and absence of nodules, ruling out structural malignancy.](data/image/USGTHYROID.jpg){width=80%}

@@ -1,0 +1,5 @@
+# Introduction
+
+The detection of thyroid incidentalomas on 18F-FDG PET/CT is increasingly common. The clinical approach typically dichotomizes findings into **focal uptake** (malignancy risk ~35%) and **diffuse uptake** (malignancy risk ~4%).[2]
+
+However, diagnostic confusion arises when diffuse uptake presents with excessively high Standardized Uptake Values ($SUV_{max} > 10$), a range typically associated with aggressive malignancies like Primary Thyroid Lymphoma or Anaplastic Carcinoma.[2] We present a case where physiological analysis—focusing on the effects of TSH on GLUT-1 transporters—prevented invasive workup in a post-cancer patient with an $SUV_{max}$ of 14.0.

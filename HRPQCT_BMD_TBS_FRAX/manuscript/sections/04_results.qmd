@@ -44,7 +44,12 @@ To investigate the lack of cortical porosity ("Cortical Switch"), we analyzed th
 
 {{< include /results/tables/Table1B_Diabetes_Characteristics.md >}}
 
-The diabetic cohort was characterized by a **moderate duration of disease** (~7 years) and **reasonable glycemic control** (HbA1c ~7.2%). This supports our "Temporal Hierarchy" hypothesis: this cohort represents the **Early Phase** of diabetic bone disease.
+::: {.callout-warning}
+## ⚠️ DATA PENDING: DIABETES DURATION
+The following paragraph requires validation against the new duration data.
+:::
+
+The diabetic cohort was characterized by **[PENDING: CONFIRM DURATION & CONTROL]**. This metabolic profile supports our "Temporal Hierarchy" hypothesis: this cohort likely represents the **Early Phase** of diabetic bone disease... a **moderate duration of disease** (~7 years) and **reasonable glycemic control** (HbA1c ~7.2%). This supports our "Temporal Hierarchy" hypothesis: this cohort represents the **Early Phase** of diabetic bone disease.
 
 ![**Microarchitecture in Diabetic Osteopenia.** Comparison of cortical and trabecular compartments. Note that while cortical porosity is visible, statistical analysis confirms that **Trabecular Disconnection** ($d=0.99$) is the primary driver of fragility, dominating the cortical signal ($d=0.28$). **(Visual Hypothesis: Osteopenia $\rightarrow$ Trabecular Failure; Osteoporosis $\rightarrow$ Cortical Failure).**](/results/figures/Fig3_Porosity_Diabetes.png){#fig-diabetes width=70%}
 

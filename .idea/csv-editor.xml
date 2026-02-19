@@ -10,6 +10,41 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/data/01_raw/DBT DATA SAHAJ.xlsx - Sheet1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/data/03_final/04_risk_factors/DBT DATA SAHAJ.xlsx - Sheet1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/data/03_final/04_risk_factors/cohort_risk_diabetes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/data/03_final/04_risk_factors/cohort_risk_osteo_diabetes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/data/03_final/04_risk_factors/cohort_risk_osteopenia.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/HRPQCT_BMD_TBS_FRAX/data/03_final/cohort_osteopenia_diabetes.csv">
           <value>
             <Attribute>
@@ -53,6 +88,34 @@
           </value>
         </entry>
         <entry key="/HRPQCT_BMD_TBS_FRAX/results/tables/stats_total_dm.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/scripts/data/04_risk_factors/cohort_risk_diabetes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/scripts/data/04_risk_factors/cohort_risk_osteo_diabetes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/scripts/data/04_risk_factors/cohort_risk_osteopenia.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HRPQCT_BMD_TBS_FRAX/scripts/data/04_risk_factors/cohort_risk_total.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

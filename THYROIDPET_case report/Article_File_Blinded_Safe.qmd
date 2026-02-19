@@ -1,0 +1,44 @@
+---
+format:
+  docx:
+    toc: false
+bibliography: thyreferfinal.bib
+csl: vancouver.csl
+---
+
+# ARTICLE FILE (Blinded)
+
+**Title:** Intense Diffuse Thyroid FDG Uptake (SUVmax 14.0) Mimicking Malignancy in Severe Radiation-Induced Hypothyroidism
+
+**Abstract:**
+Incidental thyroid uptake on 18F-FDG PET/CT is a common diagnostic challenge. While focal uptake warrants biopsy due to malignancy risk, diffuse uptake is typically associated with benign autoimmunity. We report a 51-year-old post-radiation patient presenting with an SUVmax of 14.0—a value often associated with lymphoma—who was found to have profound hypothyroidism (TSH > 100 uIU/mL). Review of her history revealed the inadvertent use of Propylthiouracil (PTU) for radiation-induced thyroiditis. High-resolution ultrasound confirmed a structurally benign gland, avoiding unnecessary biopsy. This case highlights that TSH stimulation alone can drive FDG avidity to levels mimicking malignancy.
+
+**Keywords:** FDG PET/CT, Hypothyroidism, Radiation Thyroiditis, Incidentaloma.
+
+**Introduction:**
+Thyroid incidentalomas are detected in 1-2% of PET/CT scans. Clinical differentiation relies heavily on the pattern of uptake: focal lesions carry a malignancy risk of approximately 35%, whereas diffuse uptake is generally benign (~4%) [@soelberg2012]. However, diagnostic uncertainty arises when the Standardized Uptake Value (SUVmax) is excessively high (>10), a range that overlaps with aggressive pathologies such as lymphoma. We report a case where TSH-mediated stimulation resulted in an SUVmax of 14.0 in a structurally normal gland.
+
+**Case Report:**
+A 51-year-old female presented to the endocrinology clinic in February 2026 with fatigue and weight gain. She had completed surgery and radiotherapy for carcinoma of the buccal mucosa one year prior (February 2025).
+
+Review of records from an outside facility showed she had been treated with Propylthiouracil (PTU) 100 mg BD for 6 months for presumed hyperthyroidism. The initial thyroid function tests (TFTs) post-radiation showed a **TSH < 0.0001 uIU/mL**, **Total T4 30 ug/dL**, and **Total T3 212 ng/dL**. In retrospect, the **T3/T4 ratio was 7.0** (212/30), which is consistent with destructive thyroiditis rather than Graves' disease (where the ratio typically exceeds 20). The initiation of PTU likely blocked recovery and accelerated the progression to hypothyroidism.
+
+Current evaluation revealed profound hypothyroidism with **TSH > 100 uIU/mL**, **Total T4 0.97 ug/dL**, and **Total T3 0.2 ng/dL**. TSH Receptor Antibodies (TRAb) were negative. A surveillance PET/CT showed intense, symmetric diffuse uptake in the thyroid with an **SUVmax of 14.0**.
+
+Despite the alarming metabolic signal, a high-resolution ultrasound showed a gland of preserved volume with heterogeneous echotexture but no focal nodules. Biopsy was deferred, and the patient was started on Levothyroxine.
+
+**Discussion:**
+The magnitude of FDG uptake in this case (SUVmax 14.0) is the primary confounder. While low-grade diffuse uptake is common in Hashimoto’s thyroiditis, values above 10 are rare in benign conditions.
+
+The mechanism here is physiological rather than neoplastic. TSH stimulates glucose uptake in thyroid follicular cells by upregulating GLUT-1 transporters [@chin2004; @haber1997]. In this patient, the "double hit" of radiation damage and PTU-induced blockade resulted in uninhibited TSH secretion (>100), driving the remaining thyrocytes to maximal metabolic capacity.
+
+Pruthi et al. have documented a significant positive correlation between serum TSH levels and thyroid SUVmax, confirming that severe hypothyroidism alone can cause intense FDG avidity [@pruthi2015]. Recognition of this pattern—high SUV, high TSH, but benign ultrasound—is critical. Correction of the hypothyroidism typically resolves the metabolic abnormality [@karantanis2007].
+
+**Conclusion:**
+Severe elevation of TSH can produce thyroid FDG avidity (SUVmax > 10) that mimics high-grade malignancy. Clinicians should correlate PET findings with thyroid function tests and ultrasound morphology to avoid unnecessary invasive procedures [@kim2019].
+
+**Figure Legends:**
+**Figure 1:** (A) Coronal fused PET/CT image demonstrating intense diffuse FDG uptake (SUVmax 14.0). (B) High-resolution ultrasound showing preserved thyroid volume without focal nodularity.
+
+**References:**
+(Generated automatically from thyreferfinal.bib)

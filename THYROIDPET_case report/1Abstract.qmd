@@ -1,0 +1,11 @@
+# Abstract
+
+**Introduction:** Incidental thyroid uptake on 18F-FDG PET/CT poses a diagnostic dilemma. While focal uptake carries a high malignancy risk, diffuse uptake is generally benign. We report a rare case of intense diffuse uptake ($SUV_{max}$ 14.0) mimicking malignancy in a post-radiation patient.
+
+**Case Presentation:** A 51-year-old female treated for carcinoma of the buccal mucosa (surgery and radiotherapy completed Feb 2025) presented with profound hypothyroidism ($TSH > 100 \mu IU/mL$) in Feb 2026. Review of records revealed she was treated with Propylthiouracil (PTU) for post-radiation thyrotoxicosis ($T4 \ 24 \ mcg/dL$, $T3 \ 256 \ ng/dL$), which was likely destructive in nature. A surveillance PET/CT revealed intense diffuse FDG avidity ($SUV_{max}$ 14.0), raising suspicion for metastasis or lymphoma. However, high-resolution ultrasound (USG) was benign, and TSH Receptor Antibodies (TRAb) were negative.
+
+**Discussion:** The dissociation between high metabolic activity and normal structural integrity is explained by "First Principles": massive TSH stimulation upregulates GLUT-1 glucose transporters on follicular cells, driving FDG uptake. This functional "overdrive" can mimic cancer.
+
+**Conclusion:** In the presence of severe hypothyroidism, even high-grade diffuse FDG uptake is often physiological. Correlation with ultrasound is critical to avoid unnecessary biopsy.
+
+**Keywords:** FDG PET/CT, Hypothyroidism, GLUT-1, Radiation Thyroiditis, Incidentaloma.

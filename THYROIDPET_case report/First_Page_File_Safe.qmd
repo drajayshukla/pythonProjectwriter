@@ -1,0 +1,43 @@
+---
+format:
+  docx:
+    toc: false
+---
+
+# FIRST PAGE FILE
+
+**Manuscript Type:** Letter to the Editor
+
+**Title:** Intense Diffuse Thyroid FDG Uptake (SUVmax 14.0) Mimicking Malignancy in Severe Radiation-Induced Hypothyroidism
+
+**Authors:**
+1. **Dr. Ajay Shukla**¹ (Corresponding Author)
+   - ORCID: 0000-0003-4029-8086
+2. **Dr. Gargi Tignath Shukla**²
+
+**Affiliations:**
+¹ Consultant Endocrinologist, Department of Endocrinology, Max Super Speciality Hospital, Lucknow, Uttar Pradesh, India
+² Associate Professor, Department of Physiology, Hind Institute of Medical Sciences, Barabanki, Uttar Pradesh, India
+
+**Corresponding Author:**
+Dr. Ajay Shukla
+Department of Endocrinology, Max Super Speciality Hospital
+Faizabad Road, Lucknow, Uttar Pradesh, India - 226028
+**Email:** dr.ajayshukla@gmail.com
+
+**Running Title:** High Thyroid SUV in Hypothyroidism
+
+**Covering Letter:**
+Dear Editor,
+
+We are submitting this Letter to the Editor describing a diagnostic pitfall we recently encountered in a post-radiation patient.
+
+The patient presented with a thyroid SUVmax of 14.0, a value that typically triggers concern for primary thyroid lymphoma or anaplastic carcinoma. However, a detailed review of her history revealed that she had been inappropriately treated with antithyroid drugs (Propylthiouracil) for radiation-induced thyroiditis, leading to profound TSH elevation (> 100 uIU/mL).
+
+We believe this case serves as an important reminder that physiological TSH stimulation alone can produce FDG avidity indistinguishable from high-grade malignancy, provided the ultrasound is structurally benign.
+
+**Disclosures:**
+- **Conflict of Interest:** None declared.
+- **Funding:** None.
+- **Patient Consent:** Written informed consent was obtained for the publication of this case and associated images.
+- **Authorship:** All authors contributed to the clinical management and writing of this manuscript.
